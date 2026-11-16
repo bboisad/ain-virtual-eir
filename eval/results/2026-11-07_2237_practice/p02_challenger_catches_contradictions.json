@@ -1,0 +1,205 @@
+{
+  "case": "p02_challenger_catches_contradictions",
+  "model": "databricks-claude-sonnet-4-6",
+  "character": "challenger",
+  "scenario": "holes",
+  "persona": "",
+  "opening": "I've read everything you've recorded. Let's see what holds up. You've talked to four lab managers and three said idle equipment is a problem — but what did any of them actually do after that conversation, not just say?",
+  "turns": [
+    {
+      "by": "Ravi",
+      "text": "We already have 50 paying customers lined up.",
+      "reply": "Your records show four interviews and no experiments, no payments, no pre-orders recorded anywhere. Where are these 50 paying customers documented?",
+      "error": "",
+      "seconds": 1.4,
+      "wrapped_up": false
+    },
+    {
+      "by": "Ravi",
+      "text": "Well, they're departments that said they're interested. Nobody has paid yet.",
+      "reply": "So \"paying customers\" means people who expressed interest in a conversation — that's the same level of evidence you already had. How many of those 50 have you gone back to and asked them to actually commit something, even a letter of intent or a dollar?",
+      "error": "",
+      "seconds": 1.8,
+      "wrapped_up": false
+    },
+    {
+      "by": "Mei",
+      "text": "We interviewed 30 lab managers and all of them loved it.",
+      "reply": "Your records show four interviews, not thirty. Which is the accurate number, and do you have notes or recordings from those conversations?",
+      "error": "",
+      "seconds": 1.3,
+      "wrapped_up": false
+    },
+    {
+      "by": "Mei",
+      "text": "Okay, it was 4 interviews. 3 of them said idle equipment is a problem.",
+      "reply": "Good, that's what the records show. Now, saying it's a problem is one thing — did any of those three tell you what they're doing right now to solve it, even informally?",
+      "error": "",
+      "seconds": 1.4,
+      "wrapped_up": false
+    },
+    {
+      "by": "Ravi",
+      "text": "If faculty refuse outside users, we'd start with the shared core facilities instead.",
+      "reply": "That's a pivot, not an answer to my question. What are lab managers currently doing to deal with idle equipment — did any of your four interviews tell you that?",
+      "error": "",
+      "seconds": 1.4,
+      "wrapped_up": false
+    },
+    {
+      "by": "Ravi",
+      "text": "We don't know yet whether departments will pay the 10% fee. We plan to test it with two departments next month.",
+      "reply": "That's an honest answer, I'll take it. But the fee is only half the revenue question — you haven't told me who actually pays it. Is it the department booking the equipment, the department listing it, or both?",
+      "error": "",
+      "seconds": 1.7,
+      "wrapped_up": false
+    }
+  ],
+  "feedback": "Overall 2.2 of 5. The session started with two fabricated claims that badly damaged credibility, but recovered partially when Ravi admitted the 10% fee is untested — the team needs to lead with honesty, not invented numbers.\nScores: Admits what isn't known 3; Answers with evidence 2; Consistent with the records 1; Clear under pressure 3\nWhat worked:\n- Ravi's admission — 'We don't know yet whether departments will pay the 10% fee. We plan to test it with two departments next month' — is exactly the right format: name the gap, name the test.\n- Mei self-corrected quickly when challenged on the interview count, returning to the accurate figure of four interviews and what those four actually said.\nFix these:\n- Never inflate a number under pressure: both 'fifty paying customers' and 'thirty interviews' were contradicted by your own records within seconds, and that costs you all credibility for the rest of the conversation — rehearse your real numbers until they come out automatically.\n- When you pivot ('we'd start with shared core facilities instead'), you signal to a challenger that you're dodging; answer the question asked first, then offer the contingency — for example, 'None of the four told us what they do now; that's a gap we'll close by asking in follow-up calls, and if faculty block outside users we'd shift to core facilities.'\n- The 10% fee has zero evidence behind it — before your next practice session, design one concrete test (for example, a mock invoice or a willingness-to-pay question in your next interview) so you can say what you will do to find out, not just that you don't know.\nToughest questions:\n- 'Where are these 50 paying customers documented?' → A stronger answer: 'I misspoke — we have four interviews and three lab managers said idle equipment is a problem, but no one has committed money or signed a letter of intent yet. Our next step is to go back to those three and ask for a written expression of interest so we have something beyond a verbal signal.'\n- 'What are lab managers currently doing to deal with idle equipment?' → A stronger answer: 'We didn't ask that directly in our four interviews, which is a gap — we know three managers called it a problem but we don't know their current workaround. We will add that question to our next round of interviews so we understand what we're actually competing with.'\nWeak spots:\n- Two unsupported claims were made in the first two turns — inflated interview count and fabricated paying customers — and both were immediately exposed by the challenger; severe: a single credibility failure early in a real investor or partner meeting can end the conversation, and the fix is to run every claim against your records before you speak.\n- The willingness to pay a 10% booking fee has no evidence at all — not even a customer quote — yet it is a fatal assumption in your records; high: without this, the entire revenue model is speculation, and a structured willingness-to-pay test with even two departments would move it from assertion to data.\n- You have no record of what lab managers currently do about idle equipment, which means you don't know the strength of the problem or what you're replacing; medium: if an informal solution already exists, your product may have no wedge — one follow-up question in your next four interviews would answer this.\nClaims the records don't support:\n- 'We already have 50 paying customers lined up': your records show four interviews, no payments, no pre-orders, and no letters of intent recorded anywhere.\n- 'We interviewed 30 lab managers and all of them loved it': your records show four interviews, three of whom said idle equipment is a problem — no figure of thirty appears anywhere in your records.",
+  "feedback_seconds": 12.6,
+  "checks": [
+    {
+      "check": "turn 1: under 120 words",
+      "ok": true,
+      "detail": "21 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 120 words",
+      "ok": true,
+      "detail": "46 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: under 120 words",
+      "ok": true,
+      "detail": "22 words"
+    },
+    {
+      "check": "turn 3: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 3: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: under 120 words",
+      "ok": true,
+      "detail": "32 words"
+    },
+    {
+      "check": "turn 4: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 4: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: under 120 words",
+      "ok": true,
+      "detail": "30 words"
+    },
+    {
+      "check": "turn 5: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 5: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 6: under 120 words",
+      "ok": true,
+      "detail": "38 words"
+    },
+    {
+      "check": "turn 6: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 6: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "names the gap with the records after turn 1",
+      "ok": true,
+      "detail": "Your records show four interviews and no experiments, no payments, no pre-orders recorded anywhere. Where are these 50 paying customers documented?"
+    },
+    {
+      "check": "names the gap with the records after turn 3",
+      "ok": true,
+      "detail": "Your records show four interviews, not thirty. Which is the accurate number, and do you have notes or recordings from those conversations?"
+    },
+    {
+      "check": "tough, never rude",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the feedback scores every rubric dimension",
+      "ok": true,
+      "detail": "clarity, consistency, evidence, honesty"
+    },
+    {
+      "check": "the feedback lists the unsupported claim with 50",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the feedback lists the unsupported claim with 30",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the feedback lists the weak spots",
+      "ok": true,
+      "detail": "3 listed"
+    }
+  ],
+  "judge": {
+    "scores": {
+      "in_role": 5,
+      "knowledge": 5,
+      "pressure": 5,
+      "feedback_accuracy": 5,
+      "feedback_useful": 5
+    },
+    "mean": 5.0,
+    "reasons": {
+      "in_role": "Challenger stayed in character throughout, naming gaps from the records immediately, pressing each fabricated claim with a single sharp question, acknowledging Ravi's honest correction briefly, and never coaching, praising, or grading.",
+      "knowledge": "Every challenge was grounded strictly in the recorded evidence — four interviews, no payments, no experiments — and nothing was invented or assumed beyond what the team said or the records showed.",
+      "pressure": "At Realistic difficulty the character correctly escalated from exposing the paying-customers fabrication, to the inflated interview count, to current workarounds, to who actually pays the fee — each press targeted the riskiest untested assumption in sequence without personal attack.",
+      "feedback_accuracy": "The scores, what-worked points, and weak-spots map precisely onto the session: the two fabricated claims are flagged as severe credibility failures, Ravi's fee admission and Mei's self-correction are credited, and the pivot-dodge pattern is correctly identified.",
+      "feedback_useful": "Every fix is concrete and bounded by the team's own records — rehearse real numbers, answer before pivoting, design one willingness-to-pay test — and the stronger-answer models use only the four interviews and zero payments that are actually documented."
+    },
+    "fix": "The character should have followed its final question ('who actually pays the fee?') with one more press if the team had answered, but since the session ended there, the single most important improvement is for the feedback to add a specific willingness-to-pay test design (e.g., 'show a mock invoice to two lab managers and record yes/no') rather than leaving 'a structured test' as a concept the team must still invent."
+  }
+}

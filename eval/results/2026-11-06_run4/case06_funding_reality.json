@@ -1,0 +1,120 @@
+{
+  "case": "case06_funding_reality",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Ava",
+      "text": "We want to raise $1 million from angels to build the app. Investors will back us because we're passionate.",
+      "reply": "Passion is a reason you'll work hard; it's not a reason an investor writes a check. Angels want evidence that a real, painful problem exists and that people will pay to solve it — before any app is built.\n\nThe good news: you don't need $1M or an app to find that out. Talk to 10 students without cars this week and ask them to describe the last time they needed groceries and couldn't get them — what they did, how long it took, what it cost.\n\nWho on your team will run those interviews — Ava or Marcus — and can you get to 10 by end of this week?",
+      "error": "",
+      "seconds": 12.2,
+      "updates": [
+        "New assumption H1: Students without cars on campus have a painful grocery access problem worth paying to solve.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?",
+        "New experiment (draft): Interview 10 car-free students; ask them to describe the last time they needed groceries and couldn't get them — what they did, how long it took, what it cost them."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Marcus",
+      "text": "We don't have users yet, but we will after the money.",
+      "reply": "That's backwards from how angels work — they fund traction, not the promise of it. Without evidence that students feel this pain, you have no leverage in any funding conversation.\n\nThe experiment draft is already set: 10 interviews with car-free students, asking about the last time they struggled to get groceries. That costs nothing and takes a week. The result either proves H1 or saves you from building something nobody needs.\n\nAva, Marcus — who owns this, and can you get 10 interviews done by next Friday?",
+      "error": "",
+      "seconds": 3.1,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "111 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "87 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 4,
+      "respect": 5,
+      "next_step": 5
+    },
+    "mean": 4.5,
+    "reasons": {
+      "challenge": "Directly reframes both 'passion' and 'money-before-users' as backwards without dismissing the venture idea itself.",
+      "evidence": "Correctly treats H1 as an untested assumption and records nothing stronger than what the team reported; the proposed interview design targets 'said/did' evidence appropriately.",
+      "focus": "The core message is sharp, but across two turns the mentor repeats the same experiment prompt almost verbatim, adding length without adding new information.",
+      "handoff": "No human handoff was needed at this stage and none was triggered; the mentor correctly notes the funding consultant exists but does not prematurely route the team there.",
+      "respect": "Honest and direct ('that's backwards') without flattery or idea-judgment; tone stays constructive throughout.",
+      "next_step": "Leaves a concrete, zero-cost, time-boxed action (10 interviews by end of week) with named accountability (Ava or Marcus)."
+    },
+    "fix": "Eliminate the near-identical closing question repeated in session 1 turn 2 — once the experiment is set and ownership is asked, the second turn should either advance the conversation or stay silent rather than re-asking the same prompt, which wastes the team's attention and dilutes the sharpness of the coaching."
+  }
+}

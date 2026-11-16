@@ -1,0 +1,40 @@
+{
+  "id": "p02_challenger_catches_contradictions",
+  "source": "Practice design 2026-11-07 (practice characters, design section 10): the challenger names what the team says that its records don't support",
+  "venture": {
+    "name": "LabLoop",
+    "description": "A booking platform for idle lab equipment across university departments.",
+    "members": ["Ravi Shah", "Mei Lin"],
+    "segment": "Research labs in the biology and chemistry departments",
+    "answers": {
+      "cd_interviews": {"text": "4 interviews with lab managers; 3 said idle equipment is a problem", "rung": 3}
+    },
+    "assumptions": [
+      {"statement": "Lab managers will list idle equipment for others to book", "importance": 4,
+       "evidence": [{"text": "3 of 4 lab managers said they would list equipment", "direction": "for", "rung": 3}]},
+      {"statement": "Departments will pay a 10% booking fee", "importance": 4, "evidence": []},
+      {"statement": "Faculty will allow outside users in their labs", "importance": 3,
+       "evidence": [{"text": "1 of 4 lab managers said faculty would refuse outsiders", "direction": "against", "rung": 3}]}
+    ]
+  },
+  "practice": {"character": "challenger", "scenario": "holes", "difficulty": "Realistic"},
+  "turns": [
+    ["Ravi", "We already have 50 paying customers lined up."],
+    ["Ravi", "Well, they're departments that said they're interested. Nobody has paid yet."],
+    ["Mei", "We interviewed 30 lab managers and all of them loved it."],
+    ["Mei", "Okay, it was 4 interviews. 3 of them said idle equipment is a problem."],
+    ["Ravi", "If faculty refuse outside users, we'd start with the shared core facilities instead."],
+    ["Ravi", "We don't know yet whether departments will pay the 10% fee. We plan to test it with two departments next month."]
+  ],
+  "expect": {
+    "names_gap_after": [{"turn": 1, "words": ["record", "paid", "payment"]},
+                        {"turn": 3, "words": ["4", "four", "record"]}],
+    "no_rudeness": true,
+    "max_words": 120,
+    "unsupported_mention": ["50", "30"],
+    "problems_listed": true
+  },
+  "good_character": "Names the gaps between what the team says and its records right away (50 paying customers vs. no payment recorded; 30 interviews vs. 4 recorded), one sharp question at a time; presses on the riskiest assumptions (the booking fee and faculty access); acknowledges the honest corrections briefly; tough on the idea, never rude or personal; never coaches.",
+  "good_feedback": "Flags both unsupported claims (50 paying customers, 30 interviews) as costing trust; credits the honest corrections and the plan to test the fee; lists the weak spots with severity and what would settle each: the untested fee (severe), faculty access (high), the small interview base.",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

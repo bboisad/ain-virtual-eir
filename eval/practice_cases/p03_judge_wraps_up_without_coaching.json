@@ -1,0 +1,37 @@
+{
+  "id": "p03_judge_wraps_up_without_coaching",
+  "source": "Practice design 2026-11-07 (practice characters, design section 10): the judge notes an overlong pitch, asks 3 to 5 questions, never coaches or scores during the session, and closes",
+  "venture": {
+    "name": "GreenCrate",
+    "description": "Reusable delivery crates for campus food vendors, washed on campus.",
+    "members": ["Sofia Marquez"],
+    "segment": "Food trucks and cafés on campus that deliver meals to offices and labs",
+    "answers": {
+      "pd_commitment": {"text": "Two cafés agreed to a free two-week trial starting next month", "rung": 4}
+    },
+    "assumptions": [
+      {"statement": "Vendors will pay $2 per crate per month", "importance": 4, "evidence": []},
+      {"statement": "At least 90% of crates come back each week", "importance": 3, "evidence": []}
+    ]
+  },
+  "practice": {"character": "judge", "scenario": "pitch", "difficulty": "Realistic"},
+  "turns": [
+    ["Sofia", "Every lunchtime on our campus, food trucks and cafés deliver hundreds of meals to offices and labs, and every one of those meals arrives in a disposable box. Last semester we counted the trash bins behind two office buildings for a week: by Friday they were overflowing with single-use containers, most of them barely dirty. The vendors don't like it either. One café owner told us that packaging is now his third-largest cost after staff and ingredients, and that he spends forty minutes a day breaking down boxes.\n\nGreenCrate replaces those boxes with sturdy reusable crates. A vendor packs the order into a crate with our insulated liners, the office keeps it until the next delivery, and the driver picks up the empty crates on the next run. We wash them in a small station on campus and put them back into rotation the same afternoon. Every crate has a QR code, so the vendor knows where each one is, and a crate that goes missing is charged to the office that last had it.\n\nOur first customers are the food trucks and cafés on campus that deliver to offices. There are about forty of them, and they deliver to roughly two hundred offices and labs. They are a tight group: they park in the same lots, they share a supplier, and they talk to each other every day. If two or three of them switch, the others will hear about it within a week.\n\nSo far two cafés have agreed to a free two-week trial starting next month. We will track how many crates come back, how long washing takes, and whether the drivers find the pick-up easy or annoying. If at least ninety percent of the crates come back and the drivers want to keep going, we will offer the vendors a paid plan.\n\nWe plan to charge two dollars per crate per month. A vendor using fifty crates would pay one hundred dollars a month, which is less than what the café owner told us he spends on boxes every week. Offices pay nothing, which keeps the friction on their side low, and the university's sustainability office has said it likes the idea of fewer bins behind its buildings.\n\nThe alternatives today are disposable packaging, which vendors already pay for and dislike, and a few vendors who use their own bins, which get lost because nobody tracks them. Big delivery apps are experimenting with reusable packaging in a few cities, but none of them work with small campus vendors, and none of them wash locally.\n\nI'm a supply-chain major, and I spent the last two summers in a warehouse that runs a returnable-pallet system, so I know how easily returnable things disappear. My co-founder runs a café delivery route on campus three days a week, so he talks to the drivers every day.\n\nWe are asking for the prize to buy three hundred crates and to set up the washing station for the pilot. With that, we can run the trial with two cafés, then grow to ten vendors by the end of the semester. Thank you."],
+    ["Sofia", "Two cafés have agreed to a free two-week trial starting next month. Nobody has paid yet."],
+    ["Sofia", "We'd charge $2 per crate per month, but we haven't tested that price with any vendor."],
+    ["Sofia", "Disposable packaging is the alternative, and a few vendors use their own bins that get lost."],
+    ["Sofia", "I'm a supply-chain major, and my co-founder drives a café delivery route three days a week."],
+    ["Sofia", "We'd use the prize for 300 crates and the washing station, so we can run the two-café trial."]
+  ],
+  "expect": {
+    "first_reply_mentions": ["over", "long", "minute", "time", "three"],
+    "no_coaching": true,
+    "no_score_talk": true,
+    "wraps_up_within": 6,
+    "max_words": 90,
+    "delivery_at_most": 3
+  },
+  "good_character": "A fair panel judge: says briefly that the pitch ran over three minutes, then asks 3 to 5 sharp questions one at a time (what vendors actually did, the untested price, crate returns, competition, the ask), follows up once on a vague answer, never praises, coaches or announces a score, and closes politely after the last question.",
+  "good_feedback": "Scores delivery low because the pitch ran about a minute over; credits the concrete problem story and the honest 'nobody has paid yet'; fixes: cut the pitch to about 400 words, mark the $2 price as untested with the trial as its test, and give the exact ask (how much, for which milestone).",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

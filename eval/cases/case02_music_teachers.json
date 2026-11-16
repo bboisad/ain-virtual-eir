@@ -1,0 +1,30 @@
+{
+  "id": "case02_music_teachers",
+  "source": "Roberto Colangelo, AIN Center, 2026-10-22 meeting, example 2: the voice device for music teachers [16:27-17:27]",
+  "venture": {
+    "name": "VocalGuard",
+    "description": "A small wearable that warns singing teachers when they strain their voice.",
+    "members": [
+      "Sam Rivera",
+      "Noor Haddad"
+    ]
+  },
+  "sessions": [
+    [
+      [
+        "Sam",
+        "Our customers are music teachers. They all lose their voices and they need this."
+      ],
+      [
+        "Noor",
+        "We think we can sell it for $250."
+      ]
+    ]
+  ],
+  "expect": {
+    "handoff": false,
+    "max_rung": 1
+  },
+  "good_eir": "Asks who it is for and who pays: music teachers have little money; would insurance or the school district pay; how much does it cost? Opens the other options without destroying the idea: call-center staff, broadcasters, why only this group? The $250 price is an assertion until someone pays.",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

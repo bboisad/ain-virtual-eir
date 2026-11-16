@@ -1,0 +1,33 @@
+{
+  "id": "case06_funding_reality",
+  "source": "Roberto Colangelo, AIN Center, 2026-10-22 meeting, example 6: no one gives you a million because you are nice [19:56-20:18]",
+  "venture": {
+    "name": "CampusCart",
+    "description": "Grocery delivery for students without a car.",
+    "members": [
+      "Ava Chen",
+      "Marcus Bell"
+    ]
+  },
+  "sessions": [
+    [
+      [
+        "Ava",
+        "We want to raise $1 million from angels to build the app. Investors will back us because we're passionate."
+      ],
+      [
+        "Marcus",
+        "We don't have users yet, but we will after the money."
+      ]
+    ]
+  ],
+  "expect": {
+    "handoff": false,
+    "max_rung": 1,
+    "consultants": [
+      "funding"
+    ]
+  },
+  "good_eir": "Investors want many times their money back, not passion: which milestone would the money buy, why that amount, what traction exists? Points to non-dilutive options and to getting first users before raising. Gives no valuation. May bring in the funding consultant.",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

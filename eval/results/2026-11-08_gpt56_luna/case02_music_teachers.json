@@ -1,0 +1,114 @@
+{
+  "case": "case02_music_teachers",
+  "model": "gpt-5.6-luna",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Sam",
+      "text": "Our customers are music teachers. They all lose their voices and they need this.",
+      "reply": "“Music teachers” is still broad, and “they all lose their voices” is currently an assertion, not customer evidence. We need separate the user from the painful event: which teachers, how often does strain occur, and what consequence makes them seek help? This matters because a wearable only has a market if the problem is frequent and costly enough to change behavior. Sam, interview five music teachers this week without pitching VocalGuard; record their teaching context, last voice-strain episode, current workaround, and concrete impact on lessons, time, or income. Are you targeting private vocal instructors, school music teachers, choir directors, or another group?",
+      "error": "",
+      "seconds": 5.4,
+      "updates": [
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?",
+        "New assumption H1: Music teachers experience voice strain or voice loss that is painful or costly enough to motivate seeking a solution."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Noor",
+      "text": "We think we can sell it for $250.",
+      "reply": "Noor, $250 is a price hypothesis, not evidence that music teachers will pay it; we still have no validated problem or identified payer. Price matters only after knowing whose budget covers it and whether the avoided consequence is worth $250. Noor, ask five target teachers this week what they currently spend to prevent or recover from voice strain, then run a separate prepay test offering VocalGuard at $250 with a refundable deposit; record refusals and payments, not enthusiasm. Is the buyer the individual teacher, a school, or a studio owner?",
+      "error": "",
+      "seconds": 2.7,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "102 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "90 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 4,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 5
+    },
+    "mean": 4.83,
+    "reasons": {
+      "challenge": "The mentor appropriately challenges both the broad customer claim and the unsupported $250 price without dismissing the concept.",
+      "evidence": "It correctly distinguishes assertions and price hypotheses from interviews, observed behavior, deposits, and payments, while recording only supported assumptions.",
+      "focus": "It asks the right questions and proposes useful tests, though the two responses together include several subquestions and could prioritize the payer and initial segment more tightly.",
+      "handoff": "No human handoff is needed because the issues are ordinary customer discovery and pricing validation rather than specialized EIR matters.",
+      "respect": "The tone is direct, neutral, and respectful, focusing on evidence rather than judging the venture.",
+      "next_step": "It gives concrete five-person interview assignments and a refundable-deposit prepay test, with specific evidence to record."
+    },
+    "fix": "Sequence the work more sharply: first choose a specific teacher segment and identify who pays, then test the problem and only afterward run the $250 prepayment experiment."
+  }
+}

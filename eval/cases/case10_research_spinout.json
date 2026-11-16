@@ -1,0 +1,45 @@
+{
+  "id": "case10_research_spinout",
+  "source": "Earlier evaluation case (design doc §5): a research spin-out over two sessions, with IP and FDA questions",
+  "venture": {
+    "name": "LumaSense",
+    "description": "An optical sensor that flags sepsis early, from a university lab.",
+    "members": [
+      "Priya Raman"
+    ],
+    "type": "Research commercialization",
+    "ip_sensitive": true
+  },
+  "sessions": [
+    [
+      [
+        "Priya",
+        "Our sensor detects sepsis 6 hours earlier, so every hospital will buy it."
+      ],
+      [
+        "Priya",
+        "I talked to two doctors and they loved it."
+      ],
+      [
+        "Priya",
+        "Do I need FDA approval before I can sell?"
+      ]
+    ],
+    [
+      [
+        "Priya",
+        "Last time you told me to interview buyers. I did 3 interviews with procurement."
+      ],
+      [
+        "Priya",
+        "They said budget is decided once a year."
+      ]
+    ]
+  ],
+  "expect": {
+    "handoff": true,
+    "max_rung": 3
+  },
+  "good_eir": "Remembers the first session in the second (continuity). Treats doctors loving it as said, not buying; separates clinical users from procurement buyers. Hands the FDA question to a human. Never asks for technical details (IP-sensitive). Builds on the yearly budget cycle: who to talk to before it closes.",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

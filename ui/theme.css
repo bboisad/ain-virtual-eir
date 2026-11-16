@@ -1,0 +1,109 @@
+/* Visual tokens for the prototype. Theme colors themselves live in .streamlit/config.toml. */
+:root {
+  --ink: #163d33;
+  --muted: #6b7a75;
+  --line: #e3e8e6;
+  --chip-bg: #e9efec;
+  --chip-fg: #2c3e38;
+  --chip-warn-bg: #fdf1dc;
+  --chip-warn-fg: #7a4b00;
+  --chip-ok-bg: #e3f2ea;
+  --chip-ok-fg: #1d5c45;
+  --chip-bad-bg: #fbe7e5;
+  --chip-bad-fg: #8a2a1f;
+}
+
+.block-container { max-width: 1440px; padding: 3.6rem 2rem 3rem; }  /* top padding clears the Streamlit header */
+h1, h2, h4 { color: var(--ink); letter-spacing: -0.01em; }
+
+.chip { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.8rem; margin: 0 4px 4px 0;
+        background: var(--chip-bg); color: var(--chip-fg); }
+.chip.warn { background: var(--chip-warn-bg); color: var(--chip-warn-fg); }
+.chip.ok { background: var(--chip-ok-bg); color: var(--chip-ok-fg); }
+.chip.bad { background: var(--chip-bad-bg); color: var(--chip-bad-fg); }
+.muted { color: var(--muted); font-size: 0.85rem; }
+.eyebrow { color: var(--muted); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Top bar: venture and lead mentor · the three pages · the menu */
+.st-key-topbar { border-bottom: 1px solid var(--line); padding-bottom: 6px; margin-bottom: 4px; }
+.venture-name { font-size: 1.25rem; font-weight: 700; color: var(--ink); line-height: 1.25; }
+.st-key-topbar [data-testid="stButtonGroup"] { justify-content: center; }
+
+/* Mentor chat */
+[data-testid="stChatMessage"] img { border-radius: 50%; }
+[data-testid="stChatMessage"] { padding: .75rem; }
+[data-testid="stChatMessage"] [data-testid="stButton"] button { min-height: 1.7rem; padding: .1rem .6rem; font-size: .8rem; }
+.st-key-mentor_briefing { background: #f6f9f7; }
+.chat-note { text-align: center; color: var(--muted); font-size: .8rem; margin: .4rem 0 .8rem;
+             border-top: 1px dashed var(--line); padding-top: .4rem; }
+
+/* Overview, the project's homepage (ui/pages/overview.py, v0.19). One main block, the focus card. Each block marks
+   its source once: the team's words (✎), the records (✓), the Virtual EIR's suggestion (✦, purple). */
+.src { display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .02em; padding: 1px 9px;
+       border-radius: 999px; vertical-align: middle; margin-left: 4px; text-transform: none; }
+.src.team { background: #eef2f0; color: #3d4f49; }
+.src.records { background: var(--chip-ok-bg); color: var(--chip-ok-fg); }
+.src.eir { background: #ece8fb; color: #43398f; }
+.st-key-ov_head h2 { margin-bottom: 0; padding-bottom: 0; }
+.ov-line { font-size: 1.12rem; color: var(--ink); margin: .1rem 0 .15rem; }
+.st-key-ov_focus, .st-key-ov_start { background: #f6f4fd; border-left: 4px solid #6b5fc7; border-radius: 10px;
+                                     padding: 16px 20px 10px; margin: .7rem 0 .9rem; }
+.st-key-ov_focus h3, .st-key-ov_start h3 { margin: .1rem 0 .3rem; color: #2a2560; }
+.ov-k { color: var(--muted); font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.ov-steps { display: flex; flex-wrap: wrap; gap: 6px; margin: .1rem 0 .35rem; }
+.ov-step { font-size: .82rem; padding: 3px 12px; border-radius: 999px; background: var(--chip-bg); color: var(--muted); }
+.ov-step.done { background: var(--chip-ok-bg); color: var(--chip-ok-fg); }
+.ov-step.now { background: #216451; color: #fff; font-weight: 600; }
+.ov-draft { color: #43398f; font-weight: 600; font-size: .85rem; }
+.chip.ai { background: #e8e4fb; color: #43398f; font-weight: 600; letter-spacing: 0; }
+.st-key-ov_add [data-testid="stFileUploaderDropzone"] { border: 2px dashed #216451; background: #f3f8f5; }
+.st-key-ov_saved { background: #f1f7f3; }
+
+/* Consultant rail and drawer (Mentor page; docs/DECISIONS.md "Consultant drawer"). The page adds its right padding
+   and the consultants' colours (ui/consult_drawer.py). The header is 3.75rem high: both start below it. */
+.st-key-consult_rail { position: fixed; top: 3.75rem; right: 0; bottom: 0; width: 76px; z-index: 1002;
+                       background: #fff; border-left: 1px solid var(--line); padding-top: 14px; align-items: center;
+                       gap: .35rem; }
+.st-key-consult_rail button { width: 46px; height: 46px; min-height: 46px; border-radius: 50%; padding: 0;
+                              font-weight: 700; }
+[class*="st-key-railitem_"] { align-items: center; gap: 2px; padding-bottom: 18px; }
+[class*="st-key-railitem_"][class*="_unused"] button { filter: grayscale(1); opacity: .45; }
+[class*="st-key-railitem_"][class*="_open"] button { box-shadow: 0 0 0 3px #d98a00 !important; }
+.rail-title { font-size: .62rem; color: var(--muted); text-align: center; padding-bottom: 14px; }
+.rail-name { font-size: .68rem; color: var(--muted); text-align: center; }
+/* The drawer leaves a strip of the mentor chat visible on the left, whatever the screen width. Streamlit gives the
+   container its own width: "auto" lets left and right decide. */
+.st-key-consult_drawer { position: fixed; top: 3.75rem; bottom: 0; right: 76px; left: 26vw; width: auto !important;
+                         z-index: 1001; background: #fff; box-shadow: -12px 0 32px rgba(0,0,0,.14);
+                         padding: 14px 24px 18px; overflow-y: auto; }
+.st-key-consult_transcript { max-height: calc(100vh - 22rem) !important; min-height: 9rem; }
+.drawer-head { display: flex; gap: 10px; align-items: center; line-height: 1.3; }
+.drawer-head img { border-radius: 50%; }
+
+/* Practice (ui/pages/practice.py): home cards, the session, the feedback card. Character colours come from the page. */
+.practice-who { display: flex; gap: 10px; align-items: center; line-height: 1.4; }
+.practice-who img { border-radius: 50%; flex: none; }
+.st-key-practice_recommended { background: #f6f9f7; }
+[class*="st-key-pcard_"] { min-height: 100%; }
+.practice-knows { background: #f6f9f7; border-radius: 8px; padding: 8px 10px; font-size: .85rem; color: var(--chip-fg);
+                  margin-bottom: .5rem; }
+.st-key-practice_head { border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 4px; }
+.st-key-practice_transcript { max-height: calc(100vh - 21rem) !important; min-height: 12rem; }
+.st-key-practice_side { background: #fbfcfb; }
+.st-key-practice_wrapped { background: #f1f7f3; }
+.hint-note { background: #fff8dc; border-left: 3px solid #d9a400; border-radius: 6px; padding: 8px 10px; margin: 6px 0;
+             font-size: .85rem; color: #4d3b00; }
+.score-big { text-align: right; font-size: 2.3rem; font-weight: 700; color: var(--ink); line-height: 1; }
+.score-big span { font-size: 1rem; color: var(--muted); font-weight: 500; }
+.score-bars { margin: .3rem 0 .9rem; max-width: 720px; }
+.score-row { display: grid; grid-template-columns: minmax(150px, 230px) 1fr 22px; gap: 12px; align-items: center;
+             font-size: .85rem; margin: 5px 0; }
+.score-bar { height: 8px; background: var(--chip-bg); border-radius: 999px; overflow: hidden; }
+.score-fill { display: block; height: 100%; background: #7f9c92; border-radius: 999px; }
+.score-fill.ok { background: #2e7d5b; }
+.score-fill.warn { background: #d08a1e; }
+
+@media (max-width: 760px) {
+  .block-container { padding: 3.5rem 1rem 1.5rem; }
+  .st-key-consult_drawer { left: 0; }
+}

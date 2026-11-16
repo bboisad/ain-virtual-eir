@@ -1,0 +1,305 @@
+{
+  "venture": {
+    "id": "V-LUMA",
+    "name": "LumaSense",
+    "description": "Optical bedside sensor from a university lab that may flag sepsis earlier (fictional research spin-out).",
+    "stage": "Customer validation",
+    "type": "Research commercialization",
+    "members": [
+      {
+        "id": "m1",
+        "name": "Priya Raman",
+        "background": "PhD / Postdoc · Optics lab",
+        "account": "priya",
+        "experience": "First venture"
+      }
+    ],
+    "canvas": {
+      "Customer Segments": {
+        "text": "Hospitals (ICU and emergency departments)",
+        "status": "Student statement",
+        "source": "Priya · intake",
+        "rung": 1,
+        "why": "The team's own statement.",
+        "updated": "Oct 2"
+      },
+      "Value Propositions": {
+        "text": "Detect sepsis risk hours earlier than current practice",
+        "status": "Student statement",
+        "source": "Priya · intake",
+        "rung": 1,
+        "why": "The team's own statement.",
+        "updated": "Oct 2"
+      },
+      "Channels": {
+        "text": "",
+        "status": "Empty",
+        "source": "",
+        "rung": 0,
+        "why": "",
+        "updated": ""
+      },
+      "Customer Relationships": {
+        "text": "",
+        "status": "Empty",
+        "source": "",
+        "rung": 0,
+        "why": "",
+        "updated": ""
+      },
+      "Revenue Streams": {
+        "text": "Sell devices + per-patient sensor patches",
+        "status": "Hypothesis",
+        "source": "Priya · Oct 2 session",
+        "rung": 1,
+        "why": "The team's own statement.",
+        "updated": "Oct 2"
+      },
+      "Key Resources": {
+        "text": "Lab prototype; university-owned IP",
+        "status": "Student statement",
+        "source": "Priya · intake",
+        "rung": 1,
+        "why": "The team's own statement.",
+        "updated": "Oct 2"
+      },
+      "Key Activities": {
+        "text": "",
+        "status": "Empty",
+        "source": "",
+        "rung": 0,
+        "why": "",
+        "updated": ""
+      },
+      "Key Partnerships": {
+        "text": "UR Ventures (tech transfer)",
+        "status": "Hypothesis",
+        "source": "Priya · Oct 2 session",
+        "rung": 1,
+        "why": "The team's own statement.",
+        "updated": "Oct 2"
+      },
+      "Cost Structure": {
+        "text": "",
+        "status": "Empty",
+        "source": "",
+        "rung": 0,
+        "why": "",
+        "updated": ""
+      }
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "statement": "Clinicians want earlier sepsis alerts",
+        "owner": "m1",
+        "status": "Testing",
+        "evidence": "2 clinicians were enthusiastic in informal conversations",
+        "source": "Priya · Oct 2",
+        "rung": 3,
+        "importance": 3,
+        "evidence_items": [
+          {
+            "text": "2 clinicians were enthusiastic in informal conversations",
+            "direction": "for",
+            "rung": 3,
+            "source": "Priya · Oct 2",
+            "date": "Oct 2"
+          }
+        ],
+        "updated": "Oct 2"
+      },
+      {
+        "id": "H2",
+        "statement": "Hospitals will buy a new bedside sensor",
+        "owner": "m1",
+        "status": "Untested",
+        "evidence": "",
+        "source": "Priya · Oct 2",
+        "rung": 1,
+        "importance": 4,
+        "evidence_items": [],
+        "updated": "Oct 2"
+      }
+    ],
+    "next_steps": [
+      {
+        "id": "S1",
+        "text": "Interview 3 hospital procurement / value-analysis staff",
+        "owner": "m1",
+        "from_session": "Oct 2",
+        "status": "open",
+        "done_by": null
+      },
+      {
+        "id": "S2",
+        "text": "Check IP disclosure status with UR Ventures",
+        "owner": "m1",
+        "from_session": "Oct 2",
+        "status": "open",
+        "done_by": null
+      }
+    ],
+    "sessions": [
+      {
+        "date": "Oct 2",
+        "mode": "Validate",
+        "attendees": [
+          "m1"
+        ],
+        "summary": "Priya described the sensor and two enthusiastic clinicians. The EIR separated users (clinicians) from buyers (hospital procurement) and asked who actually signs the purchase."
+      }
+    ],
+    "timeline": [
+      {
+        "date": "Sep 25",
+        "kind": "milestone",
+        "text": "Venture registered with the AIN Center",
+        "by": "AIN"
+      },
+      {
+        "date": "Oct 2",
+        "kind": "session",
+        "text": "Validate session — users vs. buyers",
+        "by": "m1"
+      }
+    ],
+    "disagreements": [],
+    "ip_sensitive": true,
+    "profile": {
+      "self_description": "Our lab built an optical bedside sensor that may detect sepsis risk earlier than current monitoring.",
+      "one_liner": "An optical bedside sensor that may flag sepsis risk hours earlier.",
+      "problem": "Sepsis is often recognized late in ICU and emergency settings.",
+      "customer": "Hospitals: ICU and emergency departments (users are clinicians; buyers unclear).",
+      "solution": "A non-invasive bedside sensor with a risk alert (technical details withheld: university IP).",
+      "alternatives": "Current vital-sign monitoring and clinical scoring.",
+      "evidence": "2 informal clinician conversations, both enthusiastic.",
+      "revenue": "Device sale plus per-patient sensor patches (hypothesis).",
+      "need": "Understanding the regulatory path and who buys inside a hospital.",
+      "notes": {
+        "evidence": "Clinicians are users, not buyers. No conversations with hospital purchasing yet."
+      },
+      "completed_by": "m1",
+      "completed_on": "Sep 25"
+    },
+    "module": "M1",
+    "answers": {
+      "cd_segment": {
+        "text": "ICU clinicians at teaching hospitals.",
+        "rung": 1,
+        "source": "Priya · Oct 2"
+      },
+      "cd_problem": {
+        "text": "2 clinicians said earlier sepsis alerts would help them.",
+        "rung": 3,
+        "source": "Priya · Oct 2"
+      }
+    },
+    "lead_mode": "Launch",
+    "mode_choice": {
+      "traction": "Not yet",
+      "goal": "Shape an idea into a plan",
+      "recommended": "Launch",
+      "chosen": "Launch",
+      "by": "m1",
+      "date": "Sep 25"
+    },
+    "focus": {
+      "text": "Who signs the purchase of a new bedside device inside a hospital?",
+      "kind": "assumption",
+      "ref": "H2",
+      "set_by": "eir",
+      "set_at": "Oct 2"
+    },
+    "day_summaries": [
+      {
+        "day": "2026-10-02",
+        "label": "Oct 2",
+        "mentor": "Launch",
+        "messages": 0,
+        "summary": "Priya described the sensor and two enthusiastic clinicians. The EIR separated users (clinicians) from buyers (hospital procurement) and asked who actually signs the purchase."
+      }
+    ],
+    "schema": 2
+  },
+  "script": [
+    {
+      "id": "l1",
+      "speaker": "any",
+      "text": "Two doctors loved it, so hospitals will buy it.",
+      "reply": "Priya, two enthusiastic clinicians tell you the **problem** may matter to users. They don't tell you who **buys**.\n\nNew devices usually go through a hospital purchasing or value-analysis process. Your open follow-up was to interview 3 of those people — that's still the most important next step.\n\n**Why:** in hospitals, the user, the buyer and the payer are often three different people."
+    },
+    {
+      "id": "l2",
+      "speaker": "any",
+      "text": "Do I need FDA approval before I can sell?",
+      "reply": "Possibly — a device that informs clinical decisions is often regulated, but I can't determine your classification and I shouldn't guess.\n\nThis is a specialist regulatory question, so I recommend a human mentor. I've drafted a **Mentor Brief**; nothing is shared until you approve it.",
+      "tools": [
+        {
+          "name": "request_human",
+          "args": {
+            "topic": "Regulatory pathway (FDA)",
+            "reason": "Device classification needs a specialist"
+          }
+        },
+        {
+          "name": "add_task",
+          "args": {
+            "text": "Meet an AIN regulatory mentor about device classification",
+            "owner": "Priya"
+          }
+        }
+      ]
+    },
+    {
+      "id": "l3",
+      "speaker": "any",
+      "text": "I haven't had time to do the procurement interviews yet.",
+      "reply": "Understood — lab work competes for your time. Let's shrink it: **one** 20-minute call this week instead of three.\n\nWho is one person who could introduce you to someone in hospital purchasing? Name them and I'll keep it on the list for next time.",
+      "tools": [
+        {
+          "name": "add_task",
+          "args": {
+            "text": "Book ONE 20-minute call with someone in hospital purchasing",
+            "owner": "Priya"
+          }
+        }
+      ]
+    }
+  ],
+  "consult_script": {
+    "funding": {
+      "lines": [
+        {
+          "id": "f1",
+          "speaker": "any",
+          "text": "An angel investor offered $200k for 20% of LumaSense. Should we take it?",
+          "reply": "An offer with a valuation and an equity share goes to a human AIN EIR, not to me. I'll flag it in my summary so your mentor routes it to someone with fundraising experience. Please don't sign anything before that conversation.\n\nWhat I can help with is readiness: which milestone would the $200k buy, and how did you arrive at that amount?"
+        },
+        {
+          "id": "f2",
+          "speaker": "any",
+          "text": "It would pay for the procurement interviews and a pilot at one hospital.",
+          "reply": "That is a clear milestone. A hospital pilot usually needs procurement and research approvals first, and at that stage non-dilutive money (AIN competitions, grants) often fits better than equity. Which of those have you looked at?\n\nI think we have enough for your mentor: the offer goes to a human, and the readiness questions are clear. Shall I write the summary?",
+          "propose_end": true
+        }
+      ],
+      "summary": {
+        "conclusions": [
+          "The angel's offer ($200k for 20%) is a valuation and equity decision: it goes to a human EIR.",
+          "The money would buy procurement interviews and a pilot at one hospital: a clear milestone (what Priya said)."
+        ],
+        "missing_evidence": [
+          "Any hospital's commitment to a pilot: none is recorded yet."
+        ],
+        "suggested_todos": [
+          "List the non-dilutive options for the pilot before answering the angel"
+        ],
+        "needs_human": true,
+        "human_topic": "valuation and equity offer",
+        "disagreements": [],
+        "out_of_scope": []
+      }
+    }
+  }
+}

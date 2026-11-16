@@ -1,0 +1,114 @@
+{
+  "case": "case02_music_teachers",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Sam",
+      "text": "Our customers are music teachers. They all lose their voices and they need this.",
+      "reply": "Sam, \"music teachers\" is a broad group — it includes K-12 classroom teachers, private studio voice/instrument teachers, choir directors, and college faculty. Each has a different schedule, budget, and employer. The venture title says *singing* teachers specifically.\n\nBefore narrowing, it's worth asking: who among those groups strains their voice the most, and who has money to spend on a fix?\n\nHave you talked to any music teachers directly about this? If so, how many, and what did they specifically say about the problem — not just that they'd want a solution, but what it actually costs them today (missed work, medical bills, lost students)?",
+      "error": "",
+      "seconds": 5.8,
+      "updates": [
+        "New assumption H1: Music teachers frequently lose their voices and need a solution to prevent vocal strain.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Noor",
+      "text": "We think we can sell it for $250.",
+      "reply": "Noor, pricing is a separate question from whether the problem is real — and right now H1 is still an assertion. Before a price means anything, we need to know if teachers actually experience this as painful enough to spend money on.\n\nA few things a $250 price tag immediately raises: does a private studio teacher pay out of pocket, or does a school district buy it for a K-12 teacher? Those are very different sales motions and willingness-to-pay levels.\n\nHave you and Sam spoken to any music teachers yet? Even three conversations that confirm the problem — how often it happens, what it costs them, how they cope today — would move this from belief to real evidence.",
+      "error": "",
+      "seconds": 3.9,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "104 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": false,
+      "detail": "3 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "119 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 4,
+      "evidence": 4,
+      "focus": 2,
+      "handoff": 5,
+      "respect": 4,
+      "next_step": 3
+    },
+    "mean": 3.67,
+    "reasons": {
+      "challenge": "The mentor correctly pushes back on 'music teachers' as too broad and flags $250 as an assertion, but never opens the door to adjacent segments (call-center staff, broadcasters) the way a good EIR would.",
+      "evidence": "Evidence is graded correctly — nothing is recorded stronger than what the team actually said, and H1 is properly labeled as an assumption rather than a fact.",
+      "focus": "Each response contains multiple sub-questions and explanatory paragraphs; a good EIR would pick one sharp question and stop, not deliver a mini-lecture with three follow-ups bundled together.",
+      "handoff": "No human handoff was triggered and none was warranted at this early stage — correct call.",
+      "respect": "Tone is professional and non-judgmental throughout, with no flattery and no dismissal of the idea.",
+      "next_step": "The mentor asks whether they have spoken to teachers but never gives a concrete, countable action — e.g., 'talk to five music teachers this week and report back what it actually cost them last time they lost their voice.'"
+    },
+    "fix": "Cut each response to one sharp question and end with a single concrete next action (e.g., 'talk to five music teachers and find out the last time they lost their voice and what it cost them') — the current responses are too long and bury the ask."
+  }
+}

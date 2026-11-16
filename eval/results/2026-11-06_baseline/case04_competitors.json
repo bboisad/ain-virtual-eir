@@ -1,0 +1,120 @@
+{
+  "case": "case04_competitors",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "There are no competitors. Nobody makes flashcards from slides with AI.",
+      "reply": "Leo, that's a strong claim — and it matters a lot, because if a close substitute already exists, your value proposition shrinks fast. Before I take it as fact, I'd push back gently: tools like Anki, Quizlet, Notion AI, and even ChatGPT can all turn pasted slide text into flashcards today. Students may not think of them as \"competitors,\" but they solve the same job.\n\nThe real question isn't whether anyone has built the *exact* same product — it's **what students do today when they need to study from slides**. That's your actual competition.\n\nSo two questions:\n1. Have you talked to any students about how they currently study from lecture slides?\n2. What would make FlashForge meaningfully harder to copy than \"just paste your slides into ChatGPT\"?\n\nThe second question is about your defensible advantage — we'll need to answer it eventually. But the first one is more urgent right now, because we don't yet have evidence the problem is real and painful enough for students to switch to something new.",
+      "error": "",
+      "seconds": 8.5,
+      "updates": [
+        "New assumption H1: No competitors exist that generate flashcards from lecture slides using AI."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "Quizlet does flashcards, but ours is better because it uses AI.",
+      "reply": "Leo, \"better because it uses AI\" is a feature, not yet a reason a student would switch. Quizlet already has AI features built in — so the question becomes: **better in what specific way, for what specific moment in a student's week?**\n\nBefore we go further on the solution, I want to make sure the problem is solid. We don't yet have evidence that students find their current study workflow painful enough to change tools.\n\nCan you tell me: **have you talked to any students about how they actually study from lecture slides today?** Even 3–5 honest conversations would tell us more than any feature comparison. What do they do the night before an exam — do they make flashcards at all, and if so, how?",
+      "error": "",
+      "seconds": 6.0,
+      "updates": [
+        "Assumption H1: reworded to \"No meaningful competitors exist that generate flashcards from lecture slides using AI — Quizlet and ChatGPT are not close substitutes.\"; importance high → fatal"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "172 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "126 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": false,
+      "detail": "3 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 4,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.33,
+    "reasons": {
+      "challenge": "The mentor correctly refuses 'no competitors,' names real substitutes (Anki, Quizlet, ChatGPT), reframes competition as the job-to-be-done, and pushes on defensibility without dismissing the idea.",
+      "evidence": "The mentor correctly treats Leo's claims as unverified assertions and records them as assumptions, never upgrading them beyond 'said'; the record update marking H1 as 'fatal' is appropriate given zero customer evidence.",
+      "focus": "Each response contains two good questions but also carries explanatory framing that edges toward lecturing — the second response in particular re-explains the problem-before-solution principle the mentor already stated in session 1.",
+      "handoff": "No human handoff was needed at this early, pre-evidence stage and none was requested or triggered — correct call.",
+      "respect": "Tone is consistently honest and direct ('that's a strong claim,' 'a feature, not yet a reason') without flattery or idea-judgment, and 'gently' signals appropriate calibration.",
+      "next_step": "Both responses point clearly to customer discovery conversations (3–5 students, specific questions about study workflow), though the action could be sharpened with a concrete deadline or a specific script prompt."
+    },
+    "fix": "Trim the explanatory prose in the second response — the mentor re-teaches problem-before-solution when Leo already heard it; replace that paragraph with one sharper constraint, e.g., 'Come back with notes from five student conversations before we touch the feature list again.'"
+  }
+}

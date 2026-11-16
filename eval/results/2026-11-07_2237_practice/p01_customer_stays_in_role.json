@@ -1,0 +1,200 @@
+{
+  "case": "p01_customer_stays_in_role",
+  "model": "databricks-claude-sonnet-4-6",
+  "character": "customer",
+  "scenario": "discovery",
+  "persona": "Darnell, part-time accounting student commuting forty minutes each way",
+  "opening": "Hi, I'm Darnell. I've got about fifteen minutes. What did you want to ask me?",
+  "turns": [
+    {
+      "by": "Dana",
+      "text": "Thanks for meeting me. Tell me about the last time you drove to campus for an early class.",
+      "reply": "I mostly do evening classes, so early morning isn't really my thing. But last Tuesday I had a midterm at 6 PM and I was cutting it close. Left work a little late, the commute's about forty minutes for me, and then when I got to campus the closer lot was full. Had to circle around a couple times before I just gave up and parked in Lot D, which is further out. Ended up walking like ten extra minutes and got to the exam five minutes late. Not great.",
+      "error": "",
+      "seconds": 2.4,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "Don't you think parking on campus is a total nightmare?",
+      "reply": "I mean, it has its moments. Tuesday was rough. But most nights it's okay, I find something eventually. It's just part of the deal, I guess.",
+      "error": "",
+      "seconds": 1.5,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "We're building an app where students with reserved spots rent them out by the hour. Would you use it?",
+      "reply": "Oh, interesting. Maybe, it depends. I'd have to see how it works I guess. I'm not really looking for anything new right now, just kind of managing it the way I do.",
+      "error": "",
+      "seconds": 1.4,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "Would you pay $5 a month for it?",
+      "reply": "Honestly, hard to say. It depends on how often it would actually help me. I already pay $180 for my semester permit, so I'm kind of already locked in to that. Maybe, I don't know.",
+      "error": "",
+      "seconds": 1.6,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "What did being late cost you that day?",
+      "reply": "Stress, mostly. I mean, showing up late to a midterm is not ideal. I don't know if it actually hurt my grade but I was flustered walking in, had less time. And then there's just the frustration of it, you know, I'd left work on time thinking I had enough buffer. That part was annoying.",
+      "error": "",
+      "seconds": 1.8,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "Could I follow up with you next week, and would you introduce me to two other commuters?",
+      "reply": "Sure, you can follow up, that's fine. As for other commuters, I mean, I know a few people but I'd have to think about whether they'd want to be contacted. I can't really promise anything on that.",
+      "error": "",
+      "seconds": 1.5,
+      "wrapped_up": false
+    }
+  ],
+  "feedback": "Overall 2.8 of 5. You opened well and closed with a next step, but you pitched your solution mid-interview and used leading questions that undermined the evidence you were trying to gather.\nScores: Asks about past behaviour 3; Open, non-leading questions 2; Listens instead of pitching 2; Digs into specifics 3; Ends with a next step 4\nWhat worked:\n- Your very first question — 'Tell me about the last time you drove to campus for an early class' — was a textbook past-behaviour opener that got Darnell telling a real story immediately.\n- You ended with a concrete ask: a follow-up next week and introductions to two other commuters, which is exactly the kind of commitment that keeps momentum going.\nFix these:\n- Cut the pitch entirely from problem interviews. Saying 'We're building an app where students with reserved spots rent them out by the hour. Would you use it?' turns a discovery conversation into a sales call and makes every answer that follows unreliable — Darnell's 'maybe' tells you nothing useful.\n- Replace leading questions with open ones. 'Don't you think parking on campus is a total nightmare?' signals the answer you want; try 'How would you describe the parking situation on the nights you come in?' so you hear their real frame, not yours.\n- Follow up vague answers with numbers. When Darnell said the cost was 'stress, mostly,' that was the moment to ask: 'How much time did you lose overall that evening?' or 'Has this happened before — roughly how often in a semester?' Concrete figures are the evidence your team still needs.\nTo check with real customers:\n- Darnell said he already pays $180 for a semester permit and feels 'locked in' — check with real commuters whether holding a permit makes them unwilling to pay anything extra, since that would undercut the $5/month willingness-to-pay assumption entirely.\n- Darnell said parking is rough only occasionally ('most nights it's okay') — check whether the frequency of bad experiences is high enough across your beachhead segment to make a recurring subscription feel worthwhile rather than wasteful.\n- Darnell was hesitant to introduce other commuters without their consent — check whether peer referrals are a reliable recruitment channel or whether you need a different way to reach commuter students at scale.",
+  "feedback_seconds": 9.8,
+  "checks": [
+    {
+      "check": "turn 1: under 110 words",
+      "ok": true,
+      "detail": "90 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 1: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 110 words",
+      "ok": true,
+      "detail": "26 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 2: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: under 110 words",
+      "ok": true,
+      "detail": "32 words"
+    },
+    {
+      "check": "turn 3: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 3: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: under 110 words",
+      "ok": true,
+      "detail": "35 words"
+    },
+    {
+      "check": "turn 4: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 4: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: under 110 words",
+      "ok": true,
+      "detail": "55 words"
+    },
+    {
+      "check": "turn 5: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 5: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 6: under 110 words",
+      "ok": true,
+      "detail": "37 words"
+    },
+    {
+      "check": "turn 6: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 6: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "never says \"ParkSwap\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "knows nothing about the idea before turn 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "promises nothing (no \"sign me up\")",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the feedback scores every rubric dimension",
+      "ok": true,
+      "detail": "listening, next_step, open, past, specifics"
+    },
+    {
+      "check": "the fixes name the main mistake",
+      "ok": true,
+      "detail": "would you, leading, don't you, pitch"
+    },
+    {
+      "check": "the feedback lists what to check with real customers",
+      "ok": true,
+      "detail": "3 listed"
+    }
+  ],
+  "judge": {
+    "scores": {
+      "in_role": 5,
+      "knowledge": 5,
+      "pressure": 3,
+      "feedback_accuracy": 4,
+      "feedback_useful": 5
+    },
+    "mean": 4.4,
+    "reasons": {
+      "in_role": "Darnell stayed fully in character throughout, using only his backstory details, giving appropriately vague 'maybe/depends' answers to hypotheticals, never coaching Dana, and hedging naturally on the referral ask.",
+      "knowledge": "Every detail Darnell mentioned — Lot B, Lot D, the $180 permit, the Tuesday midterm, the forty-minute commute, the bus route gap — maps precisely to his allowed backstory, and he revealed nothing about ParkSwap beyond what Dana described.",
+      "pressure": "Darnell pushed back gently on the leading question and the hypotheticals, but when Dana's 'stress, mostly' answer cried out for a numerical follow-up he let it pass without any resistance, missing a key moment to press for specifics.",
+      "feedback_accuracy": "The feedback correctly identifies the leading question, the mid-interview pitch, and the missed numerical follow-up, and the scores are broadly defensible, though awarding 'Digs into specifics' a 3 is slightly generous given that the one follow-up on cost yielded only vague stress language with no pushback.",
+      "feedback_useful": "Every fix is concrete and immediately actionable — the rewritten question, the specific numerical probes, and the 'To check with real customers' items are grounded in what Darnell actually said rather than generic advice."
+    },
+    "fix": "Darnell should have gently pressed the vague 'stress, mostly' answer himself — something like a brief pause and 'Can you say more about that?' — so the character models the interviewing gap in real time rather than leaving it entirely to the feedback coach to catch."
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "case": "p03_judge_wraps_up_without_coaching",
+  "model": "databricks-claude-sonnet-4-6",
+  "character": "judge",
+  "scenario": "pitch",
+  "persona": "",
+  "opening": "Welcome. You have three minutes for your pitch, then I'll ask a few questions. Whenever you're ready.",
+  "turns": [
+    {
+      "by": "Sofia",
+      "text": "Every lunchtime on our campus, food trucks and cafés deliver hundreds of meals to offices and labs, and every one of those meals arrives in a disposable box. Last semester we counted the trash bins behind two office buildings for a week: by Friday they were overflowing with single-use containers, most of them barely dirty. The vendors don't like it either. One café owner told us that packaging is now his third-largest cost after staff and ingredients, and that he spends forty minutes a day breaking down boxes.\n\nGreenCrate replaces those boxes with sturdy reusable crates. A vendor packs the order into a crate with our insulated liners, the office keeps it until the next delivery, and the driver picks up the empty crates on the next run. We wash them in a small station on campus and put them back into rotation the same afternoon. Every crate has a QR code, so the vendor knows where each one is, and a crate that goes missing is charged to the office that last had it.\n\nOur first customers are the food trucks and cafés on campus that deliver to offices. There are about forty of them, and they deliver to roughly two hundred offices and labs. They are a tight group: they park in the same lots, they share a supplier, and they talk to each other every day. If two or three of them switch, the others will hear about it within a week.\n\nSo far two cafés have agreed to a free two-week trial starting next month. We will track how many crates come back, how long washing takes, and whether the drivers find the pick-up easy or annoying. If at least ninety percent of the crates come back and the drivers want to keep going, we will offer the vendors a paid plan.\n\nWe plan to charge two dollars per crate per month. A vendor using fifty crates would pay one hundred dollars a month, which is less than what the café owner told us he spends on boxes every week. Offices pay nothing, which keeps the friction on their side low, and the university's sustainability office has said it likes the idea of fewer bins behind its buildings.\n\nThe alternatives today are disposable packaging, which vendors already pay for and dislike, and a few vendors who use their own bins, which get lost because nobody tracks them. Big delivery apps are experimenting with reusable packaging in a few cities, but none of them work with small campus vendors, and none of them wash locally.\n\nI'm a supply-chain major, and I spent the last two summers in a warehouse that runs a returnable-pallet system, so I know how easily returnable things disappear. My co-founder runs a café delivery route on campus three days a week, so he talks to the drivers every day.\n\nWe are asking for the prize to buy three hundred crates and to set up the washing station for the pilot. With that, we can run the trial with two cafés, then grow to ten vendors by the end of the semester. Thank you.",
+      "reply": "Your pitch ran a bit over three minutes, just so you know.\n\nSo you mentioned a café owner told you packaging is his third-largest cost — did he actually agree to pay the two dollars per crate per month, or is the paid plan still something you're planning to propose after the trial?",
+      "error": "",
+      "seconds": 1.7,
+      "wrapped_up": false
+    },
+    {
+      "by": "Sofia",
+      "text": "Two cafés have agreed to a free two-week trial starting next month. Nobody has paid yet.",
+      "reply": "Got it. So the $2 per crate per month is your target price — what's it based on, and have you shown that number to either of the two cafés to see how they reacted?",
+      "error": "",
+      "seconds": 1.5,
+      "wrapped_up": false
+    },
+    {
+      "by": "Sofia",
+      "text": "We'd charge $2 per crate per month, but we haven't tested that price with any vendor.",
+      "reply": "Understood. You mentioned 90% crate return as your threshold for moving to a paid plan — what happens to your unit economics if return rates come in lower, say around 75%?",
+      "error": "",
+      "seconds": 1.7,
+      "wrapped_up": false
+    },
+    {
+      "by": "Sofia",
+      "text": "Disposable packaging is the alternative, and a few vendors use their own bins that get lost.",
+      "reply": "That didn't quite answer my question — if 25% of your crates go missing each week, does the $2 per crate per month still cover your costs, or does the model break down?",
+      "error": "",
+      "seconds": 1.4,
+      "wrapped_up": false
+    },
+    {
+      "by": "Sofia",
+      "text": "I'm a supply-chain major, and my co-founder drives a café delivery route three days a week.",
+      "reply": "I appreciate the team background, but I want to stay on the economics for a moment — do you actually know your cost per crate, including washing, replacement, and labor, well enough to say whether $2 covers it even at a 90% return rate?",
+      "error": "",
+      "seconds": 1.7,
+      "wrapped_up": false
+    },
+    {
+      "by": "Sofia",
+      "text": "We'd use the prize for 300 crates and the washing station, so we can run the two-café trial.",
+      "reply": "Thank you, that's all from me. The panel will deliberate.",
+      "error": "",
+      "seconds": 1.0,
+      "wrapped_up": true
+    }
+  ],
+  "feedback": "Overall 2.6 of 5. The pitch opens with a vivid, specific problem and a credible team story, but the Q&A collapsed completely when the judge pressed on unit economics, and the pitch itself ran nearly 45 seconds over time.\nScores: Problem and customer 4; Evidence (said / did / paid) 3; Business model and numbers 2; Competition and advantage 3; Team and the ask 3; Delivery and time 2; Answers to questions 1\nWhat worked:\n- The opening is concrete and sensory: 'by Friday they were overflowing with single-use containers, most of them barely dirty' and the café owner's 40-minutes-a-day detail make the problem feel real before any solution appears.\n- The team credentials land well — your supply-chain background and your co-founder's live delivery route are directly relevant and you named them at the right moment.\nFix these:\n- Cut the pitch to under 400 words: the 'tight group' paragraph and the university sustainability-office sentence can go; use the saved time to state your unit economics in one line — cost per crate (washing + labor + replacement reserve) versus $2 revenue — so the judge can't catch you without an answer.\n- Mark every untested number as a hypothesis out loud: instead of 'We plan to charge two dollars per crate per month,' say 'Our hypothesis is $2 per crate per month — we haven't shown that number to either café yet, and the trial will let us test it'; judges reward honesty about what you know versus what you're testing.\n- Prepare a two-sentence answer to the crate-loss question before you walk in: something like 'At 75% return, we lose roughly one crate in four each week; at our current cost estimate of [X] per crate, that wipes out the subscription margin, which is exactly why 90% is our go/no-go threshold for the trial — we don't know yet whether that's achievable and the trial will tell us.' Right now, when the judge asked about 75% return rates, you answered with your competitive landscape and then your team background, neither of which addressed the question.\nToughest questions:\n- \"If 25% of your crates go missing each week, does the $2 per crate per month still cover your costs, or does the model break down?\" → We don't yet know our full cost per crate — that's one of the things the trial is designed to measure. What we do know is that 90% return is our threshold: below that, replacement costs likely exceed the $2 subscription, so we would pause and redesign the loss-prevention step before moving to a paid plan.\n- \"The $2 per crate per month — what's it based on, and have you shown that number to either of the two cafés?\" → We haven't shown the $2 figure to either café yet. It's based on the café owner's comment that packaging is his third-largest cost and that he spends more than $100 a week on boxes for roughly 50 deliveries — so $2 per crate per month would be less than he pays today. The trial will let us put that number in front of both cafés and watch whether they agree or push back.\n- \"Do you actually know your cost per crate, including washing, replacement, and labor, well enough to say whether $2 covers it even at a 90% return rate?\" → Honestly, no — we have a rough estimate but not a tested one. The prize money buys us the crates and washing station so we can measure actual washing time and labor during the trial; until we run a real cycle we're working with assumptions, and we'll know the true cost per crate by the end of the two-week pilot.\nClaims the records don't support:\n- \"We'd use the prize for 300 crates and the washing station, so we can run the two-café trial.\": your records do not show a 300-crate figure; the number of crates needed for the two-café trial has not been calculated or recorded anywhere in your project files.",
+  "feedback_seconds": 12.4,
+  "checks": [
+    {
+      "check": "turn 1: under 90 words",
+      "ok": true,
+      "detail": "53 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 90 words",
+      "ok": true,
+      "detail": "35 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: under 90 words",
+      "ok": true,
+      "detail": "31 words"
+    },
+    {
+      "check": "turn 3: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 3: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: under 90 words",
+      "ok": true,
+      "detail": "33 words"
+    },
+    {
+      "check": "turn 4: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 4: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: under 90 words",
+      "ok": true,
+      "detail": "44 words"
+    },
+    {
+      "check": "turn 5: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 5: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 6: under 90 words",
+      "ok": true,
+      "detail": "10 words"
+    },
+    {
+      "check": "turn 6: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 6: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "says the pitch ran over in its first reply",
+      "ok": true,
+      "detail": "your pitch ran a bit over three minutes, just so you know.\n\nso you mentioned a café owner told you packaging is his third-largest cost — did he actually agree to pay the two dollars per crate per mont"
+    },
+    {
+      "check": "never coaches or praises during the session",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "announces no score, prize or decision",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "closes the session within 6 team messages",
+      "ok": true,
+      "detail": "closed after 6"
+    },
+    {
+      "check": "the feedback scores every rubric dimension",
+      "ok": true,
+      "detail": "answers, competition, delivery, evidence, model, problem, team_ask"
+    },
+    {
+      "check": "delivery scored at most 3 (the pitch ran over)",
+      "ok": true,
+      "detail": "delivery 2"
+    }
+  ],
+  "judge": {
+    "scores": {
+      "in_role": 4,
+      "knowledge": 5,
+      "pressure": 4,
+      "feedback_accuracy": 4,
+      "feedback_useful": 5
+    },
+    "mean": 4.4,
+    "reasons": {
+      "in_role": "The judge stayed in role throughout, never coached or scored, noted the overrun briefly, and closed politely, though the final 'The panel will deliberate' is a mild score-adjacent signal that edges toward evaluation.",
+      "knowledge": "Every question and observation drew only from what Sofia said in the pitch or from the project brief; no facts were invented about the venture.",
+      "pressure": "The judge pressed the 75%-return economics twice and the untested $2 price twice, landing real follow-ups on vague deflections, which matches the Realistic difficulty well.",
+      "feedback_accuracy": "Scores and narrative accurately reflect the session—strong opening, collapsed Q&A, overrun noted—though the pitch overrun was closer to 45 seconds than the 'nearly a minute' framing, and the Delivery score of 2 is defensible but slightly harsh given only one dimension failed.",
+      "feedback_useful": "The three fixes are concrete and sequenced, the model answer for the 75%-return question is a usable two-sentence template, and the stronger answers to tough questions stay strictly within the team's own evidence."
+    },
+    "fix": "When Sofia deflects a direct economics question with an unrelated answer, the judge should restate the specific number from the question ('at 25% loss, does $2 still cover costs?') rather than broadening to 'do you know your cost per crate at all'—tighter re-asks force the student to either answer or explicitly admit they cannot, which is more instructive pressure."
+  }
+}

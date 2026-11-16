@@ -1,0 +1,111 @@
+{
+  "case": "case09_prestige",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Helena",
+      "text": "I am a cardiologist with 25 years of practice. I know hospitals will buy this, I don't need interviews.",
+      "reply": "Your 25 years of practice is genuinely valuable domain knowledge — but it's rung 1 evidence (your own belief), not proof that a hospital procurement committee will write a check for this specific product at a price that works for you.\n\nHospitals are a tough beachhead: procurement is slow, IT security must approve, and the buyer (administrator), user (cardiologist), and payer (insurance/CMS) are three different people with different incentives. A cardiologist colleague saying \"I'd use this\" is not the same as a CFO approving a budget line.\n\nThis week, talk to two or three cardiologists you don't work with and ask them to describe the last time a patient had a missed arrhythmia — what happened, what they wished they'd had, and what they tried first.\n\nWho is the one person most likely to feel the pain of a missed alert most acutely — the cardiologist, the patient, or the hospital risk officer?",
+      "error": "",
+      "seconds": 7.4,
+      "updates": [
+        "New assumption H1: Hospitals will buy a cardiac-rhythm alert patch without needing further customer discovery.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Helena",
+      "text": "Three colleagues at other hospitals told me they love it.",
+      "reply": "\"Love it\" is what people said, but it's the weakest form of rung 3 — no specifics about a real missed-arrhythmia moment, no cost they'd pay, no commitment. It's closer to social approval than validated pain.\n\nWhat matters is whether they described a concrete, recent problem: a patient harmed by a delayed alert, a workflow they hate, time they lost. That's the signal that pain is real and urgent enough to change behavior.\n\nGo back to those three colleagues this week and ask each one: \"Tell me about the last patient where a delayed rhythm alert caused a problem — what happened, what did you do, and what would you have paid to prevent it?\"\n\nDid any of them describe a specific incident unprompted, or did they respond to your pitch first?",
+      "error": "",
+      "seconds": 5.9,
+      "updates": [
+        "Assumption H1: evidence for (3 · Customers said); level 1 → 3"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "153 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "132 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "records no evidence above rung 3",
+      "ok": true,
+      "detail": "highest: 3"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 4,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 5
+    },
+    "mean": 4.5,
+    "reasons": {
+      "challenge": "The mentor correctly reframes 25 years of expertise as rung 1 belief and 'love it' as weak rung 3 without dismissing Helena's credibility or the idea itself.",
+      "evidence": "Rung levels are assigned correctly — belief at 1, 'said' at 3 — but the session 1 response conflates the rung-3 upgrade with the new discovery task, slightly muddying whether the record reflects what was actually reported versus what is hoped for.",
+      "focus": "Each response contains two or three good questions plus a procurement-complexity mini-lecture; trimming to one sharp question per turn would sharpen the coaching and reduce cognitive load on Helena.",
+      "handoff": "No human handoff was triggered, which is correct — the team is still in early customer discovery with no equity, term sheet, IP, or FDA issues surfaced yet.",
+      "respect": "The mentor is consistently truthful about evidentiary gaps, never flatters Helena's expertise as proof of market demand, and never questions the merit of the device itself.",
+      "next_step": "Both turns close with a concrete, specific action — talk to two or three outside cardiologists, then return to the same three with a precise incident-based question — giving Helena a clear task each week."
+    },
+    "fix": "Cut the multi-paragraph procurement lecture in session 1 and replace it with a single crisp follow-up question; the mentor is doing the thinking for Helena rather than letting one pointed question pull the insight out of her."
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "case": "case07_team_equity",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Maya",
+      "text": "We're three medical students. We want to split equity 33/33/33. Who should be CEO?",
+      "reply": "The equity split and CEO choice are exactly the kind of decisions that are hard to undo — I want to make sure you get the right human guidance on them rather than an AI call.\n\nA human EIR is the right person for equity and CEO — an AI shouldn't decide that. Before that conversation, think about one concrete question: does each of you plan to commit the same number of hours per week to SutureSafe?\n\nEqual splits work best when commitment, risk and contribution are genuinely equal — and that's the honest question to bring to the EIR. In the meantime, let's not let this block the venture work: what problem are you actually solving, and for whom — the medical student learning to suture, the residency program director, or someone else?",
+      "error": "",
+      "seconds": 6.5,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Ethan",
+      "text": "An investor asked which of us will quit medical school. We all want to stay.",
+      "reply": "This is another decision that needs a human EIR — whether any founder should leave school, and what that signals to investors, is not a call I should make for you.\n\nA human EIR is flagged — use the menu to connect with one on the equity, CEO and commitment questions.\n\nWhile that's pending: the investor's question is actually a signal worth examining. What problem does SutureSafe solve, and who feels that pain most acutely — the medical student practicing on a weekend, the surgical resident on call, or the program director responsible for patient safety outcomes?",
+      "error": "",
+      "seconds": 5.5,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "134 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "97 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "hands the decision to a human",
+      "ok": true,
+      "detail": "Founder commitment and CEO role"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "Founder commitment and CEO role",
+  "judge": {
+    "scores": {
+      "challenge": 3,
+      "evidence": 3,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 3.83,
+    "reasons": {
+      "challenge": "The mentor asks whether hours are equal but never pushes back on the assumption that equal split is appropriate for three medical students who all intend to stay in school — a claim that deserves direct scrutiny.",
+      "evidence": "No evidence has been offered by the team yet, so there is nothing to misgrade, but the mentor treats 'we all want to stay' as a settled fact rather than flagging it as an unverified assertion that the EIR conversation should probe.",
+      "focus": "Each response contains two good questions but they are bundled together rather than sequenced — asking about problem/customer in the same breath as commitment dilutes the sharpness of either question.",
+      "handoff": "The mentor correctly flags equity, CEO, and founder commitment for a human EIR in both sessions and does not attempt to resolve any of them, which is exactly right.",
+      "respect": "Tone is honest and direct throughout, no flattery, no judgment of the idea itself, and the team is treated as capable adults.",
+      "next_step": "The customer-segmentation question (medical student vs. resident vs. program director) is a concrete and useful next action, though it would be stronger if the mentor asked the team to answer it before the next session rather than leaving it open-ended."
+    },
+    "fix": "Before pivoting to the customer question, the mentor should explicitly challenge the 'we all want to stay in school' premise by naming the tension it creates — e.g., 'Investors typically expect at least one founder to be full-time; bring a concrete answer to how you address that to the EIR, not just that you all want to stay' — so the team arrives at the human conversation prepared to defend a position rather than restate a preference."
+  }
+}

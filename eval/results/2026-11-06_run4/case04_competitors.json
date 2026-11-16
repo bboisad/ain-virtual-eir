@@ -1,0 +1,120 @@
+{
+  "case": "case04_competitors",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "There are no competitors. Nobody makes flashcards from slides with AI.",
+      "reply": "\"Nobody does this\" is almost never true, and it's the riskiest claim to leave untested. Anki, Quizlet, Notion AI, and even ChatGPT let students paste slide text and generate cards today — the question is what FlashForge does that those tools don't, and why a student would switch.\n\nThis matters because if a free or cheap alternative already exists, your value proposition needs to be sharper than \"AI flashcards from slides.\"\n\nThis week, Leo: open ChatGPT or Quizlet's AI feature, upload a real lecture slide deck, and generate a set of flashcards. Note exactly where it falls short — that gap is your real value proposition.\n\nWhat does FlashForge do that a student can't get by dropping their PDF into ChatGPT right now?",
+      "error": "",
+      "seconds": 8.9,
+      "updates": [
+        "New assumption H1: No meaningful competitor makes AI-generated flashcards from lecture slides.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?",
+        "New task: Test existing tools (ChatGPT, Quizlet AI) by uploading a real lecture slide deck and generating flashcards — document exactly where they fall short to identify FlashForge's real differentiation."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "Quizlet does flashcards, but ours is better because it uses AI.",
+      "reply": "Quizlet has had AI-generated flashcards since 2023, so \"we use AI\" isn't a differentiator — it's a feature they already have. The real question is *how* FlashForge is better in a way a student would notice and pay for.\n\nThat gap is your moat: if you can't name it precisely, a student will just use the free tool they already have.\n\nYou have an open task to test this yourself — upload a real slide deck to Quizlet AI and ChatGPT, generate cards, and write down the three specific things that frustrate you. That friction is your starting point.\n\nWhat specifically breaks down when a student uses Quizlet AI on a lecture slide deck — formatting, accuracy, slide structure, something else?",
+      "error": "",
+      "seconds": 3.8,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "123 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "121 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 2",
+      "ok": true,
+      "detail": "highest: 0"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 4,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.33,
+    "reasons": {
+      "challenge": "Both turns immediately name real competitors (Quizlet AI, ChatGPT) and reframe the claim as a testable question without dismissing the idea.",
+      "evidence": "The mentor correctly treats 'no competitors' as an untested assumption and records it as H1, never upgrading it beyond a claim; the Quizlet-has-AI-since-2023 fact is desk research and is used only to rebut, not to validate FlashForge.",
+      "focus": "Each turn asks a sharp question, but both turns also include a mid-length explanatory paragraph that a human EIR would cut — the question alone would land harder and keep the session moving.",
+      "handoff": "No human handoff was triggered, which is correct — competitive landscape and differentiation are squarely within the AI mentor's scope at this stage.",
+      "respect": "Tone is direct and honest throughout; 'almost never true' and 'isn't a differentiator' are blunt but not dismissive, and the idea itself is never judged.",
+      "next_step": "The concrete task (upload a real deck, generate cards, document three specific failure points) is well-scoped, but it is repeated nearly verbatim in session 1 turn 2, suggesting the mentor did not register that the task was already assigned."
+    },
+    "fix": "Trim the explanatory paragraphs to one sentence each — the mentor is lecturing where a single sharp follow-up question would do more work and leave more room for the student to think."
+  }
+}

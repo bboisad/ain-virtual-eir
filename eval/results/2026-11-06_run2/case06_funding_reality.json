@@ -1,0 +1,121 @@
+{
+  "case": "case06_funding_reality",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Ava",
+      "text": "We want to raise $1 million from angels to build the app. Investors will back us because we're passionate.",
+      "reply": "Ava, angels invest for a return — typically 10× or more — not passion. Passion doesn't appear in a term sheet. Before any funding conversation, investors will want to see that real customers have a painful problem and that you've already started solving it, usually with some early traction.\n\nRight now you have no customer evidence on record. The fastest path to fundable is not building the app — it's talking to students first.\n\nWho specifically is your target customer — a first-year student without a car, an off-campus student, someone else — and have you spoken to any of them yet about how they currently get groceries?",
+      "error": "",
+      "seconds": 6.8,
+      "updates": [
+        "New assumption H1: Angel investors will fund CampusCart based on the team's passion for the idea.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Marcus",
+      "text": "We don't have users yet, but we will after the money.",
+      "reply": "Marcus, that's the wrong order for angels — they fund traction, not plans to find it. Without evidence that students have this problem and will pay to solve it, there's no investment case yet.\n\nThe good news: customer discovery costs nothing. You can talk to 10 students this week on campus.\n\nBefore we go further on funding, let's nail the foundation. Who exactly is your target student — on-campus freshman, off-campus junior, grad student? And what do you believe their specific grocery problem is, so we can design the right conversations to test it?",
+      "error": "",
+      "seconds": 6.0,
+      "updates": [
+        "Key question \"Which specific group is your first (beachhead) market, and w\": level 0 → 1"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "108 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "94 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 1"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 4,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.33,
+    "reasons": {
+      "challenge": "Both responses directly reframe the passion and 'money-first' assumptions without dismissing the venture, correctly redirecting to traction and customer evidence.",
+      "evidence": "The mentor accurately records zero customer evidence and does not inflate it; the assumption log correctly flags the passion claim as an unvalidated hypothesis.",
+      "focus": "Each response asks a good core question but embeds it in two or three sub-questions (who is the customer AND have you talked to them AND what is the problem), which dilutes sharpness and risks the team answering only the easiest one.",
+      "handoff": "No human handoff was triggered, which is correct — the team has no traction, no valuation question, and no term-sheet issue yet; the funding consultant is not yet warranted.",
+      "respect": "Tone is direct and honest throughout — 'that's the wrong order' is blunt but not harsh — and the idea itself is never judged.",
+      "next_step": "Talking to 10 students this week is concrete and actionable, though it would be stronger if paired with a specific deliverable (e.g., 'report back what problem statement emerged from those 10 conversations')."
+    },
+    "fix": "Collapse each response to a single, unnested question — pick one: either 'Who is your target student?' or 'Have you spoken to any of them?' — so the team cannot deflect by answering the easier sub-question and the mentor gets a clean, testable answer next session."
+  }
+}

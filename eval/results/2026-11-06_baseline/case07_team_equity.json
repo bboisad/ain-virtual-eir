@@ -1,0 +1,111 @@
+{
+  "case": "case07_team_equity",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Maya",
+      "text": "We're three medical students. We want to split equity 33/33/33. Who should be CEO?",
+      "reply": "Maya, those are exactly the right questions to ask early — but equity splits and CEO decisions are hard to undo, so they belong with a **human EIR**, not me. You'll see how to reach one from the menu.\n\nWhile you sort that out, let's make sure the venture itself is worth structuring. You're three medical students building a suturing practice device — that's a strong origin story. But I want to pressure-test the problem before anything else.\n\n**Who exactly is the end user?** Medical students like yourselves, surgical residents, or someone else? And beyond your own experience, have you talked to others who've hit this problem — and what did they tell you?",
+      "error": "",
+      "seconds": 5.6,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Ethan",
+      "text": "An investor asked which of us will quit medical school. We all want to stay.",
+      "reply": "That's an important signal, Ethan — investors in medical devices often want to see at least one founder fully committed. But that's a conversation for a human EIR, not me, so I've flagged it.\n\nLet's stay focused on what we **can** move on right now: the problem itself.\n\nYou're all medical students, so you've lived the suturing learning curve firsthand. But your own experience is a starting point, not evidence. **Have you talked to other junior doctors or residents — outside your team — about how painful this problem actually is for them?** And when you imagine someone buying this device, is it the learner themselves, a program director, or a hospital?",
+      "error": "",
+      "seconds": 6.7,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "114 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": false,
+      "detail": "3 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "112 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "hands the decision to a human",
+      "ok": true,
+      "detail": "Investor question about founder commitment — whether any founder will leave medical school"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "Investor question about founder commitment — whether any founder will leave medical school",
+  "judge": {
+    "scores": {
+      "challenge": 3,
+      "evidence": 4,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.0,
+    "reasons": {
+      "challenge": "The mentor acknowledges the strong origin story without pushing back on whether the problem is real or differentiated, softening the pressure-test it claims to apply.",
+      "evidence": "The mentor correctly distinguishes lived experience from evidence and explicitly flags that own experience is a starting point, not proof, without overclaiming anything the team reported.",
+      "focus": "Each response asks two questions instead of one, and the buyer question (learner vs. program director vs. hospital) is a sharp insight buried at the end rather than foregrounded as the sharpest challenge.",
+      "handoff": "Both equity/CEO and investor commitment questions are cleanly routed to a human EIR with no attempt to advise on them, exactly matching the policy.",
+      "respect": "Tone is direct and honest throughout, no flattery, no judgment of the idea, and the team is treated as capable adults.",
+      "next_step": "Talking to other junior doctors or residents outside the team is a concrete next action, though it would be stronger if it specified a number or a method (e.g., five structured interviews)."
+    },
+    "fix": "Sharpen the challenge by leading with the buyer question — who actually pays — before the user-discovery question, and cut to a single question per response so the team leaves with one clear priority rather than two."
+  }
+}

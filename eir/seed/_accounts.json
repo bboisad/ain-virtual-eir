@@ -1,0 +1,9 @@
+{
+  "accounts": [
+    {"id": "alice", "name": "Alice Chen", "role": "founder"},
+    {"id": "bob", "name": "Bob Lee", "role": "founder"},
+    {"id": "carol", "name": "Carol Diaz", "role": "founder"},
+    {"id": "priya", "name": "Priya Raman", "role": "founder"},
+    {"id": "roberto", "name": "AIN staff (demo)", "role": "staff"}
+  ]
+}

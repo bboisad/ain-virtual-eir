@@ -1,0 +1,118 @@
+{
+  "case": "case05_implementation",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Emma",
+      "text": "We have a working prototype and our club coach loved it. We're ready to sell to 50 college teams.",
+      "reply": "Emma, one coach saying they loved it is encouraging, but it's rung-3 evidence at best — what someone said, not what they paid or even committed to. It doesn't yet tell you whether the problem is painful enough for a *different* coach to spend money on your fix.\n\nBefore targeting 50 teams, you need to know the problem is real and widespread. Talk to **five rowers or coxswains at other clubs this week** — not your own coach — and ask: when did communication last cost you a race or a practice, and what did you do about it?\n\nWho on the team has contacts at other rowing programs, and can you reach them by Friday?",
+      "error": "",
+      "seconds": 8.6,
+      "updates": [
+        "New assumption H1: College rowing teams are the right beachhead market for CoxCall.",
+        "New assumption H2: A coach's positive reaction to the prototype means college teams will pay for CoxCall.",
+        "Assumption H2: evidence for (3 · Customers said); level 1 → 3",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Diego",
+      "text": "We'd ship it in a box and teams figure it out.",
+      "reply": "Diego, that's a distribution and setup assumption that could quietly kill sales. \"Teams figure it out\" means someone has to install, configure, and troubleshoot wireless hardware on a boat — and if it fails at 5am on race day, that coach blames you.\n\nThis matters because a difficult setup experience is one of the top reasons sports-tech hardware gets returned or never reordered.\n\nBefore you design the box, talk to **two or three coaches or team managers this week** and ask: who on your team handles new equipment, and what happened the last time something didn't work out of the box?\n\nIs the person setting it up the same coach who buys it, or a student equipment manager with no budget authority?",
+      "error": "",
+      "seconds": 6.0,
+      "updates": [
+        "New assumption H3: College rowing teams can self-install and configure CoxCall without dedicated support."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "116 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "122 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 3",
+      "ok": true,
+      "detail": "highest: 3"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 4,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 4,
+      "next_step": 4
+    },
+    "mean": 4.17,
+    "reasons": {
+      "challenge": "The mentor correctly pushes back on 'coach loved it' as insufficient and flags the 50-team leap, but misses the good EIR's sharper installation question — who installs it and what happens on day one — which Diego's reply then forced out reactively rather than proactively.",
+      "evidence": "Accurately labels the coach reaction as rung-3 'said' evidence and records it at level 3, neither inflating it to a commitment nor dismissing it; evidence ladder is applied correctly throughout.",
+      "focus": "Each response contains useful content but runs long — the first turn asks a discovery question AND a logistics question AND a deadline question AND a team-resource question, which is two or three questions too many for one exchange.",
+      "handoff": "No human handoff was triggered and none was warranted at this early discovery stage; the decision to hold is correct.",
+      "respect": "Tone is honest and direct without flattery or idea-shaming, though phrases like 'quietly kill sales' and 'that coach blames you' edge toward mild alarm rather than neutral coaching.",
+      "next_step": "Both turns close with a concrete action (talk to five rowers by Friday; talk to two or three coaches or managers this week), which is specific and time-bound, though the installation question should have been surfaced in session 1 rather than waiting for Diego to raise it."
+    },
+    "fix": "Cut each response to one sharp question — the mentor should have asked the installation and day-one question unprompted in session 1 rather than waiting for Diego to surface it, and should trim the multi-part closings to a single clear next action."
+  }
+}

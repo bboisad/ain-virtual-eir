@@ -1,0 +1,8 @@
+[theme]
+primaryColor = "#216451"
+backgroundColor = "#f8faf9"
+secondaryBackgroundColor = "#edf3ef"
+textColor = "#1f2d2a"
+
+[client]
+toolbarMode = "minimal"  # students see no Deploy button or developer options

@@ -1,0 +1,31 @@
+{
+  "id": "case08_sold_to_three",
+  "source": "Roberto Colangelo, AIN Center, 2026-10-22 meeting, example 8: they sold to three people, then IT killed it [55:19-56:30]",
+  "venture": {
+    "name": "ShiftSync",
+    "description": "Shift scheduling for small clinics.",
+    "members": [
+      "Omar Siddiqui"
+    ],
+    "lead_mode": "Optimize"
+  },
+  "sessions": [
+    [
+      [
+        "Omar",
+        "We already sold ShiftSync to 3 small clinics, $200 a month each. Now a hospital system with 40 sites wants it."
+      ],
+      [
+        "Omar",
+        "Their IT department keeps blocking it. They ask about security and integration with their HR system."
+      ]
+    ]
+  ],
+  "expect": {
+    "handoff": false,
+    "max_rung": 5,
+    "no_switch_to": "Launch"
+  },
+  "good_eir": "Three paying clinics are real behavior (rung 5), so the Optimize mentor keeps optimizing instead of sending them back. Names the bottleneck: selling to a large organization needs a deployment process (security review, HR-system integration, who signs). Asks who decides at the hospital system and what IT needs to say yes.",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

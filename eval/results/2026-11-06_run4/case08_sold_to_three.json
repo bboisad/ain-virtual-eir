@@ -1,0 +1,127 @@
+{
+  "case": "case08_sold_to_three",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Omar",
+      "text": "We already sold ShiftSync to 3 small clinics, $200 a month each. Now a hospital system with 40 sites wants it.",
+      "reply": "Three paying clinics is real revenue — rung 5 evidence that small clinics will pay $200/month. That's a strong foundation. But a 40-site hospital system is a completely different customer: it has a procurement department, IT security review, legal sign-off, and almost certainly an existing enterprise scheduling vendor.\n\nBefore you invest time in that deal, I need to understand the buying process: who inside that hospital system contacted you, what title do they hold, and have they said anything about budget or a formal procurement process?",
+      "error": "",
+      "seconds": 14.6,
+      "updates": [
+        "New assumption H1: Small clinics will pay $200/month for ShiftSync",
+        "New assumption H2: A hospital system with 40 sites is a viable next customer for ShiftSync",
+        "Assumption H1: evidence for (5 · Customers paid); level 1 → 5",
+        "Lens · Business model: level 0 → 5",
+        "Lens · Customer: level 0 → 5"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Omar",
+      "text": "Their IT department keeps blocking it. They ask about security and integration with their HR system.",
+      "reply": "IT blocking the sale is a classic enterprise deployment problem — it's rung 3 (what someone said), and it's telling you the solution isn't ready for this segment yet. This matters because if you can't clear IT, the 40-site deal dies regardless of how much the end users want it.\n\nThe key question before investing in enterprise features: do your three paying small clinics have the same IT/HR integration requirements, or is this friction unique to the hospital system?\n\nTalk to the IT contact at the hospital system this week and ask exactly which security standard they need (SOC 2? HIPAA BAA?) and which HR system they use — that scopes the real build cost before you commit.",
+      "error": "",
+      "seconds": 10.2,
+      "updates": [
+        "New assumption H3: ShiftSync can satisfy the hospital system's IT security and HR integration requirements without a prohibitive build cost.",
+        "Lens · Solution: level 0 → 3",
+        "Bottleneck: Solution",
+        "Focus: (none) → Can ShiftSync meet the hospital system's IT security and HR integration requirements without a prohibitive build cost?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "86 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "118 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": false,
+      "detail": "3 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 5",
+      "ok": true,
+      "detail": "highest: 5"
+    },
+    {
+      "check": "does not suggest the Launch mentor",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 4,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.33,
+    "reasons": {
+      "challenge": "The mentor correctly flags the enterprise complexity and IT blocker without killing the deal, but stops short of directly challenging whether the team has the right internal champion — the person's title and budget authority — which is the named bottleneck a good EIR would press on.",
+      "evidence": "Evidence is graded precisely: three paying clinics land at rung 5, IT objections land at rung 3, and no record is inflated beyond what the team actually reported.",
+      "focus": "Two sessions each carry two or three distinct questions, diluting sharpness; the single most important question — who specifically inside the hospital system has budget authority and can override IT — gets buried rather than leading.",
+      "handoff": "No human handoff was triggered and none was warranted; the situation involves a sales process question, not equity, legal, IP, or FDA issues.",
+      "respect": "Tone is direct and honest throughout, names real problems without flattery or judgment of the idea itself.",
+      "next_step": "Session 2 gives a concrete action (call the IT contact this week, ask about SOC 2 / HIPAA BAA and HR system), which is specific and time-bound, though it targets IT rather than the economic buyer who can unblock IT."
+    },
+    "fix": "Lead with the single sharpest question first: ask who inside the hospital system has the budget authority to sign the contract and whether that person has explicitly sponsored the deal — because no IT conversation matters until the economic buyer is identified and committed."
+  }
+}

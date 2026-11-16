@@ -1,0 +1,126 @@
+{
+  "case": "case08_sold_to_three",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Omar",
+      "text": "We already sold ShiftSync to 3 small clinics, $200 a month each. Now a hospital system with 40 sites wants it.",
+      "reply": "Three paying clinics is real traction, Omar — that's rung 5 and the strongest signal you can have at this stage.\n\nThe hospital opportunity is a different beast, though. A 40-site system almost certainly means a different buyer (a VP of Operations or CHRO, not a clinic owner), a procurement process, IT security review, and possibly an EHR integration requirement — none of which your three small-clinic sales tested.\n\nTwo questions: Who specifically at the hospital system approached you — a frontline manager or someone with budget authority? And has anyone mentioned IT, security, or procurement as a requirement yet?",
+      "error": "",
+      "seconds": 8.9,
+      "updates": [
+        "Lens · Business model: level 0 → 5",
+        "New assumption H1: ShiftSync can be sold to and deployed at a large hospital system (40 sites) using the same product and model that works for small clinics",
+        "Focus: (none) → Can ShiftSync close and deploy at a 40-site hospital system?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Omar",
+      "text": "Their IT department keeps blocking it. They ask about security and integration with their HR system.",
+      "reply": "That's the real bottleneck, Omar. IT is a veto player, not just a hurdle — and your three small-clinic sales tell you nothing about passing an enterprise security review or integrating with a hospital HR system (likely Workday, Kronos, or similar).\n\nBefore chasing the 40-site deal further, you need to know: what exactly does IT require — SOC 2 certification, HIPAA BAA, specific API integrations? And do you have any of those today?\n\nThat answer determines whether this is a 2-week fix or a 6-month engineering project.\n\nWhat specific requirements has IT given you in writing — a vendor security questionnaire, a list of required certifications (SOC 2, HIPAA BAA), or a named HR system they need you to connect to?",
+      "error": "",
+      "seconds": 14.7,
+      "updates": [
+        "New assumption H2: Hospital IT will approve ShiftSync after seeing its current security posture and integration capabilities.",
+        "Lens · Customer: level 0 → 3",
+        "Assumption H2: evidence against (3 · Customers said); level 1 → 3",
+        "Lens · Solution: level 0 → 3",
+        "Bottleneck: Solution"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "100 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "121 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": false,
+      "detail": "3 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 5",
+      "ok": true,
+      "detail": "highest: 5"
+    },
+    {
+      "check": "does not suggest the Launch mentor",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.5,
+    "reasons": {
+      "challenge": "Correctly accepts the three paying clinics as rung 5 evidence while immediately surfacing that the hospital deal tests entirely untested assumptions about buyer, procurement, and IT.",
+      "evidence": "Records small-clinic sales at level 5, correctly distinguishes what they do and do not prove, and logs the IT blocker as 'customers said' (level 3) without inflating it.",
+      "focus": "Each turn asks two questions when one sharper question would do — session 1 asks about buyer identity AND IT/procurement simultaneously, and session 2 asks about specific requirements AND current capabilities in the same breath.",
+      "handoff": "No human handoff was needed here and none was triggered; the mentor correctly kept coaching through a product and sales bottleneck.",
+      "respect": "Honest about the gap between small-clinic and enterprise sales without dismissing the opportunity or flattering the team.",
+      "next_step": "Session 2 ends with a clear directive to get IT requirements in writing, but stops short of naming the single concrete action — e.g., 'send the vendor security questionnaire back to IT by Friday.'"
+    },
+    "fix": "Reduce each response to one prioritized question — in session 2, drop the 'do you have any of those today' half and just ask Omar to share whatever written requirements IT has already sent, so the next session starts from a document rather than another verbal report."
+  }
+}

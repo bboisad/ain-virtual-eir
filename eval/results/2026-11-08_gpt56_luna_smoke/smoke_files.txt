@@ -1,0 +1,53 @@
+Model: gpt-5.6-luna · fictional demo venture: Campus Loop
+
+====================================================================================================
+Alice shares Campus Loop pitch.pptx: Our pitch deck for Foundry Friday. What do you think?
+----------------------------------------------------------------------------------------------------
+(21.2s) Campus Loop pitch.pptx version 1, 357 characters read
+SUMMARY: This pitch deck presents Campus Loop, a service for selling dorm items so students do not have to take them home. It argues that students leave furniture and fridges behind each May, that customers would use the service, that sellers will pay $3 per listing, and that 4,000 students move out of the residence halls annually. The only supporting evidence reported is an unspecified set of conversations in which everyone said they would use it; the deck gives no evidence for the $3 payment or the 4,000-student figure.
+CLAIMS:
+  - "sell your dorm stuff without carrying it home" (pitch description; no supporting evidence given)
+  - "every May, students leave furniture and fridges in hallways" (claim; no supporting evidence given)
+  - "Customers love it: everyone we talked to said they would use it" (unspecified conversations: said they would use it)
+  - "sellers pay $3 per item listed" (business-model claim; no evidence of payment given)
+  - "4,000 students move out of our residence halls each year" (market-size claim; no supporting evidence given)
+
+MENTOR:
+Alice, the deck currently contains claims, not proof: the $3 seller fee has no payment evidence, and the 4,000-student figure has no cited source. The strongest evidence available is Bob’s three interviews: all left bulky items behind, while two required a free service; that directly weakens the current revenue claim.
+
+This matters because Foundry Friday judges may ask whether customers—not the team—demonstrated willingness to pay.
+
+Alice, revise the deck this week using those interview counts and run the locked $3 prepay test with 10 movers; keep the $3 claim only if at least 4 prepay. Also source or label the 4,000 figure as an estimate.
+
+Should the pitch emphasize sellers paying, or test buyers paying instead?
+  changed: Focus: Will sellers really pay $3 per item? → Will sellers really pay $3 per item?
+  changed: Assumption H2: evidence against (1 · Assertion)
+  changed: New assumption H4: 4,000 students move out of the residence halls annually.
+  changed: Assumption H1: evidence for (1 · Assertion)
+  changed: New revision for Campus Loop pitch.pptx: Revise the pitch deck to replace the unsupported $3 payment claim with the current evidence and the planned prepaid test; cite who was interviewed and how many.
+  changed: New revision for Campus Loop pitch.pptx: Check the residence-hall move-out count with a named source and add the source or label 4,000 as an estimate in the pitch deck.
+  open revisions now: Revise the pitch deck to replace the unsupported $3 payment claim with the current evidence and the planned prepaid test; cite who was interviewed and how many.; Check the residence-hall move-out count with a named source and add the source or label 4,000 as an estimate in the pitch deck.
+====================================================================================================
+Alice shares Campus Loop pitch v2.pptx: Updated the deck with the interview numbers and the new fee.
+----------------------------------------------------------------------------------------------------
+(10.0s) Campus Loop pitch v2.pptx version 2, 407 characters read
+SUMMARY: The pitch deck presents Campus Loop, a service for selling dorm items so students do not have to carry them home. It argues that students leave furniture and fridges in hallways each May, and proposes free listings with buyers paying a $1 pickup fee, tested at the Residence Life table. Evidence reported is 5 mover interviews, with 4 of 5 saying they would use the service only if listing were free; no evidence is given for the 4,000-student market figure or the buyer fee. Since the previous version, the deck adds interview numbers and changes the fee model from $3 paid by sellers to free listings plus a $1 buyer pickup fee.
+CLAIMS:
+  - Students leave furniture and fridges in hallways every May (no evidence reported)
+  - 4,000 students move out of our residence halls each year (no evidence reported)
+  - Movers would use Campus Loop only if listing is free (5 interviews: 4 of 5 said this)
+  - Listings should be free (5 interviews: 4 of 5 said they would use it only if listing were free)
+  - Buyers should pay a $1 pickup fee, tested at the Residence Life table (no payment or test results reported)
+
+MENTOR:
+Alice, the revision improves the interview evidence, but switching from a $3 seller fee to a $1 buyer fee creates a new untested claim. The five movers said free listings were preferable; that is evidence about sellers’ stated preference, not buyers’ payment behavior.
+
+This matters because revenue depends on identifying the payer and showing that person will part with money.
+
+Alice, find 10 prospective buyers this week and ask for an actual $1 prepayment for a qualifying pickup; record payments separately from verbal interest. Does the buyer pay before pickup, or does Campus Loop collect the fee at pickup?
+  changed: Focus: Will sellers really pay $3 per item? → Who will pay the $1 buyer pickup fee, and will they actually pay it?
+  changed: New assumption H5: Buyers will pay a $1 pickup fee for Campus Loop items.
+  changed: Assumption H2: evidence against (3 · Customers said)
+  changed: New task: Alice: Run a $1 buyer prepay test with 10 prospective buyers and record actual payments, not stated interest.
+  changed: New revision for Campus Loop pitch v2.pptx: Alice: Add the five-interview sample, the free-listing result, and the absence of buyer-fee payment evidence to the pitch deck; cite the source.
+  open revisions now: Revise the pitch deck to replace the unsupported $3 payment claim with the current evidence and the planned prepaid test; cite who was interviewed and how many.; Check the residence-hall move-out count with a named source and add the source or label 4,000 as an estimate in the pitch deck.; Alice: Add the five-interview sample, the free-listing result, and the absence of buyer-fee payment evidence to the pitch deck; cite the source.

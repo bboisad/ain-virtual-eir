@@ -1,0 +1,34 @@
+{
+  "script": [
+    {
+      "id": "g1",
+      "speaker": "any",
+      "text": "Here's our idea — we think lots of students need this.",
+      "reply": "Let's make \"lots of students\" specific. Who exactly, and when did one of them last try to solve this problem?\n\n**Why:** a vague customer makes every later decision vague. **Test it yourselves:** find 3 people who match your description this week.\n\nI added that to your Action Plan.",
+      "tools": [
+        {
+          "name": "add_task",
+          "args": {
+            "text": "Talk to 3 people who match the target customer",
+            "owner": "team"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "speaker": "any",
+      "text": "We'd like a human mentor to look at our idea.",
+      "reply": "Happy to prepare that. Open the menu (⋯) and choose **Ask a human EIR**: I've drafted a brief from your records, and your team reviews it before anything is shared.",
+      "tools": [
+        {
+          "name": "request_human",
+          "args": {
+            "topic": "Team request",
+            "reason": "the team asked for a human mentor"
+          }
+        }
+      ]
+    }
+  ]
+}

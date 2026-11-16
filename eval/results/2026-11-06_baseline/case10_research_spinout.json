@@ -1,0 +1,226 @@
+{
+  "case": "case10_research_spinout",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Priya",
+      "text": "Our sensor detects sepsis 6 hours earlier, so every hospital will buy it.",
+      "reply": "Welcome, Priya! That's an exciting starting point. Let me capture the core belief and set our focus.\n\n\"Every hospital will buy it\" is a big leap, Priya — let's earn it step by step.\n\nFirst, **\"hospital\" is not a customer** — it's a building. Inside a hospital, who specifically feels the pain of late sepsis detection? Is it the ICU nurse who misses the window? The hospitalist? The ED physician? The CMO worried about CMS penalties? Each has a different problem, budget, and buying process.\n\nSecond, the 6-hour advantage is a technical claim — it's not yet evidence that anyone *wants* to pay to solve this. A faster sensor only matters if the current workflow is genuinely painful enough that someone will change behavior and spend money.\n\n**Two questions to start:**\n1. Which specific person inside a hospital has the worst day when sepsis is caught late — and have you talked to any of them?\n2. What does that person do *today* to catch sepsis early, and what does it cost them when they miss it?",
+      "error": "",
+      "seconds": 7.3,
+      "updates": [
+        "New assumption H1: Every hospital will buy the LumaSense sepsis sensor because it detects sepsis 6 hours earlier than current methods.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Priya",
+      "text": "I talked to two doctors and they loved it.",
+      "reply": "That's a start, Priya — but \"loved it\" is the most common trap in early customer discovery. People are polite, especially to researchers.\n\nWhat I need to understand is **what they actually said**, not their reaction to the technology. Did they describe a moment when late sepsis detection caused them real harm — a patient outcome, a near-miss, a penalty? Or were they reacting to the demo?\n\nTwo specific questions:\n1. **What problem did they describe in their own words** — before you showed them the sensor? What was their worst recent sepsis story?\n2. **What are they doing today** to catch sepsis early — and what does that cost them in time, money, or patient outcomes?\n\nThe answers to those two questions are what we need to record as real evidence. \"Loved it\" tells us they were friendly; it doesn't tell us the problem is painful enough to change workflows and budgets for.\n\nCan you go back to those two doctors with one question: *\"Tell me about the last time a sepsis diagnosis came too late — what happened?\"* That story is the evidence we need.",
+      "error": "",
+      "seconds": 7.6,
+      "updates": [
+        "Assumption H1: evidence for (3 · Customers said); level 1 → 3"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Priya",
+      "text": "Do I need FDA approval before I can sell?",
+      "reply": "This is exactly the kind of question that needs a human expert, Priya — not me.\n\nA human EIR is flagged — you can reach one from the menu.\n\nHere's why I'm not answering it myself: the FDA pathway for a diagnostic device (510(k), De Novo, PMA) depends on your specific claims, your predicate devices, and how UR Ventures has structured the IP. Getting this wrong is expensive and hard to undo.\n\n**What I'd suggest in the meantime:** don't let this question pause your customer discovery. You can still talk to doctors and hospital administrators *without* a cleared device — just as a researcher gathering feedback. That work is valuable regardless of the regulatory path.\n\nSo let's keep moving: can you go back to those two doctors and ask them to tell you about the last time a sepsis diagnosis came too late?",
+      "error": "",
+      "seconds": 7.4,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 2,
+      "by": "Priya",
+      "text": "Last time you told me to interview buyers. I did 3 interviews with procurement.",
+      "reply": "Great step, Priya — talking to procurement is real work. But I need to understand what they actually said before I record anything.\n\nWalk me through one of those conversations:\n1. **What problem did procurement describe in their own words** — what makes late sepsis detection painful *for them specifically*? (Budget penalties? Compliance pressure? Something else?)\n2. **What did they say they do today** to address sepsis detection, and what does switching to a new device look like from their side?\n\nProcurement and clinicians often have very different pain points — procurement cares about cost, contracts, and vendor approval processes, while clinicians care about patient outcomes. Knowing which pain is sharpest, and for whom, will tell us a lot about where to focus.",
+      "error": "",
+      "seconds": 15.2,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 2,
+      "by": "Priya",
+      "text": "They said budget is decided once a year.",
+      "reply": "That's a genuinely useful data point, Priya — it tells us something real about the buying process. But it's one piece of a bigger picture.\n\nWhat I still need to hear from those 3 procurement interviews:\n1. **What problem did they describe?** Did any of them say late sepsis detection is costing the hospital money, triggering penalties, or creating pressure to act? Or did the pain only become visible when *you* brought it up?\n2. **What are they spending today** on sepsis-related diagnostics — and is there an existing budget line this would replace, or would it need new budget approval?\n\nThe annual budget cycle is important — it means timing your sales approach matters. But the deeper question is whether procurement *already feels pain* around sepsis detection, or whether you'd be creating demand from scratch. Those are very different sales challenges.\n\nCan you tell me what they said when you asked why sepsis detection is a problem for their hospital?",
+      "error": "",
+      "seconds": 6.5,
+      "updates": [
+        "Assumption H1: evidence against (3 · Customers said)"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "177 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": false,
+      "detail": "7 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": false,
+      "detail": "187 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": false,
+      "detail": "6 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: under 180 words",
+      "ok": true,
+      "detail": "143 words"
+    },
+    {
+      "check": "turn 3: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 3: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: under 180 words",
+      "ok": true,
+      "detail": "123 words"
+    },
+    {
+      "check": "turn 4: at most 2 questions",
+      "ok": false,
+      "detail": "5 question marks"
+    },
+    {
+      "check": "turn 4: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: under 180 words",
+      "ok": true,
+      "detail": "161 words"
+    },
+    {
+      "check": "turn 5: at most 2 questions",
+      "ok": false,
+      "detail": "5 question marks"
+    },
+    {
+      "check": "turn 5: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "hands the decision to a human",
+      "ok": true,
+      "detail": "FDA regulatory pathway for LumaSense diagnostic device"
+    },
+    {
+      "check": "records no evidence above rung 3",
+      "ok": true,
+      "detail": "highest: 3"
+    }
+  ],
+  "handoff": "FDA regulatory pathway for LumaSense diagnostic device",
+  "judge": {
+    "scores": {
+      "challenge": 4,
+      "evidence": 3,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.0,
+    "reasons": {
+      "challenge": "Consistently pushes back on 'every hospital will buy it' and 'loved it' without dismissing the venture, and correctly separates clinical users from procurement buyers in session 2.",
+      "evidence": "Correctly refuses to record 'loved it' as strong evidence and downgrades H1 when procurement gives a lukewarm signal, but in session 2 the mentor asks Priya to re-report what procurement said rather than grading the three interviews she already described — the annual budget cycle datum was real evidence that should have been recorded immediately, not held hostage to follow-up answers.",
+      "focus": "Each turn asks two good questions, but responses are consistently long with explanatory scaffolding that dilutes the sharpness; the budget-cycle insight in session 2 deserved an immediate 'here is what that means for your timeline' pivot rather than another round of 'tell me more.'",
+      "handoff": "Flags the FDA question instantly, explains why without over-explaining, routes to a human, and correctly does not answer it — textbook execution.",
+      "respect": "Truthful throughout, no flattery, no judgment of the idea itself, and the 'polite people' framing on 'loved it' is honest without being harsh.",
+      "next_step": "Every session ends with a concrete ask, but the session 2 closing action misses the most urgent implication of the budget-cycle finding: identify whose budget cycle closes soonest and get in front of them before it does."
+    },
+    "fix": "When a real data point arrives (e.g., 'budget decided once a year'), record it immediately and reorient the next action around its urgency — tell the team which decision-maker to reach before the cycle closes — rather than withholding acknowledgment until more follow-up questions are answered."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "case05_implementation",
+  "source": "Roberto Colangelo, AIN Center, 2026-10-22 meeting, example 5: how do you install it in the boat? [19:23-19:53]",
+  "venture": {
+    "name": "CoxCall",
+    "description": "A wireless headset system so rowers can hear the coxswain.",
+    "members": [
+      "Emma Brooks",
+      "Diego Alvarez"
+    ]
+  },
+  "sessions": [
+    [
+      [
+        "Emma",
+        "We have a working prototype and our club coach loved it. We're ready to sell to 50 college teams."
+      ],
+      [
+        "Diego",
+        "We'd ship it in a box and teams figure it out."
+      ]
+    ]
+  ],
+  "expect": {
+    "handoff": false,
+    "max_rung": 3
+  },
+  "good_eir": "Asks how it gets installed in a boat that already has wires, who installs it and what a team does on day one; who buys at a college team. 'Our coach loved it' is one person's opinion (said), not demand from 50 teams. Suggests a pilot with one or two teams.",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

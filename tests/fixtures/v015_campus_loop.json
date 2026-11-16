@@ -1,0 +1,418 @@
+{
+  "venture": {
+    "id": "V-CAMPUS",
+    "name": "Campus Loop",
+    "description": "Help students moving out sell bulky dorm items without carrying them off campus.",
+    "stage": "Customer validation",
+    "type": "Market-driven",
+    "members": [
+      {
+        "id": "m1",
+        "name": "Alice Chen",
+        "background": "Master's student",
+        "account": "alice",
+        "experience": "First venture"
+      },
+      {
+        "id": "m2",
+        "name": "Bob Lee",
+        "background": "Undergraduate",
+        "account": "bob",
+        "experience": "Ran a small resale business"
+      },
+      {
+        "id": "m3",
+        "name": "Carol Diaz",
+        "background": "Undergraduate",
+        "account": "carol",
+        "experience": "First venture"
+      }
+    ],
+    "canvas": {
+      "Customer Segments": {
+        "text": "Students moving out of campus housing with bulky items",
+        "status": "Hypothesis",
+        "source": "Team · Sep 28 session"
+      },
+      "Value Propositions": {
+        "text": "Sell dorm items without hauling them off campus",
+        "status": "Student statement",
+        "source": "Alice · intake"
+      },
+      "Channels": {
+        "text": "Table at residence halls during move-out week",
+        "status": "Evidence-backed",
+        "source": "Carol · Oct 9 · Res Life approved tabling"
+      },
+      "Customer Relationships": {
+        "text": "",
+        "status": "Empty",
+        "source": ""
+      },
+      "Revenue Streams": {
+        "text": "$3 fee per item sold",
+        "status": "Student statement",
+        "source": "Alice · Oct 5 session"
+      },
+      "Key Resources": {
+        "text": "Simple listing web page",
+        "status": "Student statement",
+        "source": "Bob · Sep 28 session"
+      },
+      "Key Activities": {
+        "text": "Customer interviews; move-out collection",
+        "status": "Hypothesis",
+        "source": "Team · Sep 28 session"
+      },
+      "Key Partnerships": {
+        "text": "Residence Life office",
+        "status": "Evidence-backed",
+        "source": "Carol · Oct 9"
+      },
+      "Cost Structure": {
+        "text": "",
+        "status": "Empty",
+        "source": ""
+      }
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "statement": "Movers have bulky items they can't easily sell",
+        "owner": "m2",
+        "status": "Supported",
+        "evidence": "3 of 3 interviewees left items behind last year",
+        "source": "Bob · Oct 5",
+        "rung": 3
+      },
+      {
+        "id": "H2",
+        "statement": "Sellers will pay a $3 fee per item",
+        "owner": "m1",
+        "status": "Testing",
+        "evidence": "2 of 3 interviewees said they'd only use it if free",
+        "source": "Bob · Oct 5",
+        "rung": 3,
+        "test": "Offer prepaid $3 listings to 10 movers at the Res Life table. Decided in advance: fewer than 4 paying refutes it."
+      },
+      {
+        "id": "H3",
+        "statement": "Residence Life will allow on-site collection",
+        "owner": "m3",
+        "status": "Supported",
+        "evidence": "Approved tabling during move-out week (email, Oct 9)",
+        "source": "Carol · Oct 9",
+        "rung": 4
+      }
+    ],
+    "next_steps": [
+      {
+        "id": "S1",
+        "text": "Interview 2 more movers (5 total)",
+        "owner": "m2",
+        "from_session": "Oct 5",
+        "status": "open",
+        "done_by": null
+      },
+      {
+        "id": "S2",
+        "text": "Run a $3 fee test with 10 students",
+        "owner": "m1",
+        "from_session": "Oct 5",
+        "status": "open",
+        "done_by": null
+      },
+      {
+        "id": "S3",
+        "text": "Ask Residence Life about tabling at move-out",
+        "owner": "m3",
+        "from_session": "Oct 5",
+        "status": "done",
+        "done_by": "m3"
+      }
+    ],
+    "sessions": [
+      {
+        "date": "Sep 28",
+        "mode": "Explore",
+        "attendees": [
+          "m1",
+          "m2",
+          "m3"
+        ],
+        "summary": "Narrowed the idea from a general campus marketplace to students moving out with bulky items. Agreed to interview movers before building anything."
+      },
+      {
+        "date": "Oct 5",
+        "mode": "Validate",
+        "attendees": [
+          "m1",
+          "m2"
+        ],
+        "summary": "Bob reported 3 interviews: everyone had leftover items, but 2 of 3 would only use a free service. Alice still believes a $3 fee works. The team agreed to test the fee instead of debating it."
+      }
+    ],
+    "timeline": [
+      {
+        "date": "Sep 21",
+        "kind": "milestone",
+        "text": "Venture registered with the AIN Center",
+        "by": "AIN"
+      },
+      {
+        "date": "Sep 28",
+        "kind": "session",
+        "text": "Explore session — narrowed to movers with bulky items",
+        "by": "team"
+      },
+      {
+        "date": "Sep 28",
+        "kind": "decision",
+        "text": "Interview movers before building anything",
+        "by": "team"
+      },
+      {
+        "date": "Oct 5",
+        "kind": "session",
+        "text": "Validate session — interview results reviewed",
+        "by": "team"
+      },
+      {
+        "date": "Oct 5",
+        "kind": "decision",
+        "text": "Test the $3 fee instead of debating it",
+        "by": "team"
+      },
+      {
+        "date": "Oct 9",
+        "kind": "update",
+        "text": "Residence Life approved tabling at move-out week",
+        "by": "m3"
+      },
+      {
+        "date": "Oct 9",
+        "kind": "approval",
+        "text": "AIN staff (demo) confirmed: Business Model Canvas complete",
+        "by": "AIN"
+      },
+      {
+        "date": "Oct 9",
+        "kind": "milestone",
+        "text": "Moved from M1 · Business Model Canvas to M2 · The Perfect Pitch",
+        "by": "m1"
+      }
+    ],
+    "disagreements": [
+      {
+        "hypothesis_id": "H2",
+        "topic": "Willingness to pay",
+        "a_member": "m1",
+        "a_says": "Students will happily pay $3 per item",
+        "b_member": "m2",
+        "b_says": "2 of 3 interviewees would only use it if free"
+      }
+    ],
+    "profile": {
+      "self_description": "We help students moving out of dorms sell bulky items like mini-fridges instead of throwing them away.",
+      "one_liner": "Helping students moving out sell bulky dorm items without carrying them off campus.",
+      "problem": "At move-out, students leave fridges, chairs and rugs behind because selling them is a hassle.",
+      "customer": "Students moving out of campus housing with bulky items, in the last two weeks of the semester.",
+      "solution": "A simple listing page plus on-campus pickup at the residence halls during move-out week.",
+      "alternatives": "Facebook groups, leaving items in the hallway, or throwing them away.",
+      "evidence": "3 interviews: all left items behind last year; 2 of 3 would only use it if free.",
+      "revenue": "$3 fee per item sold (untested).",
+      "need": "Deciding who pays: sellers or buyers.",
+      "notes": {
+        "revenue": "This is still an assumption: 2 of 3 interviewees said they would only use a free service."
+      },
+      "completed_by": "m1",
+      "completed_on": "Sep 28"
+    },
+    "module": "M2",
+    "next_eir_session": "2026-10-23",
+    "done": [
+      "customer_discovery",
+      "bmc"
+    ],
+    "answers": {
+      "cd_segment": {
+        "text": "Students moving out of residence halls with bulky items (couches, mini-fridges, rugs).",
+        "rung": 1,
+        "source": "Alice · Sep 28"
+      },
+      "cd_problem": {
+        "text": "3 of 3 interviewees left items behind or threw them out when they moved out last year.",
+        "rung": 3,
+        "source": "Bob · Oct 5"
+      },
+      "cd_current": {
+        "text": "They leave items on the curb or post them in free-stuff groups; most bulky items end up in the trash.",
+        "rung": 3,
+        "source": "Bob · Oct 5"
+      },
+      "cd_interviews": {
+        "text": "3 interviews with students who moved out last year (notes in the notebook).",
+        "rung": 3,
+        "source": "Bob · Oct 5"
+      },
+      "cd_next10": {
+        "text": "10 residents of one residence hall who move out in May; names in the notebook.",
+        "rung": 1,
+        "source": "Carol · Oct 6"
+      },
+      "bmc_user_buyer": {
+        "text": "Sellers are students moving out; buyers are students moving in. Who pays is still open.",
+        "rung": 3,
+        "source": "Bob · Oct 6"
+      },
+      "bmc_value": {
+        "text": "Saves a mover about 2 hours of carrying plus disposal costs (our estimate).",
+        "rung": 2,
+        "source": "Alice · Oct 6"
+      },
+      "bmc_channels": {
+        "text": "Table at residence halls during move-out week; Residence Life approved it (email, Oct 9).",
+        "rung": 4,
+        "source": "Carol · Oct 9"
+      },
+      "bmc_revenue": {
+        "text": "$3 fee per item from sellers (a guess, not tested).",
+        "rung": 1,
+        "source": "Alice · Oct 6"
+      },
+      "bmc_costs": {
+        "text": "Volunteer time, a storage room, a simple listing web page.",
+        "rung": 1,
+        "source": "Bob · Oct 6"
+      },
+      "pd_dmu": {
+        "text": "Students decide by themselves.",
+        "rung": 1,
+        "source": "Alice · Oct 10"
+      },
+      "pd_competition": {
+        "text": "Facebook Marketplace and free-and-for-sale groups; we are physically on campus at move-out.",
+        "rung": 2,
+        "source": "Carol · Oct 10"
+      },
+      "pd_commitment": {
+        "text": "Alice believes students will pay $3 per item.",
+        "rung": 1,
+        "source": "Alice · Oct 10"
+      }
+    },
+    "judgments": [
+      {
+        "deliverable": "customer_discovery",
+        "date": "Oct 7",
+        "verdict": "Ready to move on",
+        "reasons": [
+          "All 5 key questions at their required evidence rung."
+        ],
+        "consider": [],
+        "requested_by": "m1",
+        "review": "Confirmed by EIR",
+        "reviewer": "AIN staff (demo)",
+        "note": "Good discovery work. In M2, test who pays before polishing the pitch."
+      },
+      {
+        "deliverable": "bmc",
+        "date": "Oct 9",
+        "verdict": "Ready to move on",
+        "reasons": [
+          "All 5 key questions at their required evidence rung."
+        ],
+        "consider": [],
+        "requested_by": "m1",
+        "review": "Confirmed by EIR",
+        "reviewer": "AIN staff (demo)",
+        "note": "Good discovery work. In M2, test who pays before polishing the pitch."
+      }
+    ],
+    "learning_log": [
+      {
+        "date": "Oct 5",
+        "by": "m2",
+        "text": "People saying they would use it is not the same as paying. We need to test the fee, not argue about it."
+      }
+    ]
+  },
+  "script": [
+    {
+      "id": "c1",
+      "speaker": "m1",
+      "text": "Everyone we talked to loved it — I'm sure they'll pay $3.",
+      "reply": "Alice, I hear the conviction, but \"loved it\" is what people **say**. Bob's notes show 2 of 3 would only use it if free — so the team holds two opposite beliefs and has zero transactions.\n\nBefore anyone builds payments: show 10 movers a real offer (\"we'll sell your mini-fridge, $3 if it sells\") and count sign-ups.\n\n**Why:** a sign-up is behavior, not opinion. **Test it yourselves:** agree *before* the test what result would change your mind — e.g. fewer than 3 of 10 means rethink pricing.",
+      "summary": "Alice restated confidence in the $3 fee; the EIR asked the team to pre-commit a pass/fail threshold for the fee test.",
+      "handoff": null,
+      "proposals": [
+        {
+          "kind": "new_step",
+          "text": "Agree a pass/fail threshold for the fee test (e.g. ≥3 of 10 sign-ups)",
+          "owner": "m1"
+        },
+        {
+          "kind": "canvas",
+          "block": "Revenue Streams",
+          "text": "$3 fee per item sold — untested; most interviewees prefer free",
+          "status": "Hypothesis"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "speaker": "m2",
+      "text": "I did 2 more interviews. 4 of 5 total said they'd only use it if it's free.",
+      "reply": "Thanks Bob — that closes your follow-up (5 of 5 interviews ✅).\n\nIt's stronger than before, but it's still **stated** preference, not behavior — and it now points against Alice's $3 assumption. Two models worth comparing: (a) free for sellers, buyers pay a small fee; (b) free pilot first to prove volume, then test pricing.\n\n**Why:** the disagreement is about *who* pays, not just *how much*. Which option could you test at Carol's move-out table?",
+      "summary": "Bob completed 5 interviews (4 of 5 want it free). The EIR reframed the pricing question as who pays: sellers or buyers.",
+      "handoff": null,
+      "proposals": [
+        {
+          "kind": "complete_step",
+          "step_id": "S1"
+        },
+        {
+          "kind": "update_hypothesis",
+          "hypothesis_id": "H2",
+          "evidence": "4 of 5 interviewees said they'd only use it if free",
+          "status": "Testing"
+        },
+        {
+          "kind": "new_hypothesis",
+          "statement": "Buyers (incoming students) will pay a small fee instead of sellers",
+          "owner": "m2"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "speaker": "m3",
+      "text": "Res Life said we can table at move-out week. Should we just launch there?",
+      "reply": "Good news, Carol — that's real access, and Channels is already marked as evidence.\n\nBut \"launch\" hides three decisions: what you collect, who pays, and who picks items up. Treat the table as an **experiment**: one weekend, one item category, and track sign-ups vs. people who walk by.\n\n**Why:** a narrow pilot gives you clean numbers for the pricing question the team still disagrees on.",
+      "summary": "Carol proposed launching at the move-out table; the EIR reframed it as a one-weekend pilot that also tests pricing.",
+      "handoff": null,
+      "proposals": [
+        {
+          "kind": "canvas",
+          "block": "Key Activities",
+          "text": "One-weekend move-out pilot: one item category, track sign-up rate",
+          "status": "Hypothesis"
+        },
+        {
+          "kind": "new_step",
+          "text": "Plan the one-weekend pilot at the move-out table",
+          "owner": "m3"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "speaker": "any",
+      "text": "Can we talk to a real mentor about pricing and liability for stored items?",
+      "reply": "Yes. Liability for students' stored property is outside what I should advise on, and pricing deserves a second opinion.\n\nI've drafted a **Mentor Brief** in 🤝 Mentor brief. Nothing is shared until the group approves it.",
+      "summary": "The team asked for a human mentor on pricing and liability; a Mentor Brief was drafted.",
+      "handoff": "Pricing + liability for stored items",
+      "proposals": []
+    }
+  ]
+}

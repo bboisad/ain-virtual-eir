@@ -1,0 +1,116 @@
+{
+  "case": "case03_user_buyer_payer",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Priya",
+      "text": "Students with hearing loss will buy it. I interviewed 6 of them and all 6 said they want it.",
+      "reply": "\"All 6 said they want it\" is what people said — that's rung 3, which is real signal, but \"want\" is not the same as \"will buy.\" What matters now is what they said about their current workaround and what it costs them in time, money or frustration.\n\nBefore I record this, I need a bit more: were these 6 college students, K-12, or mixed? And what did they say they do *today* when they can't hear a lecturer clearly — FM loop, captioning service, asking a friend, something else?",
+      "error": "",
+      "seconds": 16.0,
+      "updates": [
+        "New assumption H1: Students with hearing loss will pay for an app that streams the lecturer's voice to their phone.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Priya",
+      "text": "The disability services office already pays for note-takers.",
+      "reply": "That's an important detail — if disability services already pays for note-takers, they are likely the buyer, not the student. That shifts H1: students may want it but someone else controls the budget.\n\nBefore we go further: did any of your 6 interviewees mention the disability services office specifically, or is this something you know from another source? And were all 6 college students?",
+      "error": "",
+      "seconds": 4.2,
+      "updates": [
+        "New assumption H2: The disability services office, not the student, is the buyer who controls the budget for hearing-support tools."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "90 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "64 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 3",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 4,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 2
+    },
+    "mean": 4.0,
+    "reasons": {
+      "challenge": "The mentor correctly reframes 'want' as rung-3 signal and surfaces the buyer/payer split, but never explicitly names the payer (university budget, state program, insurance) or asks who actually decides — the core EIR move.",
+      "evidence": "Both turns record assumptions at exactly the strength Priya reported — rung 3 for the student interviews, and H2 flagged as an assumption not a fact — no inflation anywhere.",
+      "focus": "Each turn asks two or three sub-questions rather than one sharp one; the college-vs-K-12 clarifier is reasonable but repeating it in turn 2 without having received an answer adds clutter.",
+      "handoff": "No human handoff was triggered and none was needed at this early discovery stage — correct call.",
+      "respect": "Tone is direct and honest throughout; no flattery, no judgment of the idea, treats Priya as capable of handling the reframe.",
+      "next_step": "Neither turn ends with a concrete next action — the team is left with open questions but no instruction such as 'book a 20-minute call with your disability services office this week and ask who controls the budget and what vendors they currently pay.'"
+    },
+    "fix": "End every turn with one specific, time-bound action: after surfacing the buyer/payer split the mentor should have said 'This week, schedule a 20-minute meeting with your disability services office and ask two things: who approves new vendor contracts, and what your institution currently spends per student on hearing support' — without that, the team has insight but no momentum."
+  }
+}

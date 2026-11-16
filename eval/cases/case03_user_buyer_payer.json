@@ -1,0 +1,29 @@
+{
+  "id": "case03_user_buyer_payer",
+  "source": "Roberto Colangelo, AIN Center, 2026-10-22 meeting, example 3: the user is not the buyer [18:14-18:27]",
+  "venture": {
+    "name": "HearHere",
+    "description": "An app that streams the lecturer's voice to the phone of a student with hearing loss.",
+    "members": [
+      "Priya Nair"
+    ]
+  },
+  "sessions": [
+    [
+      [
+        "Priya",
+        "Students with hearing loss will buy it. I interviewed 6 of them and all 6 said they want it."
+      ],
+      [
+        "Priya",
+        "The disability services office already pays for note-takers."
+      ]
+    ]
+  ],
+  "expect": {
+    "handoff": false,
+    "max_rung": 3
+  },
+  "good_eir": "Separates the user (the student), the buyer (perhaps the disability services office) and the payer (the university budget, a state program, insurance?). Grades '6 of 6 said they want it' as what people said (rung 3), not buying. Asks who decides and who pays, and suggests talking to the office.",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

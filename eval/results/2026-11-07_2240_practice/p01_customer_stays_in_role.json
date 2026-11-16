@@ -1,0 +1,200 @@
+{
+  "case": "p01_customer_stays_in_role",
+  "model": "databricks-claude-sonnet-4-6",
+  "character": "customer",
+  "scenario": "discovery",
+  "persona": "Renata, part-time nursing student commuting from the suburbs",
+  "opening": "Hi, I'm Renata. I've got about fifteen minutes. What did you want to ask me?",
+  "turns": [
+    {
+      "by": "Dana",
+      "text": "Thanks for meeting me. Tell me about the last time you drove to campus for an early class.",
+      "reply": "Sure. That was actually just last Tuesday. I had an 8 a.m. clinical prep class, so I was trying to get in early enough to not be rushed. Parking ended up being a whole thing — I spent probably 14 minutes just going around Lot C looking for a spot, and eventually I just gave up and paid for the visitor garage. Which cost me $12, and I still ended up two minutes late. So the morning kind of started off on the wrong foot.",
+      "error": "",
+      "seconds": 2.3,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "Don't you think parking on campus is a total nightmare?",
+      "reply": "I mean, it has its frustrating days. Last Tuesday was definitely one of them.",
+      "error": "",
+      "seconds": 1.1,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "We're building an app where students with reserved spots rent them out by the hour. Would you use it?",
+      "reply": "Oh, that's interesting. Maybe, it depends. I'd have to see how it works I guess.",
+      "error": "",
+      "seconds": 1.4,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "Would you pay $5 a month for it?",
+      "reply": "Probably, maybe. I'm not really sure without knowing more about it.",
+      "error": "",
+      "seconds": 1.2,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "What did being late cost you that day?",
+      "reply": "Honestly it just threw me off for the whole morning. I was flustered going into the class, which is not a great way to start a clinical prep session. And the $12 for the garage on top of what I already pay for my monthly hang-tag — it adds up. I actually keep a little notebook in my glove compartment where I track those kinds of expenses, so I'll be writing that one down.",
+      "error": "",
+      "seconds": 5.9,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "Could I follow up with you next week, and would you introduce me to two other commuters?",
+      "reply": "Sure, you can follow up. As for other commuters, I mean, I don't really stick around after class much so I don't know a lot of the other students that well. I can think about it but I can't promise anything.",
+      "error": "",
+      "seconds": 1.6,
+      "wrapped_up": false
+    }
+  ],
+  "feedback": "Overall 3.0 of 5. Dana opened well with a strong past-behaviour question but then broke the problem interview by pitching the app and asking leading questions, which cut short what could have been a rich discovery conversation.\nScores: Asks about past behaviour 4; Open, non-leading questions 2; Listens instead of pitching 2; Digs into specifics 3; Ends with a next step 4\nWhat worked:\n- Your very first question — 'Tell me about the last time you drove to campus for an early class' — is textbook: it anchors Renata in a real memory and immediately surfaced a concrete story with a time (14 minutes), a cost ($12), and an emotional consequence.\n- Ending with a follow-up request and an ask for introductions shows good instinct for closing with a next step, even though Renata could only half-commit on the referrals.\nFix these:\n- Cut the pitch entirely in a problem interview. The moment you said 'We're building an app where students with reserved spots rent them out by the hour. Would you use it?' you switched from learning to selling, and Renata's answer ('Maybe, it depends') gave you nothing useful; save the concept for a separate solution interview after you have solid problem evidence.\n- Replace leading questions with open ones. 'Don't you think parking on campus is a total nightmare?' signals the answer you want and will get you agreement, not truth; try instead 'How would you describe the parking situation overall?' or 'What's the hardest part of the commute for you?'\n- Follow every vague answer with a numbers probe. When Renata said the morning 'kind of started off on the wrong foot,' you could have asked 'How often does something like this happen in a typical month?' and 'What does that add up to in extra costs or time over a semester?' — those numbers are the evidence your team needs to test the fatal assumption about willingness to pay.\nTo check with real customers:\n- Renata said she 'gave up and paid for the visitor garage' at $12 — check with Parking Services whether visitor garage use spikes during early-morning class windows, which would confirm this is a recurring pattern and not a one-off.\n- Renata mentioned she keeps a notebook to track extra parking expenses — check with other commuters whether cost-tracking is common, because if it is, it signals the pain is real and quantifiable enough that customers might already be motivated to solve it.\n- Renata said she doesn't know many other commuters because she doesn't stick around after class — check whether commuter students have any shared spaces, GroupMe channels, or commuter lounges that could serve as a recruitment channel, since word-of-mouth referrals may be harder to get than assumed.",
+  "feedback_seconds": 10.8,
+  "checks": [
+    {
+      "check": "turn 1: under 110 words",
+      "ok": true,
+      "detail": "85 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 1: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 110 words",
+      "ok": true,
+      "detail": "14 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 2: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: under 110 words",
+      "ok": true,
+      "detail": "15 words"
+    },
+    {
+      "check": "turn 3: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 3: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: under 110 words",
+      "ok": true,
+      "detail": "11 words"
+    },
+    {
+      "check": "turn 4: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 4: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: under 110 words",
+      "ok": true,
+      "detail": "74 words"
+    },
+    {
+      "check": "turn 5: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 5: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 6: under 110 words",
+      "ok": true,
+      "detail": "41 words"
+    },
+    {
+      "check": "turn 6: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 6: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "never says \"ParkSwap\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "knows nothing about the idea before turn 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "promises nothing (no \"sign me up\")",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the feedback scores every rubric dimension",
+      "ok": true,
+      "detail": "listening, next_step, open, past, specifics"
+    },
+    {
+      "check": "the fixes name the main mistake",
+      "ok": true,
+      "detail": "would you, leading, don't you, pitch"
+    },
+    {
+      "check": "the feedback lists what to check with real customers",
+      "ok": true,
+      "detail": "3 listed"
+    }
+  ],
+  "judge": {
+    "scores": {
+      "in_role": 5,
+      "knowledge": 5,
+      "pressure": 4,
+      "feedback_accuracy": 5,
+      "feedback_useful": 4
+    },
+    "mean": 4.6,
+    "reasons": {
+      "in_role": "Renata stayed fully in character throughout—concrete about the Tuesday incident, appropriately vague on hypotheticals, never coaching or praising Dana, and the glove-compartment notebook detail emerged naturally rather than being volunteered upfront.",
+      "knowledge": "Renata used only her allowed backstory details and what Dana revealed about the app, inventing nothing about ParkSwap's features, pricing logic, or team plans beyond what was stated.",
+      "pressure": "Renata resisted the leading question and gave only a half-commitment on referrals, but she could have been slightly more evasive or probing when Dana pitched the app directly—a real commuter might have asked a clarifying question that forced Dana to reveal more before answering.",
+      "feedback_accuracy": "Every score and cited example maps precisely to what happened: the strong opening question is correctly rewarded, the pitch and leading question are correctly penalized, and the follow-up ask is accurately credited as a partial success.",
+      "feedback_useful": "The fixes are specific and actionable—replacing the leading question with exact alternative phrasings and naming the missing numbers probe—though the 'to check with real customers' section could more explicitly flag that Renata's details are simulated and not yet evidence."
+    },
+    "fix": "The 'To check with real customers' section should open with an explicit disclaimer that Renata is a simulated character and her details (the $12 garage cost, the notebook habit, the referral difficulty) are hypotheses to test, not data points already collected, so the team does not treat the AI's invented specifics as partial validation."
+  }
+}

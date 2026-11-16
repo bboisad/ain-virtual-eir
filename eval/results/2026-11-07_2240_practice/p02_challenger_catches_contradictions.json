@@ -1,0 +1,205 @@
+{
+  "case": "p02_challenger_catches_contradictions",
+  "model": "databricks-claude-sonnet-4-6",
+  "character": "challenger",
+  "scenario": "holes",
+  "persona": "",
+  "opening": "I've read everything you've recorded. Let's see what holds up. You've talked to four lab managers and three said idle equipment is a problem — but what did any of them actually do after that conversation, not just say?",
+  "turns": [
+    {
+      "by": "Ravi",
+      "text": "We already have 50 paying customers lined up.",
+      "reply": "Your records show four interviews and no experiments, no payments, no pre-orders recorded anywhere. Where are these 50 paying customers documented?",
+      "error": "",
+      "seconds": 1.2,
+      "wrapped_up": false
+    },
+    {
+      "by": "Ravi",
+      "text": "Well, they're departments that said they're interested. Nobody has paid yet.",
+      "reply": "So \"paying customers\" means people who expressed interest in a conversation — that's the same level of evidence you already had. How many of those 50 have you gone back to and asked them to actually commit something, even a letter of intent or a small deposit?",
+      "error": "",
+      "seconds": 1.9,
+      "wrapped_up": false
+    },
+    {
+      "by": "Mei",
+      "text": "We interviewed 30 lab managers and all of them loved it.",
+      "reply": "Your records show four interviews. Where are the notes or any documentation from the other 26?",
+      "error": "",
+      "seconds": 1.2,
+      "wrapped_up": false
+    },
+    {
+      "by": "Mei",
+      "text": "Okay, it was 4 interviews. 3 of them said idle equipment is a problem.",
+      "reply": "Thank you for the correction. Now, saying something is a problem and being willing to pay a 10% booking fee to solve it are very different things. Did any of those three actually tell you they'd pay a fee, and if so, what's your evidence for that?",
+      "error": "",
+      "seconds": 1.7,
+      "wrapped_up": false
+    },
+    {
+      "by": "Ravi",
+      "text": "If faculty refuse outside users, we'd start with the shared core facilities instead.",
+      "reply": "That's an interesting pivot, but I'm asking about the 10% fee right now. Did any of the lab managers you interviewed actually say they would pay a 10% booking fee, yes or no?",
+      "error": "",
+      "seconds": 1.3,
+      "wrapped_up": false
+    },
+    {
+      "by": "Ravi",
+      "text": "We don't know yet whether departments will pay the 10% fee. We plan to test it with two departments next month.",
+      "reply": "Fair enough, that's an honest answer. Now let's go to that pivot you mentioned — one of your four lab managers actually said faculty would refuse outside users in their labs. If that's a real risk, what makes you confident the core facilities path is viable rather than just a way to sidestep a problem you haven't fully understood yet?",
+      "error": "",
+      "seconds": 3.4,
+      "wrapped_up": false
+    }
+  ],
+  "feedback": "Overall 2.5 of 5. The team started with two unsupported claims that damaged credibility, but recovered with a clear admission on the fee question — the session shows you can be honest under pressure, you just need to lead with that honesty instead of arriving at it after being challenged.\nScores: Admits what isn't known 3; Answers with evidence 2; Consistent with the records 2; Clear under pressure 3\nWhat worked:\n- Ravi's admission 'We don't know yet whether departments will pay the 10% fee. We plan to test it with two departments next month' is exactly the right format — a plain acknowledgment of ignorance paired with a concrete next step.\n- Mei self-corrected quickly when pressed on the interview count, pulling back from '30 lab managers' to the accurate '4 interviews, 3 said idle equipment is a problem,' which showed you can recover under pressure.\nFix these:\n- Never open with a number you can't document: 'We already have 50 paying customers lined up' was directly contradicted by your own records and cost you trust immediately — before you make any claim, ask yourself 'can I point to a note, a receipt, or a recording that shows this?'\n- Lead every answer with your strongest real evidence, not your best hope: instead of inflating to 50 customers, say '3 of 4 lab managers told us idle equipment is a real cost, and we are now designing a test to see whether they will commit to a fee' — that answer is shorter, truer, and more persuasive.\n- When you introduce a pivot (core facilities), anchor it to evidence immediately or flag it as untested: saying 'we'd start with shared core facilities instead' without any supporting interviews or data sounds like deflection — say 'that is our hypothesis and we don't have evidence for it yet; here is how we will find out.'\nToughest questions:\n- \"Did any of the lab managers you interviewed actually say they would pay a 10% booking fee, yes or no?\" → No, none of the four lab managers we interviewed confirmed they would pay a 10% fee — that assumption has no evidence behind it yet. We plan to go back to two departments next month with a concrete offer and ask them to sign a letter of intent or pay a small deposit so we have a real signal.\n- \"What makes you confident the core facilities path is viable rather than just a way to sidestep a problem you haven't fully understood yet?\" → Honestly, we don't know yet whether core facilities are viable — it is a hypothesis we formed because one of our four lab managers flagged faculty resistance to outsiders. We need to interview core facility managers directly to find out whether they face the same idle-equipment problem and whether they have more flexibility on outside users.\nWeak spots:\n- The 10% booking fee has zero evidence: no lab manager confirmed willingness to pay it, and it is rated a fatal assumption — without fee revenue the business model does not exist; severe; a letter of intent or a paid pilot booking from even one department would begin to settle this.\n- Faculty resistance to outside users is a recorded counter-signal from your own interviews, yet the team has not investigated it: if faculty routinely block access, the core product cannot be delivered; high; structured interviews with two or three faculty members asking directly about their access policies would clarify the real constraint.\n- The beachhead market choice (biology and chemistry research labs) rests on assertion only, with no documented reason it was chosen over alternatives such as core facilities or engineering labs; medium; comparing willingness-to-pay and access-policy data across at least two department types would justify or revise the choice.\nClaims the records don't support:\n- \"We already have 50 paying customers lined up.\": the records show four interviews and no payments, pre-orders, or letters of intent recorded anywhere.\n- \"We interviewed 30 lab managers and all of them loved it.\": the records show four interviews, three of whom said idle equipment is a problem — one expressed a concern about faculty refusing outsiders.",
+  "feedback_seconds": 12.3,
+  "checks": [
+    {
+      "check": "turn 1: under 120 words",
+      "ok": true,
+      "detail": "21 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 120 words",
+      "ok": true,
+      "detail": "47 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: under 120 words",
+      "ok": true,
+      "detail": "16 words"
+    },
+    {
+      "check": "turn 3: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 3: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: under 120 words",
+      "ok": true,
+      "detail": "47 words"
+    },
+    {
+      "check": "turn 4: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 4: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: under 120 words",
+      "ok": true,
+      "detail": "33 words"
+    },
+    {
+      "check": "turn 5: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 5: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 6: under 120 words",
+      "ok": true,
+      "detail": "60 words"
+    },
+    {
+      "check": "turn 6: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 6: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "names the gap with the records after turn 1",
+      "ok": true,
+      "detail": "Your records show four interviews and no experiments, no payments, no pre-orders recorded anywhere. Where are these 50 paying customers documented?"
+    },
+    {
+      "check": "names the gap with the records after turn 3",
+      "ok": true,
+      "detail": "Your records show four interviews. Where are the notes or any documentation from the other 26?"
+    },
+    {
+      "check": "tough, never rude",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the feedback scores every rubric dimension",
+      "ok": true,
+      "detail": "clarity, consistency, evidence, honesty"
+    },
+    {
+      "check": "the feedback lists the unsupported claim with 50",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the feedback lists the unsupported claim with 30",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the feedback lists the weak spots",
+      "ok": true,
+      "detail": "3 listed"
+    }
+  ],
+  "judge": {
+    "scores": {
+      "in_role": 5,
+      "knowledge": 5,
+      "pressure": 5,
+      "feedback_accuracy": 5,
+      "feedback_useful": 5
+    },
+    "mean": 5.0,
+    "reasons": {
+      "in_role": "Challenger stayed in the challenger role throughout, naming gaps immediately, pressing on unsupported claims, acknowledging corrections briefly, and never coaching or praising.",
+      "knowledge": "Every challenge was grounded in the recorded evidence map and key-question answers; no details about the venture were invented or assumed beyond what the team said.",
+      "pressure": "The character pressed each vague or inflated claim with a single sharp follow-up, held the line on the fee question when Ravi tried to pivot, and closed by naming the faculty-access risk directly — exactly what Realistic difficulty requires.",
+      "feedback_accuracy": "The scores, what-worked points, and fix-these items all map precisely to what happened in the session transcript, including both unsupported claims, both recoveries, and the unanchored pivot.",
+      "feedback_useful": "Every fix is concrete and actionable, the stronger-answer models use only the team's own recorded numbers, and each weak spot names a severity level and a specific test that would resolve it."
+    },
+    "fix": "The feedback's 'Toughest questions' section already supplies model answers, which is valuable, but it should explicitly instruct the team to rehearse delivering those answers aloud before the next session so the habit of leading with real evidence becomes automatic under pressure."
+  }
+}

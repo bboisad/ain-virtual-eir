@@ -1,0 +1,29 @@
+{
+  "_note": "Taken from the public AIN Center website (rochester.edu/aincenter), October 2026. Exact Foundry Friday dates are only on the AIN poster; confirm before showing dates.",
+  "resources": [
+    {"name": "Foundry Friday: brand identity", "kind": "Foundry Friday", "when": "October", "modules": ["M1"]},
+    {"name": "Foundry Friday: Launch Pad round tables", "kind": "Foundry Friday", "when": "October", "modules": ["M1", "M2"]},
+    {"name": "Foundry Friday: vibe coding a startup website", "kind": "Foundry Friday", "when": "October", "modules": ["M1", "M2"]},
+    {"name": "Foundry Friday: customer discovery", "kind": "Foundry Friday", "when": "November", "modules": ["M1", "M2"]},
+    {"name": "Foundry Friday: pitch practice", "kind": "Foundry Friday", "when": "November", "modules": ["M2"]},
+    {"name": "Foundry Friday: prototyping", "kind": "Foundry Friday", "when": "November", "modules": ["M1", "M2"]},
+    {"name": "Foundry Friday: how VC ventures work", "kind": "Foundry Friday", "when": "November", "modules": ["M3"]},
+    {"name": "Foundry Friday: networking", "kind": "Foundry Friday", "when": "November", "modules": ["M3"]},
+    {"name": "Mark Ain Business Model Competition", "kind": "Competition", "when": "See AIN website", "modules": ["M1", "M2"]},
+    {"name": "Forbes Pitch Competition", "kind": "Competition", "when": "See AIN website", "modules": ["M2"]},
+    {"name": "New York Business Plan Competition", "kind": "Competition", "when": "See AIN website", "modules": ["M3"]},
+    {"name": "NSF I-Corps Hub (customer discovery for research teams)", "kind": "Program", "when": "Ongoing", "modules": ["M1", "M2"], "research_only": true},
+    {"name": "UR Ventures (IP and licensing)", "kind": "Partner", "when": "Ongoing", "modules": ["M1", "M2", "M3"], "research_only": true},
+    {"name": "Startup internships: Hire Rochester Scholar Program", "kind": "Program", "when": "Ongoing", "modules": ["M3"]},
+    {"name": "Innovation incubators and VC opportunities", "kind": "Pathway", "when": "After M3", "modules": ["M3", "Alumni"]},
+    {"name": "Foundry alumni mentor network", "kind": "Pathway", "when": "After M3", "modules": ["Alumni"]}
+  ],
+  "eir_expertise": [
+    {"area": "Product, marketing and go-to-market", "keywords": ["pitch", "marketing", "product", "customer", "go-to-market", "value proposition"]},
+    {"area": "Strategy and fundraising", "keywords": ["fundrais", "investor", "venture capital", "vc", "financ"]},
+    {"area": "Early-stage finance and operations", "keywords": ["bootstrap", "financial model", "cost", "operations"]},
+    {"area": "Small-business growth and consulting", "keywords": ["growth", "small business", "scaling"]},
+    {"area": "Research commercialization and IP", "keywords": ["ip", "patent", "licens", "legal", "lab", "regulat"]},
+    {"area": "Healthcare and clinical innovation", "keywords": ["clinical", "hospital", "fda", "medical", "health"]}
+  ]
+}

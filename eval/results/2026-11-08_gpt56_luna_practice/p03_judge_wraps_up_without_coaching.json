@@ -1,0 +1,177 @@
+{
+  "case": "p03_judge_wraps_up_without_coaching",
+  "model": "gpt-5.6-luna",
+  "character": "judge",
+  "scenario": "pitch",
+  "persona": "",
+  "opening": "Welcome. You have three minutes for your pitch, then I'll ask a few questions. Whenever you're ready.",
+  "turns": [
+    {
+      "by": "Sofia",
+      "text": "Every lunchtime on our campus, food trucks and cafés deliver hundreds of meals to offices and labs, and every one of those meals arrives in a disposable box. Last semester we counted the trash bins behind two office buildings for a week: by Friday they were overflowing with single-use containers, most of them barely dirty. The vendors don't like it either. One café owner told us that packaging is now his third-largest cost after staff and ingredients, and that he spends forty minutes a day breaking down boxes.\n\nGreenCrate replaces those boxes with sturdy reusable crates. A vendor packs the order into a crate with our insulated liners, the office keeps it until the next delivery, and the driver picks up the empty crates on the next run. We wash them in a small station on campus and put them back into rotation the same afternoon. Every crate has a QR code, so the vendor knows where each one is, and a crate that goes missing is charged to the office that last had it.\n\nOur first customers are the food trucks and cafés on campus that deliver to offices. There are about forty of them, and they deliver to roughly two hundred offices and labs. They are a tight group: they park in the same lots, they share a supplier, and they talk to each other every day. If two or three of them switch, the others will hear about it within a week.\n\nSo far two cafés have agreed to a free two-week trial starting next month. We will track how many crates come back, how long washing takes, and whether the drivers find the pick-up easy or annoying. If at least ninety percent of the crates come back and the drivers want to keep going, we will offer the vendors a paid plan.\n\nWe plan to charge two dollars per crate per month. A vendor using fifty crates would pay one hundred dollars a month, which is less than what the café owner told us he spends on boxes every week. Offices pay nothing, which keeps the friction on their side low, and the university's sustainability office has said it likes the idea of fewer bins behind its buildings.\n\nThe alternatives today are disposable packaging, which vendors already pay for and dislike, and a few vendors who use their own bins, which get lost because nobody tracks them. Big delivery apps are experimenting with reusable packaging in a few cities, but none of them work with small campus vendors, and none of them wash locally.\n\nI'm a supply-chain major, and I spent the last two summers in a warehouse that runs a returnable-pallet system, so I know how easily returnable things disappear. My co-founder runs a café delivery route on campus three days a week, so he talks to the drivers every day.\n\nWe are asking for the prize to buy three hundred crates and to set up the washing station for the pilot. With that, we can run the trial with two cafés, then grow to ten vendors by the end of the semester. Thank you.",
+      "reply": "That pitch ran over the three-minute limit. You mentioned two cafés agreed to a free trial; what specifically did they commit to, and what evidence do you have that they would pay after the trial?",
+      "error": "",
+      "seconds": 1.7,
+      "wrapped_up": false
+    },
+    {
+      "by": "Sofia",
+      "text": "Two cafés have agreed to a free two-week trial starting next month. Nobody has paid yet.",
+      "reply": "What evidence do you have that the offices receiving the meals will reliably return the crates, rather than leaving them in offices or discarding them?",
+      "error": "",
+      "seconds": 1.6,
+      "wrapped_up": false
+    },
+    {
+      "by": "Sofia",
+      "text": "We'd charge $2 per crate per month, but we haven't tested that price with any vendor.",
+      "reply": "You haven't addressed the return behavior. What did the cafés or offices say they would do to ensure crates are available for pickup, and have any of them agreed to a specific return process?",
+      "error": "",
+      "seconds": 2.0,
+      "wrapped_up": false
+    },
+    {
+      "by": "Sofia",
+      "text": "Disposable packaging is the alternative, and a few vendors use their own bins that get lost.",
+      "reply": "Thank you. What are your estimated washing, pickup, replacement, and other operating costs per crate per month, and how does the proposed $2 price cover those costs?",
+      "error": "",
+      "seconds": 1.3,
+      "wrapped_up": false
+    },
+    {
+      "by": "Sofia",
+      "text": "I'm a supply-chain major, and my co-founder drives a café delivery route three days a week.",
+      "reply": "Thank you, that's all from me. The panel will deliberate.",
+      "error": "",
+      "seconds": 2.4,
+      "wrapped_up": true
+    }
+  ],
+  "feedback": "Overall 2.4 of 5. You presented a concrete waste and packaging problem with a plausible pilot, but the pitch ran long and your answers did not address the judge's questions about commitments, returns, or unit economics.\nScores: Problem and customer 4; Evidence (said / did / paid) 2; Business model and numbers 2; Competition and advantage 3; Team and the ask 3; Delivery and time 2; Answers to questions 1\nWhat worked:\n- The problem was vivid and specific: you described overflowing bins and a café owner spending \"forty minutes a day breaking down boxes.\"\n- You identified a relevant pilot and operating test: \"two cafés have agreed to a free two-week trial starting next month,\" with return rates, washing time, and driver effort to be tracked.\nFix these:\n- Cut the 520-word pitch to about 400 words so it fits three minutes; remove details such as the shared supplier, QR-code mechanics, and broad market claims unless they directly support the problem, evidence, or ask.\n- Separate evidence from assumptions: state that the two cafés agreed only to free trials, that nobody has paid, and that the $2 price and 90% return rate are untested.\n- Practice answering the question asked in two sentences: give the direct answer first, then cite evidence or say what you will test; your responses substituted team background or competition for the requested facts.\nToughest questions:\n- \"What specifically did the cafés commit to, and what evidence do you have that they would pay after the trial?\" → \"They committed to a free two-week trial starting next month; nobody has paid or committed to continue afterward. We will ask each café to sign a written trial scope and test a paid continuation offer after measuring returns and driver effort.\"\n- \"What evidence do you have that offices will reliably return the crates?\" → \"We do not have evidence yet that offices will reliably return them. During the two-café trial, we will record crate returns by delivery and ask the cafés and receiving offices to use a specific pickup process.\"\n- \"What are your estimated washing, pickup, replacement, and other operating costs per crate per month, and how does the proposed $2 price cover them?\" → \"We do not yet have those cost estimates, so we cannot show that the $2 price covers them. We will measure washing time, pickup effort, and losses during the trial, then calculate cost per crate before setting or validating the price.\"\nClaims the records don't support:\n- \"Every lunchtime on our campus, food trucks and cafés deliver hundreds of meals to offices and labs\": the records contain no supporting count or experiment.\n- \"There are about forty of them, and they deliver to roughly two hundred offices and labs\": the records contain no supporting market-size evidence.\n- \"The university's sustainability office has said it likes the idea\": the records contain no recorded evidence of this statement.\n- \"A café owner told us that packaging is now his third-largest cost after staff and ingredients\": the records do not record this customer statement as evidence.",
+  "feedback_seconds": 7.9,
+  "checks": [
+    {
+      "check": "turn 1: under 90 words",
+      "ok": true,
+      "detail": "35 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 90 words",
+      "ok": true,
+      "detail": "25 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: under 90 words",
+      "ok": true,
+      "detail": "34 words"
+    },
+    {
+      "check": "turn 3: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 3: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: under 90 words",
+      "ok": true,
+      "detail": "27 words"
+    },
+    {
+      "check": "turn 4: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 4: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: under 90 words",
+      "ok": true,
+      "detail": "10 words"
+    },
+    {
+      "check": "turn 5: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 5: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "says the pitch ran over in its first reply",
+      "ok": true,
+      "detail": "that pitch ran over the three-minute limit. you mentioned two cafés agreed to a free trial; what specifically did they commit to, and what evidence do you have that they would pay after the trial?"
+    },
+    {
+      "check": "never coaches or praises during the session",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "announces no score, prize or decision",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "closes the session within 6 team messages",
+      "ok": true,
+      "detail": "closed after 5"
+    },
+    {
+      "check": "the feedback scores every rubric dimension",
+      "ok": true,
+      "detail": "answers, competition, delivery, evidence, model, problem, team_ask"
+    },
+    {
+      "check": "delivery scored at most 3 (the pitch ran over)",
+      "ok": true,
+      "detail": "delivery 2"
+    }
+  ],
+  "judge": {
+    "scores": {
+      "in_role": 5,
+      "knowledge": 5,
+      "pressure": 5,
+      "feedback_accuracy": 5,
+      "feedback_useful": 5
+    },
+    "mean": 5.0,
+    "reasons": {
+      "in_role": "The judge stayed concise and in character, noted the time violation, asked focused questions one at a time, followed up on unanswered returns evidence, and closed without coaching or scoring.",
+      "knowledge": "The judge used only claims from the pitch and project records, without inventing venture facts.",
+      "pressure": "The judge appropriately pressed for commitments, payment evidence, return behavior, and unit economics while remaining professional and non-coaching.",
+      "feedback_accuracy": "The feedback accurately identified the overlong pitch, credited the concrete problem and free-trial evidence, and correctly flagged that answers failed to address the questions.",
+      "feedback_useful": "The feedback gives specific, record-supported revisions, including a shorter pitch, explicit labeling of untested assumptions, direct answer structures, and a precise trial-based testing plan."
+    },
+    "fix": "Make the team’s final ask specific by stating the exact prize amount requested and the milestone it will fund, while keeping the price and return-rate claims explicitly labeled as untested."
+  }
+}

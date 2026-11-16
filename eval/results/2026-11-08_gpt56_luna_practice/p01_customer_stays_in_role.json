@@ -1,0 +1,200 @@
+{
+  "case": "p01_customer_stays_in_role",
+  "model": "gpt-5.6-luna",
+  "character": "customer",
+  "scenario": "discovery",
+  "persona": "Marisol, a community-college student commuting to morning classes",
+  "opening": "Hi, I'm Marisol. I've got about fifteen minutes. What did you want to ask me?",
+  "turns": [
+    {
+      "by": "Dana",
+      "text": "Thanks for meeting me. Tell me about the last time you drove to campus for an early class.",
+      "reply": "Last Tuesday, I drove in for my morning class. The closer lot was full, so I circled around for about fifteen minutes, then parked farther away. I paid eight dollars for the day and got to class just before it started. I skipped coffee that morning.",
+      "error": "",
+      "seconds": 1.8,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "Don't you think parking on campus is a total nightmare?",
+      "reply": "It can be, especially when the closer lots fill up. Usually I manage, but I don't always know how long it’ll take to find a space.",
+      "error": "",
+      "seconds": 1.7,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "We're building an app where students with reserved spots rent them out by the hour. Would you use it?",
+      "reply": "Maybe. It would depend on how reliable the spot was and how it worked with the campus parking rules. I’d probably want to understand the details first.",
+      "error": "",
+      "seconds": 1.7,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "Would you pay $5 a month for it?",
+      "reply": "Maybe, I’m not sure. It would depend on how often I actually needed it and whether it saved me time.",
+      "error": "",
+      "seconds": 3.3,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "What did being late cost you that day?",
+      "reply": "I wasn’t late that day—I got there just before class. It cost me about fifteen minutes of circling and eight dollars for parking, and I skipped coffee.",
+      "error": "",
+      "seconds": 7.0,
+      "wrapped_up": false
+    },
+    {
+      "by": "Dana",
+      "text": "Could I follow up with you next week, and would you introduce me to two other commuters?",
+      "reply": "I can probably answer a few more questions next week, but I’m not really sure about introducing you to other students. I’d have to ask them first.",
+      "error": "",
+      "seconds": 2.0,
+      "wrapped_up": true
+    }
+  ],
+  "feedback": "Overall 3.4 of 5. You obtained one useful past example and a plausible follow-up, but shifted too quickly into leading questions and an unsupported product pitch.\nScores: Asks about past behaviour 4; Open, non-leading questions 3; Listens instead of pitching 3; Digs into specifics 3; Ends with a next step 4\nWhat worked:\n- You opened with a strong behavioral question: \"Tell me about the last time you drove to campus for an early class,\" which elicited a concrete Tuesday example.\n- You ended by asking for a follow-up next week and introductions to two commuters, creating a specific potential next step even though the introduction was not committed.\nFix these:\n- Replace \"Don't you think parking on campus is a total nightmare?\" with a neutral follow-up such as \"What was that experience like?\" The original wording suggests the answer you want.\n- Hold the product pitch and payment question until you have fully explored the problem. Ask about frequency, time lost, parking costs, and what they tried on several recent occasions instead of asking whether they would use the app or pay $5.\n- Follow vague answers with measurable questions. After \"Usually I manage,\" ask how many times in the past month this happened, how long finding parking took, and what each workaround cost.\nWorth checking with real customers (the customer is made up: check these before relying on them):\n- Check with real commuters whether circling for about fifteen minutes and paying eight dollars for the day is typical, occasional, or unusual.\n- Check how often commuters skip coffee, arrive just before class, or otherwise change their routine because of parking.\n- Check with Residence Life or campus parking whether students with reserved spots may legally rent them out by the hour and what reliability or enforcement issues would apply.",
+  "feedback_seconds": 3.9,
+  "checks": [
+    {
+      "check": "turn 1: under 110 words",
+      "ok": true,
+      "detail": "46 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 1: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 110 words",
+      "ok": true,
+      "detail": "26 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 2: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: under 110 words",
+      "ok": true,
+      "detail": "27 words"
+    },
+    {
+      "check": "turn 3: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 3: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: under 110 words",
+      "ok": true,
+      "detail": "20 words"
+    },
+    {
+      "check": "turn 4: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 4: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: under 110 words",
+      "ok": true,
+      "detail": "27 words"
+    },
+    {
+      "check": "turn 5: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 5: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 6: under 110 words",
+      "ok": true,
+      "detail": "27 words"
+    },
+    {
+      "check": "turn 6: at most 2 questions",
+      "ok": true,
+      "detail": "0 question marks"
+    },
+    {
+      "check": "turn 6: stays in role (never 'as an AI')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "never says \"ParkSwap\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "knows nothing about the idea before turn 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "promises nothing (no \"sign me up\")",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the feedback scores every rubric dimension",
+      "ok": true,
+      "detail": "listening, next_step, open, past, specifics"
+    },
+    {
+      "check": "the fixes name the main mistake",
+      "ok": true,
+      "detail": "don't you, past, pitch"
+    },
+    {
+      "check": "the feedback lists what to check with real customers",
+      "ok": true,
+      "detail": "3 listed"
+    }
+  ],
+  "judge": {
+    "scores": {
+      "in_role": 5,
+      "knowledge": 5,
+      "pressure": 5,
+      "feedback_accuracy": 5,
+      "feedback_useful": 5
+    },
+    "mean": 5.0,
+    "reasons": {
+      "in_role": "Marisol stays consistent as a busy, polite commuter, answers concretely about the past, remains appropriately vague about hypothetical use and payment, and does not coach Dana.",
+      "knowledge": "She uses only the permitted commuter details and responds to the product, price, and campus-rule claims only after Dana introduces them.",
+      "pressure": "She realistically resists the hypothetical questions with conditional answers and declines to promise introductions while remaining polite and direct.",
+      "feedback_accuracy": "The feedback accurately rewards the behavioral opening and follow-up, identifies the leading and hypothetical questions, and treats the customer's statements as issues to validate rather than evidence.",
+      "feedback_useful": "The feedback gives specific neutral alternatives, recommends exploring frequency and measurable past behavior, and appropriately flags product, pricing, and legal assumptions for real-customer research."
+    },
+    "fix": "The feedback could be even more actionable by explicitly noting that Dana's question about being late contained a false premise and should have been reframed as what the parking experience cost or changed that day."
+  }
+}

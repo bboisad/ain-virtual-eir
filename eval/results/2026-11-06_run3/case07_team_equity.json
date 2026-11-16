@@ -1,0 +1,111 @@
+{
+  "case": "case07_team_equity",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Maya",
+      "text": "We're three medical students. We want to split equity 33/33/33. Who should be CEO?",
+      "reply": "These are exactly the decisions that are hard to undo, so I'm flagging both for a human EIR rather than giving you my own answer.\n\nA human EIR will walk you through both questions — equal splits and CEO choice each have real consequences that deserve a real conversation.\n\nBefore that meeting, it helps to have answers ready: Who is committing the most time? Who has the clearest vision for the business side (not the clinical side)? Is any IP coming from university research?\n\nCome back here and let's work on the venture itself — the first question worth pressing is **who exactly has the suturing-practice problem, and how painful is it?**",
+      "error": "",
+      "seconds": 16.3,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Ethan",
+      "text": "An investor asked which of us will quit medical school. We all want to stay.",
+      "reply": "This is another decision a human EIR should be in on — it directly affects how investors will read your commitment and your team structure.\n\nA human EIR can help you frame an honest answer to that investor and think through what \"part-time founding team\" means for fundraising.\n\nWhile you wait for that conversation: the strongest near-term move is to show traction that doesn't require full-time commitment — real evidence that the problem is painful. **Who on your team has the most access to junior doctors or surgical residents right now?**",
+      "error": "",
+      "seconds": 16.4,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "112 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": false,
+      "detail": "4 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "91 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "hands the decision to a human",
+      "ok": true,
+      "detail": "Team equity split, CEO role, and investor commitment question"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "Team equity split, CEO role, and investor commitment question",
+  "judge": {
+    "scores": {
+      "challenge": 2,
+      "evidence": 2,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 4,
+      "next_step": 4
+    },
+    "mean": 3.33,
+    "reasons": {
+      "challenge": "The mentor never pushed back on the 33/33/33 assumption or the 'we all want to stay in med school' position — it accepted both at face value rather than surfacing the tension each creates for investors and co-founder dynamics.",
+      "evidence": "No evidence about the problem has been offered yet and the mentor did not press for any; it recorded nothing fabricated, but it also graded nothing because nothing was on the table to grade.",
+      "focus": "Each response contains one sharp closing question, but both responses also carry a short lecture paragraph before reaching it, adding length without adding value.",
+      "handoff": "The mentor correctly flagged equity split, CEO role, and investor-commitment framing as human-EIR territory and did so immediately without trying to answer any of them itself.",
+      "respect": "Tone is honest and non-flattering throughout; the mentor does not praise the idea or soften hard truths, though it stops short of naming the real risk each decision carries.",
+      "next_step": "Both sessions end with a concrete, specific action tied to the team's actual situation — access to residents and evidence of problem pain are sensible near-term tests."
+    },
+    "fix": "Challenge the claims before routing them: ask 'What makes equal split the right starting point given potentially unequal time commitments?' and 'What does staying in med school mean concretely — ten hours a week or forty?' so the team arrives at the human EIR with pressure-tested positions rather than untested assumptions."
+  }
+}

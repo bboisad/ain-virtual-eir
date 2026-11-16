@@ -1,0 +1,115 @@
+{
+  "case": "case02_music_teachers",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Sam",
+      "text": "Our customers are music teachers. They all lose their voices and they need this.",
+      "reply": "\"Music teachers lose their voices\" is a belief right now — it's rung 1 until a teacher tells you so in their own words.\n\nIf H1 is wrong — teachers don't strain their voices often enough to care — there's no problem to solve and the venture fails.\n\nSam, talk to **five singing teachers this week** and ask them: *\"Tell me about the last time your voice was strained or tired after teaching — what happened, and what did you do?\"* Don't mention the product yet.\n\nWho do you know that teaches voice or music, and can you get five conversations by Friday?",
+      "error": "",
+      "seconds": 8.4,
+      "updates": [
+        "New assumption H1: Singing teachers regularly strain or lose their voice as a direct result of teaching.",
+        "Canvas · Customer Segments: text updated, level 0 → 1",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Noor",
+      "text": "We think we can sell it for $250.",
+      "reply": "A price without a customer who has agreed to pay it is a rung-1 belief, and pricing is downstream of the problem — we don't yet have a single teacher confirming voice strain is painful enough to act on.\n\nIf teachers won't pay $250, your whole revenue model shifts.\n\nBefore pricing, let's get the problem confirmed: Sam, can you and Noor together line up five singing teachers to interview this week? Ask about the last time their voice was strained, what it cost them (cancelled lessons, medical visits, lost income), and what they already tried.\n\nWho is the first teacher you can call today?",
+      "error": "",
+      "seconds": 3.7,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "103 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "104 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 1"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 4,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 4,
+      "next_step": 4
+    },
+    "mean": 4.17,
+    "reasons": {
+      "challenge": "The mentor correctly reframes both claims as unvalidated beliefs without dismissing the idea, but never opens the adjacent customer question (call-center staff, broadcasters) that a good EIR would raise to stress-test why only music teachers.",
+      "evidence": "Evidence is graded precisely — both claims are logged at level 1 with no inflation, and the record accurately reflects only what the team asserted.",
+      "focus": "Each turn ends with a good interview question, but the mentor repeats nearly the same action across both turns and adds a multi-part cost/lost-income probe in turn 2 that widens scope rather than sharpening it.",
+      "handoff": "No human handoff was triggered and none was warranted at this stage; the mentor correctly kept everything in-session.",
+      "respect": "Tone is honest and non-judgmental throughout, though the phrase 'the venture fails' in turn 1 is slightly blunt when 'the hypothesis fails' would be more precise and less discouraging.",
+      "next_step": "Both turns close with a concrete five-interview task and a named deadline or prompt, giving the team a clear immediate action, though the two turns leave slightly redundant asks rather than building sequentially."
+    },
+    "fix": "After challenging the music-teacher assumption, briefly surface one or two adjacent customer segments (e.g., call-center agents, broadcasters) to stress-test why this group specifically — a good EIR opens that door without abandoning the idea, and it sharpens the team's thinking before they even run the interviews."
+  }
+}

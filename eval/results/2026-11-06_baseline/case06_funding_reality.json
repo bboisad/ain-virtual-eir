@@ -1,0 +1,119 @@
+{
+  "case": "case06_funding_reality",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Ava",
+      "text": "We want to raise $1 million from angels to build the app. Investors will back us because we're passionate.",
+      "reply": "Ava, passion matters — but angel investors back evidence, not enthusiasm. Before any funding conversation, they'll want to see that real students have a painful problem and that you're the right team to solve it. Raising $1M without that is very unlikely.\n\nLet's build the foundation that makes a raise possible. The most important question right now: **who exactly is your customer, and what problem are you solving for them?**\n\nYou said \"students without a car\" — that's a start, but it's a big, fuzzy group. Which students specifically? First-years in dorms? Off-campus students? Students at one particular school? \n\nAnd how do you *know* grocery access is painful for them — have you talked to any yet?",
+      "error": "",
+      "seconds": 6.7,
+      "updates": [
+        "New assumption H1: Angel investors will fund CampusCart based on the team's passion before customer evidence is in hand.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Marcus",
+      "text": "We don't have users yet, but we will after the money.",
+      "reply": "Marcus, that's the classic chicken-and-egg trap — investors won't give you money to find users; they expect you to find users first to earn the money. The good news: talking to students costs nothing.\n\nHere's the real question: **can you name five students right now who struggle to get groceries?** Not hypothetically — actual people you could text today. That's your starting point, not the app.\n\nWhat does a typical week look like for a car-free student trying to buy groceries at UR?",
+      "error": "",
+      "seconds": 4.9,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "117 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": false,
+      "detail": "6 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "83 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 4,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.33,
+    "reasons": {
+      "challenge": "Both responses directly reframe the flawed assumption (passion funds raises; money precedes users) without dismissing the venture.",
+      "evidence": "The mentor correctly treats all claims as unvalidated assumptions and records H1 accordingly, never upgrading evidence beyond what the team actually reported.",
+      "focus": "Each response asks a good core question but then appends a second question, diluting sharpness — Marcus's turn ends with two distinct questions plus a framing statement.",
+      "handoff": "No human handoff was triggered, which is correct at this stage; the funding consultant flag is not yet warranted since no raise mechanics or valuation were discussed.",
+      "respect": "Tone is direct and honest throughout, uses the 'classic trap' framing constructively, and never flatters or belittles.",
+      "next_step": "Naming five specific students to text is a concrete, zero-cost action, though the parallel question about a typical grocery week slightly blurs what the team should actually do first."
+    },
+    "fix": "Cut each response to a single sharp question — drop the trailing second question so the team leaves with one unambiguous next action rather than two competing prompts."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "case": "case05_implementation",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Emma",
+      "text": "We have a working prototype and our club coach loved it. We're ready to sell to 50 college teams.",
+      "reply": "One coach saying they loved it is rung 3 — what someone said — and it's one person who knows you personally, which makes it weaker than a stranger's opinion. That's not enough to commit to 50 teams.\n\nBefore selling, you need to know whether the problem is painful enough that a *buyer* (likely the athletic department or coach, not the rower) will actually spend money on it.\n\nTalk to five college coxswains or coaches you've **never met** this week — not your own club — and ask them to describe the last time communication broke down during a race or practice and what it cost them.\n\nWho on the team has contacts at other college programs, and do you know yet whether the coach buys or the athletic department does?",
+      "error": "",
+      "seconds": 9.2,
+      "updates": [
+        "New assumption H1: College rowing teams are the right beachhead market for CoxCall.",
+        "New assumption H2: Rowers/coxswains have a painful enough communication problem that they will pay for a wireless headset solution.",
+        "Assumption H2: evidence for (3 · Customers said); level 1 → 3",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Diego",
+      "text": "We'd ship it in a box and teams figure it out.",
+      "reply": "That's an assumption, not a plan — and it's a fatal one if it's wrong. Rowing equipment that fails mid-race gets returned, not repurchased.\n\n\"Teams figure it out\" has killed hardware ventures before: who pairs the headsets, charges them, replaces a broken unit on race day? If setup takes an IT approval or a 30-minute tutorial, your first sale becomes your last.\n\nThis week, ask two coaches at other programs: \"If a new wireless headset arrived tomorrow, who would set it up and what would need to happen before your team used it in a race?\" Their answer tells you whether self-install is realistic.\n\nIs there anyone on the team who has shipped consumer hardware before, or is this your first time?",
+      "error": "",
+      "seconds": 6.1,
+      "updates": [
+        "New assumption H3: College rowing teams can self-install and operate CoxCall without hands-on support or IT approval."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "131 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "122 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": false,
+      "detail": "3 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 3",
+      "ok": true,
+      "detail": "highest: 3"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 4,
+      "next_step": 4
+    },
+    "mean": 4.33,
+    "reasons": {
+      "challenge": "The mentor correctly reframes 'coach loved it' as weak social-proof evidence and pushes back on the leap to 50 teams without accepting or dismissing the idea.",
+      "evidence": "Evidence is graded precisely — one known contact's opinion is placed at level 3 (said) and flagged as weaker still because of the personal relationship, matching the rubric exactly.",
+      "focus": "Each response asks two or three questions and adds a mini-lecture on hardware failure modes; the ideal EIR would pick one sharp question and stop, and the installation question (who installs it, what happens on day one) is buried in Diego's turn rather than foregrounded earlier.",
+      "handoff": "No human handoff was triggered and none was warranted at this early, pre-revenue stage — correct call.",
+      "respect": "Tone is direct and honest without flattery or idea-judgment, though phrases like 'fatal assumption' and 'killed hardware ventures before' edge toward dramatic rather than neutral.",
+      "next_step": "Both turns close with a concrete action (talk to five strangers, ask two coaches a specific question), but the ask in session 1 bundles two tasks (interviews plus buyer-identification) when one would be sharper."
+    },
+    "fix": "Cut each response to one focused question — the installation and buyer-identity questions are the most critical and should each get their own turn rather than being stacked with secondary asks that dilute the team's attention."
+  }
+}

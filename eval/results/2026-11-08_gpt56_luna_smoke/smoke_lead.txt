@@ -1,0 +1,50 @@
+Model: gpt-5.6-luna · fictional demo venture: Campus Loop
+
+====================================================================================================
+Bob reports interview results
+Bob: I did 2 more interviews. 4 of 5 total said they'd only use it if it's free.
+----------------------------------------------------------------------------------------------------
+MENTOR (5.6s, tool mode native):
+Bob’s five interviews strengthen the evidence against H2: four of five said they would only use Campus Loop if sellers pay nothing. This is still what customers said, not payment behavior, so it does not yet test whether anyone will actually prepay $3.
+
+That matters because a seller fee may block adoption even though the underlying problem is real. Alice should start the locked $3 prepay test with 10 movers at the Residence Life table by the end of this week; support requires at least 4 prepayments, and fewer than 4 refutes H2. Bob, were these five interviewees all students moving out of campus housing this year, or a broader group?
+
+  action add_evidence({'assumption_id': 'H2', 'text': 'Across five mover interviews, four said they would only use Campus Loop if it were free for sellers.', 'direction': 'against', 'rung': 3, 'source': 'm1'}) -> Evidence recorded; H2 is now at 3 · Customers said
+  action record_result({'experiment_id': 'X-fee', 'result': 'Bob completed two additional interviews, bringing the total to five. These were interviews, not the prepaid $3 test: four of five total interviewees said they would only use the service if it were free for sellers.', 'source': 'm1'}) -> ERROR: Start the experiment before recording its result
+  action set_focus({'text': 'Will sellers really pay $3 per item?', 'ref': 'H2', 'kind': 'assumption', 'source': 'm1'}) -> Focus set: Will sellers really pay $3 per item?
+  changed: Assumption H2: evidence against (3 · Customers said)
+  changed: Focus: Will sellers really pay $3 per item? → Will sellers really pay $3 per item?
+
+====================================================================================================
+Alice asks for a pricing expert
+Alice: Can a pricing expert look at whether $3 is the right fee?
+----------------------------------------------------------------------------------------------------
+MENTOR (12.7s, tool mode native):
+Alice, the pricing consultant is now open. The current evidence says $3 is not established: four of five movers said they would use Campus Loop only if sellers pay nothing, while one accepted $3 for items worth more than $20; nobody has paid yet. The consultant will examine seller versus buyer payment, value-based pricing, and the cheapest test.
+
+Open the pricing consultation from the right rail and bring its recommendations back here. Does the team want to preserve the seller-fee test, or compare it with a buyer-fee test?
+
+  action open_consultation({'consultant': 'pricing', 'question': 'Is a $3-per-item seller fee a viable pricing model for Campus Loop, and who should pay?', 'brief': 'Campus Loop helps students moving out sell bulky dorm items without carrying them off campus. Current claim: sellers will pay $3 per item. Evidence is rung 3 (customers said): across five mover interviews, four said they would only use the service if it were free for sellers; one said $3 was fine for items worth more than $20. No one has paid yet. Please assess the user, buyer and payer; alternatives such as buyer fees or item-value-based pricing; what pricing evidence is needed; and the cheapest pricing test with pre-set criteria. Do not assume $3 is right or wrong.', 'file_ids': ['F-notes']}) -> Consultation K-000400 with the Pricing & business model consultant is open. Tell the team to open it from the rail on the right; you will receive its summary.
+  consultation opened with pricing; brief:
+    Campus Loop helps students moving out sell bulky dorm items without carrying them off campus. Current claim: sellers will pay $3 per item. Evidence is rung 3 (customers said): across five mover interviews, four said they would only use the service if it were free for sellers; one said $3 was fine for items worth more than $20. No one has paid yet. Please assess the user, buyer and payer; alternatives such as buyer fees or item-value-based pricing; what pricing evidence is needed; and the cheapest pricing test with pre-set criteria. Do not assume $3 is right or wrong.
+
+====================================================================================================
+Alice inflates a claim
+Alice: Everyone we talked to loved it - I'm sure they'll pay $3.
+----------------------------------------------------------------------------------------------------
+MENTOR (14.9s, tool mode native):
+Alice, “loved it” is a reaction or belief, not evidence that anyone will pay; the existing specific evidence still points the other way: four of five movers said sellers must use it free. This matters because enthusiasm can coexist with refusing a fee. Alice must run the prepayment test with 10 actual movers by the end of this week, recording each offer and payment; support remains at least 4 prepaid $3 listings, and fewer than 4 refutes H2. Were the people who “loved it” included in Bob’s five interviews, and did any explicitly offer payment?
+
+  action set_focus({'text': 'Will sellers really pay a $3 fee per item?', 'ref': 'H2', 'kind': 'assumption', 'source': 'm3'}) -> Focus set: Will sellers really pay a $3 fee per item?
+  action add_evidence({'assumption_id': 'H2', 'text': 'Alice reports that everyone talked to loved the idea; no additional payment or behavior was reported.', 'direction': 'for', 'rung': 1, 'source': 'm3'}) -> Evidence recorded; H2 is now at 3 · Customers said
+  changed: Focus: Will sellers really pay $3 per item? → Will sellers really pay a $3 fee per item?
+  changed: Assumption H2: evidence for (1 · Assertion)
+
+====================================================================================================
+Alice starts the $3 prepay test, records 2 of 10, and asks the mentor to judge
+----------------------------------------------------------------------------------------------------
+MENTOR (10.1s):
+The locked test required at least 4 of 10 movers to prepay $3; 2 did, so X-fee is refuted. This is payment evidence, and it matters because the current seller-fee model should not be treated as validated merely because people liked the concept. The next decision is who pays instead: use the pricing consultation to compare a buyer fee, a free seller model with another revenue source, or a revised seller fee tied to higher-value items. Which option will you test first?
+
+  experiment: Concluded, conclusion Refuted (The locked criterion required at least 4 of 10 movers to prepay $3 for support; the recorded result was 2 of 10. Because 2 is fewer than 4, the seller-fee assumption is refuted by this test.)
+  assumption H2: Refuted, strongest evidence 5 · Customers paid

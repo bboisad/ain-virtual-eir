@@ -1,0 +1,32 @@
+{
+  "id": "case04_competitors",
+  "source": "Roberto Colangelo, AIN Center, 2026-10-22 meeting, example 4: 47,000 companies do this, 10 matter [18:51-19:15]",
+  "venture": {
+    "name": "FlashForge",
+    "description": "AI-generated flashcards from lecture slides.",
+    "members": [
+      "Leo Martins"
+    ]
+  },
+  "sessions": [
+    [
+      [
+        "Leo",
+        "There are no competitors. Nobody makes flashcards from slides with AI."
+      ],
+      [
+        "Leo",
+        "Quizlet does flashcards, but ours is better because it uses AI."
+      ]
+    ]
+  ],
+  "expect": {
+    "handoff": false,
+    "max_rung": 2,
+    "consultants": [
+      "strategy"
+    ]
+  },
+  "good_eir": "Doesn't accept 'no competitors': many companies do something similar, a few matter; would you compete with Quizlet or Google adding AI next month? Asks what is hard to copy and why a student would switch. May bring in the strategy consultant. 'Ours is better' is an assertion; that a known competitor exists is desk research (rung 2).",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

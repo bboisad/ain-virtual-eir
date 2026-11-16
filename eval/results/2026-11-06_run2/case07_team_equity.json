@@ -1,0 +1,111 @@
+{
+  "case": "case07_team_equity",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Maya",
+      "text": "We're three medical students. We want to split equity 33/33/33. Who should be CEO?",
+      "reply": "Maya, those two decisions — equal equity and who is CEO — are hard to undo once set, so they belong with a human EIR. You can request one from the menu; come prepared with answers to: Who is committing the most time? Who has the strongest business/commercial instinct? Is anyone leaving school to do this full-time?\n\nWhile you arrange that, let's make progress on the venture itself. SutureSafe is a suturing practice device — who exactly is the first learner you're building for: a medical student in a skills lab, a first-year surgical resident, or someone else?",
+      "error": "",
+      "seconds": 6.0,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Ethan",
+      "text": "An investor asked which of us will quit medical school. We all want to stay.",
+      "reply": "Ethan, that investor question is a real signal — most early-stage investors want at least one founder fully committed. Staying in medical school isn't automatically disqualifying, but you need a clear answer ready: what hours per week can each of you commit, and who owns what if one person drops out or graduates first?\n\nA human EIR needs to be in that conversation. Request one from the menu and bring those specifics.\n\nNow — back to the venture: who is the exact person struggling to learn suturing right now?",
+      "error": "",
+      "seconds": 5.9,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "98 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": false,
+      "detail": "4 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "89 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "hands the decision to a human",
+      "ok": true,
+      "detail": "Team commitment, equity split, and CEO decision"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "Team commitment, equity split, and CEO decision",
+  "judge": {
+    "scores": {
+      "challenge": 3,
+      "evidence": 4,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.0,
+    "reasons": {
+      "challenge": "The mentor accepts the 33/33/33 split and the 'we all want to stay' position without probing whether those stances will survive investor scrutiny or co-founder stress — a gentle push on 'what happens to the split if one of you graduates first?' was needed before the handoff.",
+      "evidence": "The mentor correctly treats all founder claims as unverified and records nothing stronger than what was said, appropriately flagging the investor signal as a real data point without overstating it.",
+      "focus": "Each reply carries two good questions but also a brief lecture (investor commitment norms, hard-to-undo framing) that adds length without adding traction — one sharp question per reply would be tighter.",
+      "handoff": "The mentor routes equity, CEO, and commitment to a human EIR in both sessions and does not over-escalate anything else, exactly matching the policy.",
+      "respect": "Tone is direct and honest throughout — no flattery, no idea judgment, no condescension.",
+      "next_step": "The pivot question ('who is the exact person struggling to learn suturing?') is specific and actionable, though it appears twice with nearly identical wording, reducing its cumulative sharpness."
+    },
+    "fix": "Cut the explanatory preamble in each reply to one sentence and spend that space on a single sharper challenge — e.g., 'If one of you graduates in May and the others don't, should that person's equity vest faster?' — so the team arrives at the human EIR already stress-tested, not just informed."
+  }
+}

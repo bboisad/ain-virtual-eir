@@ -1,0 +1,122 @@
+{
+  "case": "case04_competitors",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "There are no competitors. Nobody makes flashcards from slides with AI.",
+      "reply": "\"Nobody does this\" is almost never true, Leo — Anki, Quizlet, Chegg, and several newer AI tools (Notion AI, ChatPDF, various GPT wrappers) all let students turn uploaded content into flashcards. The real question is what FlashForge does that those can't, and why a student would switch.\n\nBefore we get to differentiation, though, we need to know who the customer is. A college student uploading their own slides is very different from a professor who wants to auto-generate review material, or a test-prep company licensing the tool.\n\n**This week:** talk to five students (or professors) who actually use slides in their courses. Ask them to show you how they study from slides today — not what they would do, but what they already do.\n\nWho is the one type of person you are building this for first?",
+      "error": "",
+      "seconds": 17.3,
+      "updates": [
+        "New assumption H1: There are no direct competitors making AI-generated flashcards from lecture slides.",
+        "Focus: (none) → Which specific group is your first (beachhead) market, and why this one rather than the others?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "Quizlet does flashcards, but ours is better because it uses AI.",
+      "reply": "\"Better because it uses AI\" isn't a differentiator yet — Quizlet launched AI-generated flashcards in 2023, and several other tools do the same. What matters is whether your specific approach solves a problem those tools don't, for a specific person.\n\nThat's why the beachhead segment question is still open: a pre-med student cramming lecture slides has a very different need than an engineering student or a language learner, and each competes with different alternatives.\n\n**This week:** talk to five college students who use slides to study. Ask one question: \"Walk me through exactly how you turned your last set of lecture slides into something you could study from.\" Listen for the pain, don't pitch.\n\nWho do you have easiest access to right now — students at UR, online communities, or somewhere else?",
+      "error": "",
+      "seconds": 8.0,
+      "updates": [
+        "Assumption H1: reworded to \"FlashForge has no meaningful competitors making AI-generated flashcards from lecture slides.\"; importance medium → high",
+        "Assumption H1: evidence against (2 · Desk research); level 1 → 2"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "137 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "132 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": false,
+      "detail": "highest: 2"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 4,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.33,
+    "reasons": {
+      "challenge": "The mentor immediately named real competitors including Quizlet's 2023 AI launch, refused to accept 'no competitors' twice, and reframed the question toward differentiation without dismissing the idea.",
+      "evidence": "Desk research is correctly recorded as evidence against H1 at level 2, and no stronger evidence is claimed than what the team actually provided; minor gap is that H1's initial importance rating of 'medium' before upgrade was slightly generous given the claim was obviously testable.",
+      "focus": "Each response contains two distinct threads — competitor rebuttal plus beachhead segmentation — which is one thread too many per turn, and the second session repeats the beachhead question almost verbatim without escalating pressure.",
+      "handoff": "No human handoff was triggered and none was warranted at this stage; the mentor correctly held the conversation.",
+      "respect": "Tone is direct and honest throughout — 'ours is better' is called an assertion, not a strategy — without mocking the team or praising weak claims.",
+      "next_step": "Both sessions assign a concrete five-interview task with a specific single question to ask, though the identical assignment in session 2 suggests the team did not complete it and the mentor did not explicitly address that non-completion."
+    },
+    "fix": "When the team returns in session 2 without having done the interviews, call that out explicitly and make completing the five conversations a hard gate before moving any other topic forward, rather than re-issuing the same assignment as if it were fresh."
+  }
+}

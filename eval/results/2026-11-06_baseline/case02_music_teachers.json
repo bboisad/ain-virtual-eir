@@ -1,0 +1,116 @@
+{
+  "case": "case02_music_teachers",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Sam",
+      "text": "Our customers are music teachers. They all lose their voices and they need this.",
+      "reply": "Good start, Sam — but \"music teachers\" is a broad group. A K-12 choir teacher, a private singing coach, and a university voice professor all use their voices very differently.\n\nTwo questions:\n1. **Who exactly** have you talked to? Not \"music teachers\" in general — which specific type, how many, and what did they actually tell you about losing their voice?\n2. **How painful is it?** Losing your voice occasionally is an inconvenience; losing it so badly you cancel lessons or see a doctor is a crisis. Which is it for the people you've spoken with?\n\nRight now H1 is a belief (rung 1). To move forward, you need at least a handful of real conversations where teachers described the problem in their own words — not just agreed it sounds useful.",
+      "error": "",
+      "seconds": 6.5,
+      "updates": [
+        "New assumption H1: Music teachers regularly lose their voices and need a solution to prevent it.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Noor",
+      "text": "We think we can sell it for $250.",
+      "reply": "That's a number worth exploring, Noor, but pricing comes after you know *who* is buying and *why they'd pay* — and we're not there yet.\n\nBefore price matters, I need to understand the problem better. Can you answer Sam's open question: **have you actually talked to any music teachers yet?** If so, how many, and what did they say about voice strain — in their own words?\n\nIf you haven't interviewed anyone yet, that's the most important thing to do this week. A price of $250 only holds if teachers feel the pain badly enough to spend money on it. Let's get that evidence first.",
+      "error": "",
+      "seconds": 6.5,
+      "updates": [
+        "New assumption H2: Singing teachers will pay $250 for VocalGuard."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "132 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": false,
+      "detail": "4 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "105 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 3,
+      "evidence": 4,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 4,
+      "next_step": 3
+    },
+    "mean": 3.67,
+    "reasons": {
+      "challenge": "The mentor questions both claims but never opens the adjacent customer segments (call-center staff, broadcasters) or probes who actually pays (school district, insurance), which a good EIR would do without killing the idea.",
+      "evidence": "Both assumptions are correctly logged at rung 1 (belief) with no inflation, and the mentor explicitly tells the team the $250 price is unproven until someone pays.",
+      "focus": "Each response contains multiple sub-questions and explanatory sentences that dilute the sharpness; a good EIR would pick one question per turn and stop.",
+      "handoff": "No human handoff was triggered and none was warranted at this early stage, so the call is correct.",
+      "respect": "Tone is honest and non-judgmental throughout, with no empty flattery, though the repeated framing of 'we're not there yet' edges toward mild condescension.",
+      "next_step": "The mentor tells the team to do interviews but does not specify a concrete target (e.g., 'talk to five K-12 choir teachers this week and report back what they said word-for-word'), leaving the action too vague."
+    },
+    "fix": "Open the adjacent customer segments (call-center workers, broadcasters, coaches) and ask who actually controls the budget (teacher, school district, insurer) before the next session — this is the single most important gap a good EIR would have surfaced immediately."
+  }
+}

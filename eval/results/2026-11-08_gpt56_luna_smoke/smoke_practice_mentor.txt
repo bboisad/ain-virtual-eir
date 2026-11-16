@@ -1,0 +1,75 @@
+Model: gpt-5.6-luna · fictional demo venture: Campus Loop
+
+====================================================================================================
+Judge: Alice starts a 3-minute pitch
+----------------------------------------------------------------------------------------------------
+(0.0s) opening: Welcome. You have three minutes for your pitch, then I'll ask a few questions. Whenever you're ready.
+====================================================================================================
+Alice: Last May, a junior we interviewed carried her mini-fridge out of her room, looked at the four flights of stairs, and left it in the hallway. She told us: carryi…
+----------------------------------------------------------------------------------------------------
+Competition judge (AI) (2.2s; wraps up: False):
+Thank you. Of the 40 students on the waitlist, how many have explicitly agreed to pay the $3 fee per item, rather than only expressing interest in the idea?
+====================================================================================================
+Alice: Honestly, it's a sign-up sheet we passed around in our dorm. We haven't checked how many of them are moving out with bulky items.
+----------------------------------------------------------------------------------------------------
+Competition judge (AI) (1.4s; wraps up: False):
+Thank you. What, specifically, will make a seller choose Campus Loop over listing the item for free on Facebook Marketplace or a campus free-and-for-sale group?
+====================================================================================================
+Alice: Residence Life approved our table for move-out week, by email on October 9. No student has paid yet. In May we offer prepaid $3 listings to 10 movers and count …
+----------------------------------------------------------------------------------------------------
+Competition judge (AI) (2.6s; wraps up: False):
+Understood. What happens financially if an item is listed but does not sell—who covers the collection, storage, and any disposal costs?
+====================================================================================================
+Alice: Because it's easier than carrying it, and they get some money back. But we don't know yet, which is why we're running the prepay test.
+----------------------------------------------------------------------------------------------------
+Competition judge (AI) (1.4s; wraps up: False):
+Thank you. Beyond the $3 listing fee, what is your plan for storage and disposal, and what costs have you estimated for handling items that remain unsold?
+====================================================================================================
+Alice: We would rent a storage room for the summer and print flyers for move-out week, so we can run the first hall in May.
+----------------------------------------------------------------------------------------------------
+Competition judge (AI) (2.0s; wraps up: True):
+Thank you, that's all from me. The panel will deliberate.
+
+pitch timing: 311 words ≈ 2:13 (target 3:00)
+====================================================================================================
+Alice ends the session: the practice coach's feedback
+----------------------------------------------------------------------------------------------------
+  overall 2.9 · simplified: False · hints used: 0
+  scores: {'problem': 4, 'evidence': 3, 'model': 2, 'competition': 3, 'team_ask': 2, 'delivery': 4, 'answers': 2}
+  verdict: You delivered a clear, credible problem story in under three minutes, but unsupported demand claims and unanswered operating and financial questions weakened confidence.
+  strengths: You opened with a vivid customer situation—"a junior... looked at the four flights of stairs, and left it in the hallway"—and clearly identified students moving out with bulky items as the beachhead.
+  strengths: The pitch was easy to follow and finished in about 2:13, with a logical sequence from problem to solution, alternatives, team, and next step.
+  fixes: Remove or correct unsupported demand claims: replace "About 40 students are already on our waitlist" and "students will happily pay" with the recorded evidence that 3 of 3 interviewees left items behind, while 2 of 3 would use the service only if it were free for sellers.
+  fixes: State the business model and operating risk precisely: explain that the proposed $3 seller fee is untested, identify who pays if an item does not sell, and give current or explicitly labeled estimated storage, collection, and disposal costs.
+  fixes: Answer questions directly in two sentences, then give the next test: for example, say "We do not yet know who pays for unsold items" before explaining the 10-person prepaid test and the criterion of at least 4 prepayments.
+  tough_questions: "What, specifically, will make a seller choose Campus Loop over listing the item for free on Facebook Marketplace or a campus free-and-for-sale group?" → "Our tested advantage is physical presence at Residence Life tables during move-out week, so students can hand over bulky items without arranging a stranger meeting or carrying them themselves. We have not yet shown that sellers will pay for this convenience; we will offer prepaid $3 listings to 10 movers and count how many prepay."
+  tough_questions: "What happens financially if an item is listed but does not sell—who covers the collection, storage, and any disposal costs?" → "We do not know yet who will cover those costs or whether the $3 fee can cover them. We will define an unsold-item policy and estimate collection, summer storage, and disposal costs before running the first hall, then compare those costs with the test results and any buyer revenue we test."
+  tough_questions: "Of the 40 students on the waitlist, how many have explicitly agreed to pay the $3 fee per item?" → "We do not have a verified 40-student waitlist or evidence that any have agreed to pay; the recorded evidence is a dorm sign-up sheet, and we have not checked whether those students are moving out with bulky items. We will verify each signup and ask 10 movers to prepay $3, treating at least 4 prepayments as support for the pricing assumption."
+  unsupported_claims: "About 40 students are already on our waitlist": The records show only a dorm sign-up sheet and do not show 40 students.
+  unsupported_claims: "Everyone we talked to loves the idea": The records show 2 of 3 interviewees would use it only if it were free for sellers; no one has paid.
+  unsupported_claims: "We think students will happily pay": The records show seller payment is untested, and 2 of 3 interviewees said they would use it only if free.
+  unsupported_claims: "A mover drops an item off and we list it... A student moving in picks it up in August": The records do not establish that buyers will use the service, who pays, or that the collection, storage, and handoff process is feasible.
+(7.9s)
+====================================================================================================
+Alice sends the judge's feedback to the mentor, with a note
+----------------------------------------------------------------------------------------------------
+MENTOR (6.5s):
+The practice exposed two consequential gaps, not new customer evidence: unsupported demand claims and no answer for unsold-item costs. The $3 fee remains contradicted by 2 of 3 interviewees saying the service must be free, so the prepaid test—not the pitch—is what can change that conclusion.
+
+This matters because free alternatives and disposal costs could eliminate the seller-fee model even if the problem is real.
+
+Alice should revise the pitch, Bob should define the unsold-item policy and estimate collection, storage, and disposal costs, and Carol should rehearse direct two-sentence answers this week. Which risk should the next pitch lead with: seller payment or unsold-item liability?
+  changed: Focus: Will sellers really pay $3 per item? → Will sellers really pay $3 per item? (source: practice:R-5b845a)
+  changed: Key question "Where have you pitched it, and what was the hardest question": level 0 → 1 (source: practice:R-5b845a)
+  changed: New task: Revise the pitch to remove unsupported waitlist and willingness-to-pay claims; state that 3 of 3 interviewees left bulky items, 2 of 3 required a free seller service, and the $3 fee is untested. (source: practice:R-5b845a)
+  changed: New task: Define the unsold-item policy and estimate collection, storage, and disposal costs before the first hall; label estimates clearly and identify who bears each cost. (source: practice:R-5b845a)
+  changed: New task: Prepare two-sentence answers for the competition questions about free alternatives and unsold-item costs, followed by the $3 prepay test and its locked criterion. (source: practice:R-5b845a)
+====================================================================================================
+Alice asks how to prepare for Foundry Friday
+----------------------------------------------------------------------------------------------------
+MENTOR (10.0s; practice button: none):
+Prepare around what you can prove, not a polished growth story. The practice feedback is evidence about pitch weaknesses, while your customer evidence remains: 3 of 3 left bulky items, 2 of 3 required a free seller service, and nobody has paid.
+
+This matters because judges will test whether the fee and operating model survive contact with reality.
+
+Alice should run the 10-person $3 prepay test; Bob should quantify who bears unsold-item costs; Carol should revise the pitch; then rehearse a three-minute pitch and five direct answers before Foundry Friday. State the support/refutation criterion in advance. Which answer is currently weakest: why sellers switch from free groups, or who pays for unsold items?

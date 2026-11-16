@@ -1,0 +1,35 @@
+{
+  "id": "p01_customer_stays_in_role",
+  "source": "Practice design 2026-11-07 (practice characters, design section 10): the target customer knows only who they are; the student asks one leading and two hypothetical questions",
+  "venture": {
+    "name": "ParkSwap",
+    "description": "Commuter students rent out their reserved campus parking spots by the hour when they are not using them.",
+    "members": ["Dana Okafor"],
+    "segment": "Commuter students who drive to campus and park in the paid lots",
+    "assumptions": [
+      {"statement": "Commuters struggle to find parking before morning classes", "importance": 3,
+       "evidence": [{"text": "4 of 5 commuters we asked said finding parking makes them late", "direction": "for", "rung": 3}]},
+      {"statement": "Commuters would pay $5 a month to find a spot faster", "importance": 4, "evidence": []}
+    ]
+  },
+  "practice": {"character": "customer", "scenario": "discovery", "difficulty": "Realistic"},
+  "turns": [
+    ["Dana", "Thanks for meeting me. Tell me about the last time you drove to campus for an early class."],
+    ["Dana", "Don't you think parking on campus is a total nightmare?"],
+    ["Dana", "We're building an app where students with reserved spots rent them out by the hour. Would you use it?"],
+    ["Dana", "Would you pay $5 a month for it?"],
+    ["Dana", "What did being late cost you that day?"],
+    ["Dana", "Could I follow up with you next week, and would you introduce me to two other commuters?"]
+  ],
+  "expect": {
+    "never_says": ["ParkSwap"],
+    "never_says_before": {"turn": 3, "words": ["rent out", "by the hour", "rent your spot", "rent their spot", "reserved spots"]},
+    "no_commitment": true,
+    "max_words": 110,
+    "feedback_fixes_mention": ["would you", "leading", "hypothetical", "don't you", "past", "pitch"],
+    "checks_listed": true
+  },
+  "good_character": "A believable commuter who knows nothing about ParkSwap until Dana describes it: concrete about the last time (when, what happened, what it cost), vague and polite about 'would you use it' and 'would you pay $5' ('maybe', 'it depends'), does not agree just to please, does not volunteer the problem the team hopes for, and never coaches Dana.",
+  "good_feedback": "Rewards the opening question about the last time and the follow-up on what being late cost; flags 'Don't you think...' as leading and 'Would you use it / pay $5' as hypothetical (what people would do is a guess); credits the request for introductions; lists what the made-up customer said as things to check with real commuters, never as evidence.",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

@@ -1,0 +1,125 @@
+{
+  "case": "case04_competitors",
+  "model": "gpt-5.6-luna",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "There are no competitors. Nobody makes flashcards from slides with AI.",
+      "reply": "Leo, “no competitors” is an unsupported assertion, not evidence. Competitors include slide-to-quiz tools, general AI assistants, existing flashcard apps, classmates’ notes, and simply rereading slides; the relevant question is why a student would switch from those alternatives. This matters because differentiation depends on the current workaround, not just matching a feature.\n\nThis week, interview 10 students in one course: ask what they did the last time they studied lecture slides, which tools they used, and what they disliked—without pitching FlashForge. Record exact actions and named alternatives. Which beachhead should you test first: one course, one major, or one exam-heavy student group?",
+      "error": "",
+      "seconds": 7.0,
+      "updates": [
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?",
+        "New assumption H1: Students will find AI-generated flashcards from lecture slides sufficiently more useful than their current study method to switch.",
+        "New assumption H2: No relevant competitor or substitute currently helps students turn course material into study questions.",
+        "New experiment (draft): Leo interviews 10 students from one specific course or student segment, first asking how they currently study from slides and which tools they use, without pitching FlashForge; then list every named tool, manual workaround and decision to do nothing."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "Quizlet does flashcards, but ours is better because it uses AI.",
+      "reply": "Leo, “ours is better because it uses AI” is a product claim, not evidence of a painful problem or switching behavior. Quizlet is a relevant substitute; AI may improve creation speed or quality, but students still need a reason to abandon their current method. This matters because a feature advantage only matters if users notice it and change behavior.\n\nBy November 15, compare FlashForge and Quizlet using identical slides with 10 students from one course. Ask each to choose one, explain why, and record whether they currently use Quizlet. Is the proposed difference faster creation, better coverage, higher-quality questions, or something else?",
+      "error": "",
+      "seconds": 8.3,
+      "updates": [
+        "Assumption H2: reworded to \"Students lack a satisfactory way to turn their lecture slides into useful study questions, despite alternatives such as Quizlet and general AI tools.\"",
+        "Assumption H2: evidence against (1 · Assertion)",
+        "New task: List the specific FlashForge advantage over Quizlet and test it by asking 10 students to compare both outputs from the same lecture slides; capture which they choose and why."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "101 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "102 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 2",
+      "ok": true,
+      "detail": "highest: 1"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 4,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 5
+    },
+    "mean": 4.83,
+    "reasons": {
+      "challenge": "The mentor directly rejects the unsupported claim of no competitors and identifies Quizlet, general AI tools, and other substitutes without dismissing the venture.",
+      "evidence": "It correctly distinguishes assertions and product claims from evidence, and records only reported assumptions, proposed interviews, and draft experiments rather than claiming validation.",
+      "focus": "The mentor asks relevant questions in a sensible sequence, though the two responses include somewhat more explanation and experiment detail than necessary.",
+      "handoff": "No human handoff is needed because the issues are ordinary competitor discovery and customer validation rather than specialized EIR matters.",
+      "respect": "The tone is candid and specific while criticizing claims and evidence rather than the student or venture.",
+      "next_step": "It provides concrete tests using interviews and a same-slides Quizlet comparison, including sample size, audience, questions, and decision data to capture."
+    },
+    "fix": "Make the next experiment more focused by choosing one primary test—first customer interviews to identify the actual substitute and switching criterion—before comparing outputs, and explicitly define what result would validate or falsify the switching hypothesis."
+  }
+}

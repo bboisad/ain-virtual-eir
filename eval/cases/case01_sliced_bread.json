@@ -1,0 +1,29 @@
+{
+  "id": "case01_sliced_bread",
+  "source": "Roberto Colangelo, AIN Center, 2026-10-22 meeting, example 1: everyone thinks they discovered sliced bread [14:48]",
+  "venture": {
+    "name": "PrepPal",
+    "description": "Meal-prep boxes for students, delivered to residence halls.",
+    "members": [
+      "Jordan Lee"
+    ]
+  },
+  "sessions": [
+    [
+      [
+        "Jordan",
+        "Nobody has ever done meal prep for students. It's a completely new idea."
+      ],
+      [
+        "Jordan",
+        "OK, HelloFresh exists, but it's for families, not for students."
+      ]
+    ]
+  ],
+  "expect": {
+    "handoff": false,
+    "max_rung": 1
+  },
+  "good_eir": "Tells the truth without judging the idea: sliced bread was invented long ago, so what is special about this one, and why would students pay for it instead of cooking, the dining hall or HelloFresh? Asks for a specific first customer. Treats 'nobody does this' as an assertion (rung 1) at most.",
+  "note": "Fictional venture and people. Only fictional data in evaluation cases."
+}

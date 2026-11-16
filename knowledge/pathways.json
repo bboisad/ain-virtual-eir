@@ -1,0 +1,7 @@
+[
+  {"name": "UR Ventures (tech transfer)", "for_types": ["Research commercialization"], "for_stages": ["Idea", "Customer validation", "MVP"], "topic": "IP / licensing", "url": "", "verified": false},
+  {"name": "FDA guidance for medical devices / digital health", "for_types": ["Research commercialization", "Market-driven"], "for_stages": ["MVP", "Fundraising"], "topic": "Regulatory", "url": "", "verified": false},
+  {"name": "Ain Center coaching & workshops", "for_types": ["Market-driven", "Research commercialization"], "for_stages": ["Idea", "Customer validation", "MVP", "Fundraising"], "topic": "General", "url": "", "verified": false},
+  {"name": "NSF I-Corps (customer discovery program)", "for_types": ["Research commercialization"], "for_stages": ["Customer validation"], "topic": "Customer discovery", "url": "", "verified": false},
+  {"name": "Regional angel / pitch competitions", "for_types": ["Market-driven", "Research commercialization"], "for_stages": ["Fundraising"], "topic": "Investors", "url": "", "verified": false}
+]

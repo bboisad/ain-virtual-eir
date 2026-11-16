@@ -1,0 +1,126 @@
+{
+  "case": "case08_sold_to_three",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Omar",
+      "text": "We already sold ShiftSync to 3 small clinics, $200 a month each. Now a hospital system with 40 sites wants it.",
+      "reply": "Three paying clinics is real traction — rung 5 evidence that small clinics will pay. The hospital system is a different animal: the user, the buyer, and the payer are likely three different people (scheduler, operations VP, CFO), and IT security plus procurement can kill the deal before price is ever discussed.\n\nThe bottleneck right now is whether you can actually close and deploy at that scale.\n\n**This week:** get a 30-minute call with your hospital contact and ask specifically who owns the vendor approval process, what IT/security review is required, and what the expected contract timeline looks like.\n\nWho is your contact there — a scheduler, an operations director, or someone in procurement?",
+      "error": "",
+      "seconds": 11.3,
+      "updates": [
+        "Lens · Business model: level 0 → 5",
+        "Lens · Customer: level 0 → 5",
+        "New assumption H1: A hospital system with 40 sites will buy ShiftSync at a price that works for both sides",
+        "Bottleneck: Customer",
+        "Focus: (none) → Can ShiftSync close and deploy to a 40-site hospital system, given its procurement, IT, and legal requirements?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Omar",
+      "text": "Their IT department keeps blocking it. They ask about security and integration with their HR system.",
+      "reply": "That's rung 3 evidence — the IT blocker is real, not hypothetical, and it's the exact friction that kills SaaS deals in healthcare. If you can't clear IT, the 40-site deal dies regardless of how much the scheduler loves the product.\n\nYou need to know exactly what IT requires before you build or promise anything.\n\n**This week:** ask your hospital contact to get you a 30-minute call directly with their IT lead — not to pitch, but to collect their written security checklist and the name of the HR system they use (Epic, Workday, ADP?).\n\nDo you know yet which HR system they're on, and does ShiftSync currently have any security certifications (SOC 2, HIPAA BAA)?",
+      "error": "",
+      "seconds": 20.2,
+      "updates": [
+        "New assumption H2: ShiftSync can satisfy the hospital's IT security and HR system integration requirements at a cost and timeline that keeps the deal alive.",
+        "Assumption H2: evidence against (3 · Customers said); level 1 → 3",
+        "Focus: Can ShiftSync close and deploy to a 40-site hospital system, given its procurement, IT, and legal requirements? → What specific security standards and HR integration requirements must ShiftSync meet to pass the hospital's IT review?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "114 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "116 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 5",
+      "ok": true,
+      "detail": "highest: 5"
+    },
+    {
+      "check": "does not suggest the Launch mentor",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 4,
+      "evidence": 5,
+      "focus": 4,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 5
+    },
+    "mean": 4.67,
+    "reasons": {
+      "challenge": "The mentor correctly reframes the hospital as a different animal and names the procurement/IT blockers, but it accepts the IT-blocking story at face value without probing whether Omar has actually requested the security checklist or is just hearing second-hand friction.",
+      "evidence": "Rung levels are assigned precisely and conservatively — paying clinics at 5, IT blocker at 3 (customers said, not a written requirement yet) — with no inflation anywhere in the record.",
+      "focus": "Each session ends with one concrete question and one concrete action, though the second response layers two asks (security checklist plus HR system name) that could have been sequenced more crisply.",
+      "handoff": "No human handoff was triggered and none was needed; there are no term sheets, equity splits, IP strategy, or FDA issues present in this conversation.",
+      "respect": "Tone is direct and factual throughout — 'that's the exact friction that kills SaaS deals in healthcare' names the risk without flattering or dismissing the team.",
+      "next_step": "Both sessions leave Omar with a specific, time-boxed action (30-minute call, written checklist, HR system name) that directly tests the stated bottleneck."
+    },
+    "fix": "In session 2, split the two asks — get the written security checklist first, then identify the HR system — so Omar has a single unambiguous priority rather than two parallel tasks that could stall each other."
+  }
+}

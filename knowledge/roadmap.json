@@ -1,0 +1,104 @@
+{
+  "_note": "Design v0.2. Modules and deliverables come from the Ain Foundry Roadmap and the 'EIR mentoring and advising responsibilities' document Roberto showed on 2026-10-22. Step numbers refer to Bill Aulet's Disciplined Entrepreneurship (24 steps). Key questions and required evidence rungs are our initial standard; they are calibrated by AIN EIRs reviewing the first judgments. Each question's 'step' is a draft mapping to one of the 24 steps (0 = a Foundry item outside the 24 steps), to confirm with Roberto.",
+  "rungs": {
+    "1": "Assertion: the team believes it",
+    "2": "Desk research: reports, web data, AI estimates (verify before relying on them)",
+    "3": "Customers said: interviews, quotes",
+    "4": "Customers did: sign-ups, letters of intent, time spent, switching",
+    "5": "Customers paid: pre-orders, paid pilots",
+    "6": "Retained behavior: repeat purchase, renewal, continued use"
+  },
+  "modules": [
+    {
+      "id": "M1",
+      "title": "Business Model Canvas",
+      "focus": "Is the problem real, for whom exactly, and what business model might serve them? Push for customer discovery before anything is polished.",
+      "deliverables": [
+        {
+          "id": "customer_discovery",
+          "title": "Customer discovery",
+          "short": "Customer discovery",
+          "steps": ["1 Market segmentation", "2 Select a beachhead market", "3 End user profile", "4 Beachhead market size", "5 Persona", "9 Next 10 customers"],
+          "questions": [
+            {"id": "cd_segment", "ask": "Which specific group is your first (beachhead) market, and why this one rather than the others?", "need": 1, "step": 2},
+            {"id": "cd_problem", "ask": "What problem do they have, and how do you know it is real and painful for them?", "need": 3, "step": 3},
+            {"id": "cd_current", "ask": "How do they solve it today, and what does that cost them?", "need": 3, "step": 5},
+            {"id": "cd_interviews", "ask": "How many people have you interviewed, and what did they actually do, not just say?", "need": 3, "step": 1},
+            {"id": "cd_next10", "ask": "Can you name your next 10 potential customers?", "need": 1, "step": 9}
+          ],
+          "consider": ["Estimate the size of your beachhead market (step 4) and say where each number comes from.", "Write a persona of one real person you interviewed (step 5).", "Look for a bigger or more painful group you have not considered yet."]
+        },
+        {
+          "id": "bmc",
+          "title": "Business Model Canvas",
+          "short": "Business model canvas",
+          "steps": ["6 Full life cycle use case", "7 High-level product specification", "8 Quantify the value proposition", "15 Design a business model (first draft)"],
+          "questions": [
+            {"id": "bmc_user_buyer", "ask": "Is the person who uses it the same as the person who pays? If not, who pays, and why would they?", "need": 3, "step": 6},
+            {"id": "bmc_value", "ask": "Can you quantify the value: how much time, money or risk does it save the customer?", "need": 2, "step": 8},
+            {"id": "bmc_channels", "ask": "How will customers find out about it and get it?", "need": 1, "step": 6},
+            {"id": "bmc_revenue", "ask": "How will you make money? Mark it as a guess if you have not tested a price yet.", "need": 1, "step": 15},
+            {"id": "bmc_costs", "ask": "What are the main costs of delivering it?", "need": 1, "step": 15}
+          ],
+          "consider": ["Mark every canvas block that is still a guess; the Virtual EIR will come back to them in Module 3.", "Walk through the full life cycle: how a customer discovers, buys, installs, uses and pays (step 6)."]
+        }
+      ]
+    },
+    {
+      "id": "M2",
+      "title": "The Perfect Pitch",
+      "focus": "Who decides to buy, why you and not a competitor, and has anyone committed? Act like the toughest investor in the room.",
+      "deliverables": [
+        {
+          "id": "pitch_deck",
+          "title": "Pitch deck (slides and practice)",
+          "short": "Pitch deck",
+          "steps": ["10 Define your core", "11 Competitive position", "12 Customer decision-making unit", "13 Process to acquire a paying customer", "22 Minimum viable business product", "23 Show the dogs will eat the dog food"],
+          "questions": [
+            {"id": "pd_dmu", "ask": "Who decides on the purchase, who influences it, and who can block it?", "need": 3, "step": 12},
+            {"id": "pd_competition", "ask": "Who else solves this, and what do you have that they cannot easily copy?", "need": 2, "step": 11},
+            {"id": "pd_commitment", "ask": "Has anyone paid, pre-ordered or signed a letter of intent?", "need": 4, "step": 23},
+            {"id": "pd_acquire", "ask": "What are the steps to get one paying customer, and how long do they take?", "need": 2, "step": 13},
+            {"id": "pd_legal", "ask": "Which legal structure do you plan, and who advised you? (A human EIR handles the legal advice.)", "need": 1, "step": 0},
+            {"id": "pd_practice", "ask": "Where have you pitched it, and what was the hardest question you got?", "need": 1, "step": 0}
+          ],
+          "consider": ["Record a video of your pitch; Ain asks for practice, not only slides.", "Run a mock investor Q&A with the Virtual EIR before the next competition.", "Define the smallest product a customer would pay for (step 22)."]
+        }
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "The Business Plan",
+      "focus": "Every number needs a source. Stress-test the plan like an investor: unit economics, deployment, funding.",
+      "deliverables": [
+        {
+          "id": "business_plan",
+          "title": "Business plan",
+          "short": "Business plan",
+          "steps": ["14 Follow-on markets", "16 Pricing framework", "17 Lifetime value of a customer", "18 Sales process", "19 Cost of customer acquisition", "20 Identify key assumptions", "21 Test key assumptions", "24 Product plan"],
+          "questions": [
+            {"id": "bp_pricing", "ask": "What is your price, and where does that number come from?", "need": 3, "step": 16},
+            {"id": "bp_unit", "ask": "What is a customer worth over time, and what does it cost to acquire one?", "need": 2, "step": 17},
+            {"id": "bp_assumptions", "ask": "Which key assumptions have you tested, and what happened?", "need": 4, "step": 21},
+            {"id": "bp_stress", "ask": "What happens to the plan if conversion is half of what you expect?", "need": 2, "step": 20},
+            {"id": "bp_deploy", "ask": "Who installs or deploys it at the customer, and what could block that (for example their IT team)?", "need": 2, "step": 18},
+            {"id": "bp_funding", "ask": "How much money do you need, for which milestone, and from which source? (Term sheets go to a human EIR.)", "need": 1, "step": 0}
+          ],
+          "consider": ["Name your follow-on markets and how big they are (step 14).", "Enter a business plan competition to test the plan in front of judges.", "Ask a human EIR about any financing offer before you accept it."]
+        }
+      ]
+    }
+  ],
+  "alumni": {
+    "id": "Alumni",
+    "title": "Graduated to NextCorps",
+    "focus": "All Ain EIRs agreed the venture is ready for the next accelerator."
+  },
+  "chain": [
+    "Be specific: who exactly, how many, when?",
+    "Evidence: how do you know? Did customers say it, do it, or pay for it?",
+    "Alternatives: how do they cope today? Is there a bigger or more painful group? Who else is doing this?",
+    "Consequence: if this is wrong, what happens to your venture?",
+    "Test: what is the smallest test this week, and what result would prove you wrong?"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "case": "case04_competitors",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "There are no competitors. Nobody makes flashcards from slides with AI.",
+      "reply": "Leo, \"nobody does this\" is almost never true, and it's worth pressure-testing before you build.\n\nAnki has an AI add-on ecosystem; Quizlet launched AI auto-generation from uploaded files last year; Notion AI, ChatGPT, and several Chrome extensions can turn a PDF or slide deck into flashcards today. The real question isn't whether the feature exists elsewhere — it's **what makes yours meaningfully better**, and why a student would switch from what they already use.\n\nBefore we go further: who exactly is your target student — undergrad, grad, a specific major — and have you talked to any of them yet about how they actually study from slides today?",
+      "error": "",
+      "seconds": 5.6,
+      "updates": [
+        "New assumption H1: No competitor uses AI to generate flashcards directly from lecture slides."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Leo",
+      "text": "Quizlet does flashcards, but ours is better because it uses AI.",
+      "reply": "Quizlet's AI auto-generation from uploaded files *is* AI — so \"we use AI\" isn't the differentiator yet. You need a sharper claim: faster, more accurate, works with lecture slide formatting, something specific.\n\nBut let's not get stuck on competition before we know the customer. H1 needs updating, and more importantly, we haven't established the problem yet.\n\nWho specifically are you building this for — which students, at what level, in what subjects? And have you talked to any of them to find out whether generating flashcards from slides is actually the painful part of their studying?",
+      "error": "",
+      "seconds": 5.6,
+      "updates": [
+        "Assumption H1: reworded to \"FlashForge produces better flashcards from lecture slides than Quizlet's AI and other existing tools.\""
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "108 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "96 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 4,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 3
+    },
+    "mean": 4.17,
+    "reasons": {
+      "challenge": "The mentor immediately named real competitors with specifics (Quizlet AI, Anki add-ons, Chrome extensions) and reframed the question as 'what makes yours meaningfully better' without dismissing the idea.",
+      "evidence": "H1 was correctly recorded as an assumption, not a fact, and was updated to reflect only what Leo claimed rather than inflating it to validated insight; desk-research competitors were cited as context, not as evidence against the team.",
+      "focus": "Each response contains two or three distinct threads simultaneously — competitor rebuttal, customer definition, and problem validation — making it harder for the team to know which thread to pull first.",
+      "handoff": "No human handoff was triggered, which is correct; nothing in this conversation touched equity, legal, term sheets, IP, or FDA-level topics that require a human EIR.",
+      "respect": "The mentor was direct and honest ('ours is better because it uses AI' is not a differentiator) without mocking the idea or the team, and never used flattery.",
+      "next_step": "The mentor asked good questions about customer identity and problem validation but never converted them into a single concrete action (e.g., 'talk to five students by Thursday and report back what they said') that the team could execute before the next session."
+    },
+    "fix": "End each response with exactly one assigned action and a deadline — for example, 'Before we meet again, interview three students who study from lecture slides and ask them to show you how they make flashcards today; bring back what they said and did, not what they think they would use.'"
+  }
+}

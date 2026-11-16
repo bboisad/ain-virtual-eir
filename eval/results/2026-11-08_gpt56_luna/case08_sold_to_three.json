@@ -1,0 +1,133 @@
+{
+  "case": "case08_sold_to_three",
+  "model": "gpt-5.6-luna",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Omar",
+      "text": "We already sold ShiftSync to 3 small clinics, $200 a month each. Now a hospital system with 40 sites wants it.",
+      "reply": "Three clinics paying $200/month is rung-5 evidence that scheduling has enough value for those customers to purchase. The hospital system’s interest is only a statement so far; the critical uncertainty is whether a buyer can navigate site-level users, IT/security, procurement, and deployment.\n\nThis matters because a 40-site sale may fail on approval or implementation even if the problem is real.\n\nOmar, by November 15, identify the hospital buyer, two site scheduling users, and the IT/security or procurement blocker; document the approval path and ask for a paid pilot at two sites with a start date.\n\nWhich person currently owns the conversation: the operational buyer, a site manager, or an IT/procurement contact?",
+      "error": "",
+      "seconds": 11.8,
+      "updates": [
+        "New assumption H1: A hospital system with 40 sites is a viable next customer and can deploy ShiftSync across its sites under an acceptable buying process.",
+        "Lens · Problem: level 0 → 5",
+        "Lens · Customer: level 0 → 5",
+        "Lens · Solution: level 0 → 5",
+        "Lens · Market: level 0 → 1",
+        "Lens · Business model: level 0 → 5",
+        "Lens · Advantage: level 0 → 1",
+        "Bottleneck: Customer",
+        "Focus: (none) → Can the 40-site hospital system identify a buyer, users and blockers, and commit to a deployment step?",
+        "New experiment (draft): Omar interviews the hospital system's operational buyer, two site-level scheduling users, and the IT/security or procurement blocker, then asks the buyer to authorize a paid pilot at 2 sites with a named start date."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Omar",
+      "text": "Their IT department keeps blocking it. They ask about security and integration with their HR system.",
+      "reply": "IT blocking the deal is evidence of a specific deployment obstacle, not evidence that the hospital will reject ShiftSync. We still do not know whether security, integration scope, or an internal owner is the binding issue.\n\nThis matters because a 40-site opportunity cannot scale if each site or system requires an unresolved approval path.\n\nOmar, by November 15, meet the hospital security lead and HR-integration owner, document their minimum requirements and approval steps, then request authorization for a paid two-site pilot using a narrowly scoped integration approach.\n\nIs the main blocker data security, technical integration, or lack of an internal IT owner?",
+      "error": "",
+      "seconds": 7.2,
+      "updates": [
+        "Focus: Can the 40-site hospital system identify a buyer, users and blockers, and commit to a deployment step? → Can ShiftSync meet the hospital system's security and HR-integration requirements well enough for IT to approve a two-site paid pilot?",
+        "New assumption H2: ShiftSync can satisfy the hospital system's IT security and HR-system integration requirements through an acceptable pilot approval process.",
+        "Lens · Customer: level 5 → 3",
+        "Bottleneck: Customer",
+        "New experiment (draft): Omar meets the hospital's IT security lead and HR-system integration owner, obtains their written minimum security and integration requirements, and asks them to approve a scoped two-site paid pilot using a documented integration approach."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "111 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "102 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 5",
+      "ok": true,
+      "detail": "highest: 5"
+    },
+    {
+      "check": "does not suggest the Launch mentor",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 5,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 5
+    },
+    "mean": 5.0,
+    "reasons": {
+      "challenge": "It correctly treats three paid clinics as validated evidence while challenging the unproven assumption that the hospital can complete enterprise approval and deployment.",
+      "evidence": "It accurately distinguishes paid behavior from the hospital's expressed interest and records only team-reported claims as assumptions and experiments.",
+      "focus": "It narrows the issue from a broad hospital opportunity to the specific security, integration, ownership, and pilot-approval bottlenecks in a sensible sequence.",
+      "handoff": "No human handoff is needed because the issues are customer discovery and deployment validation rather than legal, equity, FDA, IP, or other human-only matters.",
+      "respect": "It is direct and grounded without dismissing ShiftSync or overstating the evidence.",
+      "next_step": "It gives a dated, concrete test involving the security lead and integration owner, written requirements, and a request for a scoped paid two-site pilot."
+    },
+    "fix": "Make the enterprise buying path even more explicit by asking who has final authority to approve and pay for the pilot, in addition to identifying the technical blockers."
+  }
+}

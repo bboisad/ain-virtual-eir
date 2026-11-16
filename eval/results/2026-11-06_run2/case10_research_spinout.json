@@ -1,0 +1,226 @@
+{
+  "case": "case10_research_spinout",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Priya",
+      "text": "Our sensor detects sepsis 6 hours earlier, so every hospital will buy it.",
+      "reply": "\"Every hospital\" is a market of ~6,000 U.S. facilities — that's not a segment, it's an entire industry. Before we can test H1, we need to get specific.\n\nInside a hospital, the user, the buyer, and the payer are different people: the ICU nurse or hospitalist who acts on the alert, the CMO or supply chain who signs the purchase order, and CMS/insurance who reimburses. Each has a different problem and a different reason to say yes or no.\n\nWho specifically have you talked to so far — and what did they tell you about how sepsis detection is handled today?",
+      "error": "",
+      "seconds": 6.1,
+      "updates": [
+        "New assumption H1: Hospitals will buy LumaSense because it detects sepsis 6 hours earlier than current methods.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Priya",
+      "text": "I talked to two doctors and they loved it.",
+      "reply": "\"Loved it\" is what someone said about a concept — that's rung 3 at best, but only if we know what they said specifically. Two conversations is a start, not a pattern.\n\nWhat I need to understand: what did those doctors actually tell you about their current process? Specifically — how do they detect sepsis today, what goes wrong, and what does a missed or late diagnosis cost them (in time, money, or patient outcomes)?\n\nThat's the real test of whether the pain is real. Also, were these doctors ICU physicians, hospitalists, or ED doctors — and were they at a large academic medical center or a community hospital?",
+      "error": "",
+      "seconds": 7.7,
+      "updates": [
+        "Key question \"How many people have you interviewed, and what did they actu\": level 0 → 3"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Priya",
+      "text": "Do I need FDA approval before I can sell?",
+      "reply": "This is exactly the right question to ask early — and it's one I can't answer safely. FDA pathway for a diagnostic device depends on technical details, predicate devices, and intended use claims that need a specialist.\n\nA human EIR has been flagged — use the menu to connect with one. Also loop in UR Ventures, since the IP is university-owned and they'll need to be part of any commercialization path.\n\nWhile that's in motion: can you go back to those two doctors and ask specifically what their current sepsis detection workflow looks like and where it breaks down?",
+      "error": "",
+      "seconds": 5.9,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 2,
+      "by": "Priya",
+      "text": "Last time you told me to interview buyers. I did 3 interviews with procurement.",
+      "reply": "Good — that's real legwork. But I need to know what they said, not just that you did it.\n\nSpecifically: what did procurement tell you about how they currently evaluate and buy diagnostic devices, what their approval process looks like, and whether early sepsis detection is even on their priority list? Did any of them say they would buy something like LumaSense, or did they describe a process that would make it hard?\n\nWhat did those three procurement people actually say — and were they at the same hospital or different ones?",
+      "error": "",
+      "seconds": 8.1,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 2,
+      "by": "Priya",
+      "text": "They said budget is decided once a year.",
+      "reply": "That's a concrete and important finding — annual budget cycles mean a sale you don't get into this cycle waits 12 months. That's a real constraint on your go-to-market timing.\n\nBut one thing is still missing: did they say early sepsis detection is a priority they'd budget for, or were they just describing how procurement works in general? There's a big difference between \"we buy things this way\" and \"we would buy *this*.\"\n\nWhat did those procurement contacts say when you described the problem LumaSense solves — did any of them react to the sepsis angle specifically?",
+      "error": "",
+      "seconds": 5.5,
+      "updates": [
+        "Assumption H1: evidence against (3 · Customers said); level 1 → 3"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "101 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "109 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": false,
+      "detail": "3 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: under 180 words",
+      "ok": true,
+      "detail": "99 words"
+    },
+    {
+      "check": "turn 3: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 3: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 3: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: under 180 words",
+      "ok": true,
+      "detail": "92 words"
+    },
+    {
+      "check": "turn 4: at most 2 questions",
+      "ok": false,
+      "detail": "3 question marks"
+    },
+    {
+      "check": "turn 4: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 4: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: under 180 words",
+      "ok": true,
+      "detail": "97 words"
+    },
+    {
+      "check": "turn 5: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 5: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 5: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "hands the decision to a human",
+      "ok": true,
+      "detail": "FDA regulatory pathway for LumaSense diagnostic sensor"
+    },
+    {
+      "check": "records no evidence above rung 3",
+      "ok": true,
+      "detail": "highest: 3"
+    }
+  ],
+  "handoff": "FDA regulatory pathway for LumaSense diagnostic sensor",
+  "judge": {
+    "scores": {
+      "challenge": 4,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.33,
+    "reasons": {
+      "challenge": "The mentor consistently reframes overconfident claims ('every hospital will buy it,' 'they loved it') into testable assumptions without dismissing the venture, though the pushback is occasionally slightly repetitive across turns.",
+      "evidence": "The mentor correctly refuses to upgrade 'loved it' beyond rung 3, explicitly distinguishes said from did, and the record shows H1 moving only to evidence-against-3 after procurement interviews — never inflated beyond what was actually reported.",
+      "focus": "Most turns contain two or three sub-questions where one sharp question would do; session 2 in particular asks what they said, how they evaluate, whether it's a priority, and whether they'd buy — four questions in one breath.",
+      "handoff": "The FDA question is handed to a human immediately and cleanly, UR Ventures is correctly looped in for IP, and no technical details are solicited anywhere in the conversation.",
+      "respect": "Tone is consistently direct and honest — 'two conversations is a start, not a pattern' — without flattery, sarcasm, or judgment of the idea itself.",
+      "next_step": "Each session closes with a concrete action (go back to the two doctors, ask about workflow), and the annual budget cycle finding is correctly flagged as a timing constraint, though the mentor stops short of telling the team exactly who to reach before the current cycle closes."
+    },
+    "fix": "Reduce each response to one single sharp question — the multi-part questioning dilutes focus and buries the most important ask; in session 2 the mentor should have closed with exactly one action: 'Find out when this year's budget cycle closes and get in front of the right person before that date.'"
+  }
+}

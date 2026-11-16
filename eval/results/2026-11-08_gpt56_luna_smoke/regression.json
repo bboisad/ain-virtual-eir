@@ -1,0 +1,12 @@
+{
+  "command": ".\\.venv\\Scripts\\python.exe -X utf8 -m pytest -q",
+  "passed": 214,
+  "seconds": 7.85,
+  "exit_code": 0,
+  "pip_check": "No broken requirements found.",
+  "versions": {
+    "openai": "3.46.0",
+    "streamlit": "1.66.1",
+    "pytest": "9.2.0"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "case": "case09_prestige",
+  "model": "gpt-5.6-luna",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Helena",
+      "text": "I am a cardiologist with 25 years of practice. I know hospitals will buy this, I don't need interviews.",
+      "reply": "Helena’s experience is valuable expert context, but “hospitals will buy” is still an assertion, not evidence of a buyer’s recent action. The user, clinical champion, buyer, and payer may differ, and hospital procurement, IT security, and regulatory requirements can block adoption even when clinicians want the product.\n\nThis matters because a cardiologist’s confidence cannot establish who controls a purchase or whether the problem is painful enough to displace current monitoring.\n\nHelena, talk to five hospital decision-makers outside your own practice by November 15—such as the ICU nurse, hospitalist, CMO, procurement lead, or IT/security lead—and document a recent comparable purchase, current alternative, budget owner, and concrete next step.\n\nWhich first beachhead will you test: inpatient monitoring, post-discharge monitoring, or ambulatory cardiology?",
+      "error": "",
+      "seconds": 16.2,
+      "updates": [
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?",
+        "New assumption H1: Hospitals will buy CardioWatch, a patch that sends heart-rhythm alerts to a cardiologist.",
+        "New experiment (draft): Helena interviews five hospital buyers or procurement/clinical decision-makers outside her own practice and asks for a recent comparable purchase, current alternative, decision process, budget owner, and next step; record specific actions separately from opinions."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Helena",
+      "text": "Three colleagues at other hospitals told me they love it.",
+      "reply": "Helena, three colleagues saying they “love it” is rung-3 evidence of positive opinion, not evidence that a hospital buyer will purchase. We still do not know which problem each person has, what they use today, or whether they control budget. That distinction matters because enthusiasm can come from a clinical user while procurement, IT, and compliance determine adoption.\n\nThis week, ask those three colleagues separately for the last time they faced the problem, what they did instead, who approved and paid for it, and whether they will introduce you to that decision-maker; record actions and introductions, not general reactions.\n\nWere they users, buyers, or payers—and did any agree to a concrete next step?",
+      "error": "",
+      "seconds": 10.2,
+      "updates": [
+        "Assumption H1: evidence for (3 · Customers said); level 1 → 3"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "120 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "113 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "records no evidence above rung 3",
+      "ok": true,
+      "detail": "highest: 3"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 4,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 5
+    },
+    "mean": 4.83,
+    "reasons": {
+      "challenge": "The mentor directly challenges the unsupported assumption that clinical expertise or colleague enthusiasm proves hospital purchasing without dismissing the venture.",
+      "evidence": "It correctly distinguishes expert assertion and colleague opinion from evidence of buyer action, and records the latter only as rung-3 evidence.",
+      "focus": "The coaching is generally targeted, though the first response includes several stakeholder categories and multiple requested data points before narrowing to one beachhead.",
+      "handoff": "No human handoff was needed because the issues raised are appropriate for AI coaching rather than specialized legal, regulatory, financing, or equity guidance.",
+      "respect": "It acknowledges Helena’s experience and remains factual and nonjudgmental while clearly separating confidence from evidence.",
+      "next_step": "It gives concrete interview tasks, deadlines, questions, and a request for introductions or other observable commitments."
+    },
+    "fix": "Make the next step narrower by selecting one beachhead and one or two priority decision-makers before asking for the broader set of interviews and procurement details."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "case": "case09_prestige",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Helena",
+      "text": "I am a cardiologist with 25 years of practice. I know hospitals will buy this, I don't need interviews.",
+      "reply": "Your 25 years of practice is genuine domain expertise, but it's rung-1 evidence — your belief, however informed. Hospitals are large organizations where the user (cardiologist), the buyer (hospital administration or procurement), and the payer (insurance/CMS) are often three different people with different incentives, and any one of them can kill a purchase.\n\nThe single most important thing to nail first: which patient population and which clinical setting is the *first* sale — inpatient monitoring, post-discharge follow-up, or outpatient arrhythmia screening?\n\nPick the one setting you know best, and name three specific hospitals or cardiology practices you could call this week to ask how they handle that problem today.",
+      "error": "",
+      "seconds": 6.6,
+      "updates": [
+        "New assumption H1: Hospitals will buy the CardioWatch patch.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Helena",
+      "text": "Three colleagues at other hospitals told me they love it.",
+      "reply": "\"Love it\" is what people said about a concept — that's rung 3, but only for enthusiasm, not for willingness to pay or ability to get procurement to approve it. Three colleagues is a start, but we need to know what problem they described in their own words, not whether they liked your idea.\n\nThe critical gap: did any of them describe a specific patient case where the current monitoring approach failed or cost them something — time, a missed diagnosis, a readmission?\n\nTalk to those same three colleagues again this week, Helena, and ask them to tell you about the last patient where late arrhythmia detection caused a real problem — what happened, what they did, and what it cost. That story is the evidence we need.",
+      "error": "",
+      "seconds": 8.5,
+      "updates": [
+        "Assumption H1: evidence for (3 · Customers said); level 1 → 3",
+        "New assumption H2: Cardiologists experience a real, painful problem with late or missed arrhythmia detection in their current monitoring workflow.",
+        "New task: Re-interview the three cardiologist colleagues: ask each to describe a specific patient case where late arrhythmia detection caused a real problem — what happened, what they did, and what it cost them."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "109 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "128 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "records no evidence above rung 3",
+      "ok": true,
+      "detail": "highest: 3"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 3,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.5,
+    "reasons": {
+      "challenge": "The mentor directly questioned both the expertise-as-evidence claim and the 'love it' shortcut without dismissing the idea or Helena's credibility.",
+      "evidence": "Evidence was graded precisely — rung 1 for personal belief, rung 3 for colleagues saying they love it — and the record reflects nothing stronger than what was actually reported.",
+      "focus": "Session 1 asked two distinct questions (which setting, and name three hospitals) plus a follow-up re-interview task in session 2, which is one question too many per turn and risks diluting attention.",
+      "handoff": "No human handoff was triggered, which is correct — the team is still at early customer discovery with no equity, term sheet, IP, or FDA questions on the table.",
+      "respect": "The mentor was consistently truthful about the limits of Helena's evidence while treating her 25 years of experience as genuinely valuable context, never flattering and never judging the device.",
+      "next_step": "The re-interview task in session 2 is specific and actionable, but session 1's next step asked Helena to both pick a setting and name three hospitals, which is two actions that could have been sequenced more tightly."
+    },
+    "fix": "Each turn should end with exactly one sharp question or one concrete action — session 1 should have asked only for the specific clinical setting first, deferring the 'name three hospitals' prompt to after Helena answers."
+  }
+}

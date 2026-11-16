@@ -1,0 +1,6 @@
+streamlit==1.66.1   # pinned: 1.67 changed the server stack; re-run the tests before upgrading
+openai>=1.50        # OpenAI-compatible endpoints (LLM_PROVIDER = "openai")
+anthropic>=0.40     # only needed when LLM_PROVIDER = "anthropic"
+pypdfium2>=4.30     # project files: text of PDFs (Word and PowerPoint are read with the standard library)
+openpyxl>=3.1       # project files: values of Excel sheets
+pytest

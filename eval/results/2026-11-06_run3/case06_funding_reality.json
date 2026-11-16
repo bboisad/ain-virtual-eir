@@ -1,0 +1,121 @@
+{
+  "case": "case06_funding_reality",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Ava",
+      "text": "We want to raise $1 million from angels to build the app. Investors will back us because we're passionate.",
+      "reply": "Passion is a reason you work hard; it is not a reason an investor writes a check — they want evidence that many customers will pay, repeatedly, and that the math returns their fund.\n\nBefore any funding conversation, you need answers investors will actually ask: who is the specific customer, what painful problem have you confirmed in their own words, and what have they already done (not just said) to solve it?\n\nTalk to ten car-free students this week — dorm residents, freshmen, international students — and ask them to walk you through the last time they needed groceries. What did they actually do, and what did it cost them in time and money?\n\nWho on your team has the easiest access to that group right now — Ava or Marcus?\n\nA human EIR has been flagged for the funding conversation — find that option in the menu when you're ready. For now, the fastest path to any investor is evidence from real customers, which is what we're building toward.",
+      "error": "",
+      "seconds": 9.3,
+      "updates": [
+        "New assumption H1: Angel investors will fund CampusCart based on the team's passion alone.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Marcus",
+      "text": "We don't have users yet, but we will after the money.",
+      "reply": "That's backwards from how early-stage funding works — angels invest after you've shown customer evidence, not before, because the money is meant to scale something that already has signal, not to find out if the problem exists.\n\nThe good news is that customer evidence costs nothing: you just need conversations. Ten interviews with car-free students will tell you whether the problem is real and painful enough to build on — and that's the same evidence an angel will ask for anyway.\n\nThis week, Ava or Marcus: walk into a freshman dorm or international student lounge and ask five students to tell you about the last time they needed groceries without a car. What did they do, and how long did it take?\n\nWhich of you can do that by end of this week?",
+      "error": "",
+      "seconds": 8.4,
+      "updates": [
+        "Assumption H1: evidence against (1 · Assertion)"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "170 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": false,
+      "detail": "3 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "133 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "2 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": false,
+      "detail": "Funding strategy and investor readiness"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 1"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "Funding strategy and investor readiness",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 4,
+      "focus": 3,
+      "handoff": 4,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.17,
+    "reasons": {
+      "challenge": "Both responses directly reframe the passion and 'money first' claims without dismissing the venture, correctly explaining what investors actually require.",
+      "evidence": "The mentor correctly treats the team's assertions as zero evidence and pushes toward 'did' evidence (observed behavior), though it does not explicitly name the evidence ladder to help the team understand why interviews beat surveys.",
+      "focus": "Each response ends with a good behavioral question, but both responses also include explanatory paragraphs that lecture before asking, making them longer than a sharp EIR would deliver in a single exchange.",
+      "handoff": "The mentor correctly flags the human funding consultant for the funding-strategy conversation and does not attempt to give valuation or term-sheet guidance itself.",
+      "respect": "Tone is direct and honest throughout — no flattery, no idea-bashing, no condescension.",
+      "next_step": "A concrete action (five to ten interviews, specific target population, specific week) is given each time, though the two responses give slightly different numbers (ten vs. five) which could confuse the team."
+    },
+    "fix": "Cut the explanatory preamble in each response to one sentence and lead with the single sharp question — the mentor is currently teaching a mini-lecture before asking, which dilutes urgency and buries the call to action."
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "check": "smoke_lead",
+    "exit_code": 0,
+    "seconds": 43.9
+  },
+  {
+    "check": "smoke_consult",
+    "exit_code": 0,
+    "seconds": 28.0
+  },
+  {
+    "check": "smoke_files",
+    "exit_code": 0,
+    "seconds": 31.2
+  },
+  {
+    "check": "smoke_practice mentor",
+    "exit_code": 0,
+    "seconds": 34.7
+  }
+]

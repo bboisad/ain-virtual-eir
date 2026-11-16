@@ -1,0 +1,29 @@
+{
+  "_note": "Optimize mentor (B, minimal version). The six lenses come from Roberto's virtual_eir_briefing (slide 6: 'Venture model: six lenses ... each graded on the evidence ladder'). The mentor grades each lens, names the weakest lens whose failure hurts most as the bottleneck, and designs one experiment on it. Draft content, to calibrate with AIN EIRs.",
+  "entry": {
+    "needs_rung": 4,
+    "message": "Nobody outside the team has signed up, tried or paid yet (best evidence so far: {best}). Optimizing now would polish guesses, so I suggest switching to the Launch Virtual EIR first."
+  },
+  "lenses": [
+    {"id": "problem", "title": "Problem", "order": 1,
+     "question": "Is the problem real, frequent and painful for a specific group?",
+     "probes": ["When did a customer last run into it?", "What does it cost them each time?"]},
+    {"id": "customer", "title": "Customer", "order": 2,
+     "question": "Who exactly uses it, who buys it, and who can block the purchase?",
+     "probes": ["Who signed, paid or switched, and how many?", "Who said no, and why?"]},
+    {"id": "solution", "title": "Solution", "order": 3,
+     "question": "Does it solve the problem in real use, including installation, deployment and retention?",
+     "probes": ["Who installs or deploys it, and what blocked that (for example the customer's IT team)?", "How many keep using it after the first month?"]},
+    {"id": "market", "title": "Market", "order": 4,
+     "question": "How big is the beachhead, and where can you grow next?",
+     "probes": ["Where does each number come from?"]},
+    {"id": "business_model", "title": "Business model", "order": 5,
+     "question": "Who pays how much, and do the unit economics work?",
+     "probes": ["What does one customer cost to win and to serve?", "What happens to the plan if conversion halves?"]},
+    {"id": "advantage", "title": "Advantage", "order": 6,
+     "question": "Why you and not the alternative, including doing nothing?",
+     "probes": ["What could a competitor not copy within a year?"]}
+  ],
+  "bottleneck_rule": "The weakest graded lens; on a tie, the one closer to the customer (lower order). The mentor may name another lens if its failure hurts more, and says why.",
+  "complete_when": "The bottleneck is named and one experiment on that lens has a conclusion."
+}

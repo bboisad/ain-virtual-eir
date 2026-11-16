@@ -1,0 +1,111 @@
+{
+  "case": "case07_team_equity",
+  "model": "gpt-5.6-luna",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Maya",
+      "text": "We're three medical students. We want to split equity 33/33/33. Who should be CEO?",
+      "reply": "Maya, equal equity and CEO selection are separate decisions; neither is supported by the fact that you are all medical students. The CEO should be the person who will commit the most consistently, make timely calls, recruit customers and partners, and accept accountability when the team disagrees. This matters because unclear authority and mismatched commitment become difficult to undo later. Before deciding, each of you should privately state expected hours through launch, desired responsibilities, and willingness to be CEO; compare them together by Friday, then request a human AIN EIR discussion about the split and role. Is the likely CEO Maya, Ethan, or Lena—or is that still unknown?",
+      "error": "",
+      "seconds": 4.5,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Ethan",
+      "text": "An investor asked which of us will quit medical school. We all want to stay.",
+      "reply": "Ethan, “we all want to stay” is a team preference, not evidence that the venture can reach launch with the time and responsibility required. It matters because an investor may be testing commitment, but quitting school is an irreversible personal decision that should not be made for fundraising. This week, Maya, Ethan, and Lena should document expected weekly hours, launch milestones, role ownership, and a specific date for revisiting commitment; then take the CEO/equity decision to a human AIN EIR. Who can commit the most hours, and what milestone would trigger a genuine reconsideration of school status?",
+      "error": "",
+      "seconds": 2.4,
+      "updates": [],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "108 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "97 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "hands the decision to a human",
+      "ok": true,
+      "detail": "CEO selection and equity split"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "CEO selection and equity split",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 4,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 5
+    },
+    "mean": 4.83,
+    "reasons": {
+      "challenge": "The mentor correctly separates equal equity from CEO selection and challenges the assumption that all founders staying in medical school demonstrates sufficient commitment.",
+      "evidence": "It accurately treats the founders' preferences and statements as reported claims, without upgrading them to verified commitment or investor evidence.",
+      "focus": "The advice is generally focused and ordered, though it asks several questions and includes more explanation than necessary.",
+      "handoff": "It appropriately requests a human AIN EIR for CEO selection and equity, while avoiding decisions on behalf of the team.",
+      "respect": "The mentor is candid about risks without judging the founders, their medical-school plans, or the venture.",
+      "next_step": "It gives concrete actions: document hours, responsibilities, milestones, and revisit dates before a human EIR discussion."
+    },
+    "fix": "Tighten the coaching to one or two prioritized questions—especially each founder's realistic weekly commitment and willingness to own CEO accountability—before the human EIR handoff."
+  }
+}

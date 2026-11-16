@@ -1,0 +1,28 @@
+{
+  "provider": "supabase",
+  "project_id": "mjdfvamdxmqeliaqmjmd",
+  "project_name": "ain-virtual-eir-demo",
+  "project_url": "https://mjdfvamdxmqeliaqmjmd.supabase.co",
+  "region": "us-east-1",
+  "organization_plan": "free",
+  "created_date": "2026-11-16",
+  "bucket": "eir-files",
+  "bucket_private": true,
+  "schema_initialized": true,
+  "seed_projects": ["V-CAMPUS", "V-LUMA"],
+  "seed_payloads_verified": true,
+  "sql_save_and_stale_revision_test_passed": true,
+  "render": {
+    "workspace_id": "tea-dbtmljo8v5cc73an4oj0",
+    "workspace_name": "My Workspace",
+    "workspace_confirmed": true,
+    "allowed_plan": "free",
+    "service_id": null,
+    "repository_url": "https://github.com/bboisad/ain-virtual-eir"
+  },
+  "streamlit_connected": false,
+  "rest_adapter_live_verified": false,
+  "file_upload_live_verified": false,
+  "application_url": null,
+  "note": "Deployment reference only. Contains no keys. The application still requires server-side secrets."
+}

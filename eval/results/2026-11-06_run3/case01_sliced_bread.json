@@ -1,0 +1,117 @@
+{
+  "case": "case01_sliced_bread",
+  "model": "databricks-claude-sonnet-4-6",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Jordan",
+      "text": "Nobody has ever done meal prep for students. It's a completely new idea.",
+      "reply": "\"Nobody has done this\" is almost never true, and it's worth checking before building anything. Grocery delivery (Instacart, Amazon Fresh), campus dining plans, and services like HelloFresh or Factor already reach students — so the real question is what PrepPal does that those don't, and why a student would switch.\n\nBefore we go further: have you talked to any students about how they actually handle food today — what they buy, where, and what frustrates them?",
+      "error": "",
+      "seconds": 6.8,
+      "updates": [
+        "New assumption H1: No existing service meaningfully solves meal prep for college students living in residence halls.",
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?"
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Jordan",
+      "text": "OK, HelloFresh exists, but it's for families, not for students.",
+      "reply": "That's a reasonable distinction, but \"it's for families\" is your claim, not a student's. A student could subscribe to HelloFresh today — the question is why they don't, or what stops them.\n\nThe real test is whether students have a painful enough problem that they'd switch to something new. Talk to ten resident-hall students this week: ask them how they fed themselves last week, what it cost, and what frustrated them most. Don't mention your idea yet.\n\nWho on your team can run those ten conversations by Friday?",
+      "error": "",
+      "seconds": 7.8,
+      "updates": [
+        "New assumption H2: HelloFresh and similar services are not a real alternative for residence-hall students because they are designed and priced for families, not students.",
+        "New experiment (draft): Interview 10 residence-hall students about how they fed themselves last week, what it cost, and what frustrated them most — without mentioning PrepPal."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "76 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "88 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 4,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 4
+    },
+    "mean": 4.67,
+    "reasons": {
+      "challenge": "The mentor immediately names real competitors (Instacart, HelloFresh, dining plans) and reframes 'nobody does this' as a question rather than a fact, without dismissing the idea.",
+      "evidence": "Both assumptions are recorded as hypotheses (H1, H2), not validated claims, accurately reflecting that nothing stronger than an assertion was reported by the team.",
+      "focus": "Each reply asks one clear question, but the second turn carries a slight lecture tone ('that's your claim, not a student's') before landing on the core ask, costing one point.",
+      "handoff": "No human handoff was triggered, which is correct — nothing in this conversation touched team structure, equity, IP, term sheets, or regulatory issues.",
+      "respect": "The mentor is honest about the weakness in Jordan's reasoning without mocking the idea or flattering the team, and the tone stays collegial throughout.",
+      "next_step": "The interview task is concrete and time-bound (ten conversations, by Friday), but the second turn does not confirm who owns it — the mentor asks 'who can run those,' which is good, yet the record shows the experiment as a draft with no owner assigned."
+    },
+    "fix": "Assign a named owner to the interview experiment before closing the session — 'who can run those ten conversations by Friday?' is the right question, but the session should not end until Jordan commits a specific person's name, so the record reflects an owned next step rather than a perpetual draft."
+  }
+}

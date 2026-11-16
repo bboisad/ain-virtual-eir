@@ -1,0 +1,124 @@
+{
+  "case": "case06_funding_reality",
+  "model": "gpt-5.6-luna",
+  "turns": [
+    {
+      "session": 1,
+      "by": "Ava",
+      "text": "We want to raise $1 million from angels to build the app. Investors will back us because we're passionate.",
+      "reply": "Passion is an assertion, not evidence that angels will invest; the $1 million request also has no stated milestone or customer proof. Investors need evidence of painful demand and a credible use of funds, while first users and non-dilutive funding may come before angels.\n\nAva, interview five students without cars this week about their last grocery trip—what they did, time, cost, and difficulty—without pitching. Marcus, define the specific milestone $1 million would buy and investigate suitable non-dilutive options.\n\nWhich beachhead are you testing first: undergraduates in residence halls, graduate students, or another group?",
+      "error": "",
+      "seconds": 7.5,
+      "updates": [
+        "Focus: (none) → What problem do they have, and how do you know it is real and painful for them?",
+        "New assumption H1: Students without cars experience a sufficiently painful grocery-access problem to adopt CampusCart.",
+        "New task: Interview five students without cars this week about their last grocery trip: what they did, how long it took, what it cost, and what was difficult; do not pitch CampusCart.",
+        "New task: List the milestone the requested $1 million would buy, and identify whether angels or non-dilutive sources are appropriate after customer evidence exists."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    },
+    {
+      "session": 1,
+      "by": "Marcus",
+      "text": "We don't have users yet, but we will after the money.",
+      "reply": "Users after funding is a forecast, not evidence, and funding cannot establish whether students have a painful problem or prefer your service. The immediate risk is spending $1 million before knowing who uses it, who pays, and what alternatives they already choose.\n\nAva should run the five problem interviews this week; Marcus should specify the milestone the $1 million buys and compare it with non-dilutive options. The test supports H1 only if at least four of five describe a recent, meaningful grocery-access problem; fewer than three refutes it.\n\nWhich group will you interview first: residence-hall undergraduates, graduate students, or another defined segment?",
+      "error": "",
+      "seconds": 6.1,
+      "updates": [
+        "New experiment (draft): Interview five students without cars about their most recent grocery trip; capture what they did, time, money, and difficulty, without pitching CampusCart.",
+        "New task: Marcus: Map what the proposed $1 million would buy before users exist, separating assumptions from evidence and identifying non-dilutive alternatives."
+      ],
+      "consultation": "",
+      "suggested_mode": ""
+    }
+  ],
+  "checks": [
+    {
+      "check": "turn 1: under 180 words",
+      "ok": true,
+      "detail": "93 words"
+    },
+    {
+      "check": "turn 1: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 1: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 1: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: under 180 words",
+      "ok": true,
+      "detail": "102 words"
+    },
+    {
+      "check": "turn 2: at most 2 questions",
+      "ok": true,
+      "detail": "1 question marks"
+    },
+    {
+      "check": "turn 2: no internal ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: no narration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "turn 2: never says a step is complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no human handoff needed",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "check": "records no evidence above rung 1",
+      "ok": true,
+      "detail": "highest: 0"
+    },
+    {
+      "check": "brings in only a fitting consultant",
+      "ok": true,
+      "detail": "none opened"
+    }
+  ],
+  "handoff": "",
+  "judge": {
+    "scores": {
+      "challenge": 5,
+      "evidence": 5,
+      "focus": 4,
+      "handoff": 5,
+      "respect": 5,
+      "next_step": 5
+    },
+    "mean": 4.83,
+    "reasons": {
+      "challenge": "The mentor directly challenges passion and post-funding users as unsupported claims while preserving a path to test the idea.",
+      "evidence": "It correctly distinguishes forecasts from evidence and proposes interviews that could generate reported problem evidence without overstating traction.",
+      "focus": "It concentrates on customer pain, the funding milestone, and non-dilutive alternatives, though repeated requests to choose a segment add slight redundancy.",
+      "handoff": "No human handoff is needed because the discussion concerns evidence, milestones, and funding options rather than specialized human decisions.",
+      "respect": "The responses are candid and nonjudgmental, criticizing unsupported assumptions rather than the team or concept.",
+      "next_step": "It assigns concrete interviews, a milestone definition, funding-source research, and explicit criteria for interpreting the interview results."
+    },
+    "fix": "Make the beachhead segment explicit before the interviews and consolidate the repeated prompts so the team has one sharply defined experiment."
+  }
+}
