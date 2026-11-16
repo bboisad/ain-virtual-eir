@@ -22,9 +22,9 @@
 | 云适配器、并发和文件版本 | 真实Supabase数据库的初次保存、二次保存、旧版本拒写和版本归档已验证；临时测试事务已回滚。HTTP适配器与真实文件上传下载仍待后端密钥配置 |
 | 迁移与恢复 | 经用户明确授权，Campus Loop和LumaSense两个内置虚构项目已导入个人云数据库，完整JSON与本地种子数据逐项一致；真实云端文件上传与历史恢复演示仍待验收 |
 | Docker镜像 | 配置已准备；本机没有Docker，未实际构建镜像 |
-| GitHub与云账号 | 三个平台均已连接。224个源文件已上传到AIN私有仓库bboisad/ain-virtual-eir；源代码提交为d1240248b0b22c2490e8c06929ecff60afbc4c8b。Render创建服务返回私有仓库无法读取，需要在Render授权GitHub仓库；已确认没有留下重复服务 |
+| GitHub与云账号 | 三个平台均已连接。源代码已上传到AIN私有仓库bboisad/ain-virtual-eir。Render已获仓库授权，My Workspace中的免费服务ain-virtual-eir-demo已构建并达到live；仍需私密配置及功能验收 |
 | 真实AI对话 | 用户表示已有API；本工作区尚未配置其密钥和模型，未产生真实模型验收结果 |
-| 公开可访问的部署网址 | 尚未生成；部署配置和本地网址不等于云端上线 |
+| 公开可访问的部署网址 | https://ain-virtual-eir-demo.onrender.com 已部署为live，首页与健康检查均返回HTTP 200；解锁、云数据读取保存、文件操作与真实模型验收仍未完成 |
 
 这版是使用虚构项目的完整演示扩展，保留共享密码和演示身份。共享密码不区分真实个人，应用内团队权限也不等于学校身份认证。
 
@@ -35,7 +35,9 @@
 - 在私密配置中填写Supabase后端密钥，以及已有模型的提供商、模型名、API密钥；不在聊天和仓库中传递密钥。
 - 团队约定的演示访问密码。
 
-当前部署阻碍是Render无法读取私有GitHub仓库。需要账号持有人在Render的New → Web Service → Git Provider中连接GitHub，并授予Render访问`ain-virtual-eir`的权限。授权成功、能在Render看见仓库后即可继续；创建服务本身由部署流程完成，避免重复创建。
+Render读取仓库的权限问题已解决。当前必填配置是Supabase后端密钥`SUPABASE_SECRET_KEY`和团队自定的`EIR_DEMO_PASSWORD`，应直接填入Render服务的Environment；不要写进仓库或聊天。真实模型配置还需小组已有API的提供商、模型名与私密密钥。服务详情见`deploy/cloud-target.json`；健康检查通过后仍需解锁、打开项目和保存读取测试。
+
+逐步填写方法见 [线上私密配置](PRIVATE_CONFIGURATION.md)。不要只凭Render显示live或健康检查成功就声称应用、模型和云存储全部完成验收。
 
 账号连接后按 [部署与恢复说明](CLOUD_DEPLOYMENT.md) 执行初始化和迁移，部署应用，再填写真实网址与验收结果。不要把此页的待验收项提前改成通过。
 

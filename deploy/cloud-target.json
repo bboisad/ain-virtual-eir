@@ -17,14 +17,23 @@
     "workspace_name": "My Workspace",
     "workspace_confirmed": true,
     "allowed_plan": "free",
-    "service_id": null,
+    "service_id": "srv-dbtn61jm8hqs73cvbno0",
     "repository_url": "https://github.com/bboisad/ain-virtual-eir",
     "source_commit": "d1240248b0b22c2490e8c06929ecff60afbc4c8b",
-    "creation_blocker": "Render cannot fetch the private repository. Git provider access must be authorized in Render."
+    "creation_blocker": null,
+    "initial_deploy_id": "dep-dbtn61rm8hqs73cvbol0",
+    "service_url": "https://ain-virtual-eir-demo.onrender.com",
+    "dashboard_url": "https://dashboard.render.com/web/srv-dbtn61jm8hqs73cvbno0",
+    "deployment_status": "live",
+    "deployed_commit": "a3fcda350dcb390d8de1eeda3ce6c5d1c4629c7d",
+    "health_http_verified": true,
+    "html_http_verified": true,
+    "private_configuration_pending": ["SUPABASE_SECRET_KEY", "EIR_DEMO_PASSWORD"]
   },
   "streamlit_connected": false,
   "rest_adapter_live_verified": false,
   "file_upload_live_verified": false,
-  "application_url": null,
+  "application_url": "https://ain-virtual-eir-demo.onrender.com",
+  "acceptance_status": "awaiting_private_configuration_and_functional_acceptance",
   "note": "Deployment reference only. Contains no keys. The application still requires server-side secrets."
 }
