@@ -18,7 +18,9 @@
     "workspace_confirmed": true,
     "allowed_plan": "free",
     "service_id": null,
-    "repository_url": "https://github.com/bboisad/ain-virtual-eir"
+    "repository_url": "https://github.com/bboisad/ain-virtual-eir",
+    "source_commit": "d1240248b0b22c2490e8c06929ecff60afbc4c8b",
+    "creation_blocker": "Render cannot fetch the private repository. Git provider access must be authorized in Render."
   },
   "streamlit_connected": false,
   "rest_adapter_live_verified": false,
