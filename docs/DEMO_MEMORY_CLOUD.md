@@ -7,7 +7,7 @@
 - 提前打开 [演示网站](https://ain-virtual-eir-demo.onrender.com) 预热；Render Free 可能休眠。准备普通窗口A和无痕窗口B，分别用共享演示密码进入，选择 Alice、Bob，打开 Campus Loop。
 - 当前使用个人 GitHub 仓库、Supabase Free 和 Render Free；真实 OpenAI 模型为 `gpt-5.6-luna`，老师提供的密钥只放在服务端私密配置中。不要在投屏、聊天或交付包中展示密钥。
 - 使用已有 Cedar 聊天和附件，避免为演示反复写入同一计划。可复用附件见 [Cedar_Pilot_Plan.txt](demo/Cedar_Pilot_Plan.txt)。
-- 记录实际部署版本和验收证据，参照 [部署与恢复说明](CLOUD_DEPLOYMENT.md)。来源文本中 `$36`、`$3` 的显示修复已在本地完成并通过针对性测试，仍需部署和线上复核；不要提前计为线上通过。
+- 记录实际部署版本和验收证据，参照 [部署与恢复说明](CLOUD_DEPLOYMENT.md)。来源文本中 `$36`、`$3` 的显示修复已部署，针对性本地UI测试通过；新版来源窗口尚未进行人工截图复核，展示前可搜索 `cedar` 再检查一次。
 
 ## 1. 说明交付内容，约45秒
 

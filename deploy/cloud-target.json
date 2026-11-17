@@ -9,7 +9,10 @@
   "bucket": "eir-files",
   "bucket_private": true,
   "schema_initialized": true,
-  "seed_projects": ["V-CAMPUS", "V-LUMA"],
+  "seed_projects": [
+    "V-CAMPUS",
+    "V-LUMA"
+  ],
   "seed_payloads_verified": true,
   "sql_save_and_stale_revision_test_passed": true,
   "render": {
@@ -19,15 +22,15 @@
     "allowed_plan": "free",
     "service_id": "srv-dbtn61jm8hqs73cvbno0",
     "repository_url": "https://github.com/bboisad/ain-virtual-eir",
-    "source_commit": "a4a27bbcfacdcc936ddc03929e7b3422ce90beed",
+    "source_commit": "3bc35e0a7c36831c5c1741a2b8725767fe0b35a9",
     "creation_blocker": null,
     "initial_deploy_id": "dep-dbtn61rm8hqs73cvbol0",
-    "latest_deploy_id": "dep-dbts45rl550s7396l2l0",
+    "latest_deploy_id": "dep-dbtsrigae00c739vet2g",
     "service_plan": "free",
     "service_url": "https://ain-virtual-eir-demo.onrender.com",
     "dashboard_url": "https://dashboard.render.com/web/srv-dbtn61jm8hqs73cvbno0",
     "deployment_status": "live",
-    "deployed_commit": "a4a27bbcfacdcc936ddc03929e7b3422ce90beed",
+    "deployed_commit": "3bc35e0a7c36831c5c1741a2b8725767fe0b35a9",
     "health_http_verified": true,
     "html_http_verified": true,
     "private_configuration_pending": []
@@ -58,7 +61,7 @@
   "simulated_second_member_model_recall_live_verified": true,
   "shared_cloud_recent_context_recall_live_verified": true,
   "production_authentication_live_verified": false,
-  "chat_memory_retrieval_live_verified": false,
+  "chat_memory_retrieval_live_verified": true,
   "fresh_session_bob_recall_live_verified": true,
   "source_search_live_verified": true,
   "long_window_retrieval_live_verified": false,
@@ -158,14 +161,16 @@
   },
   "currency_quote_rendering": {
     "literal_currency_display_live_verified": false,
-    "fix_deployed": false,
-    "status": "local_fix_validated_deployment_pending",
+    "fix_deployed": true,
+    "status": "deployed_targeted_ui_test_passed_online_visual_recheck_pending",
     "observed_issue": "st.write interprets $36 and $3 as math delimiters and alters the displayed quote.",
-    "local_fix": "Use st.text for literal source text; completed locally and not yet deployed.",
+    "local_fix": "st.text displays the original source literally, preserving currency and Markdown; deployed in commit 3bc35e0a7c36831c5c1741a2b8725767fe0b35a9.",
     "local_targeted_ui_test": {
       "passed": 1,
       "duration_seconds": 1.68
-    }
+    },
+    "deployment_id": "dep-dbtsrigae00c739vet2g",
+    "deployed_at": "2026-11-17T03:46:38.26831Z"
   },
   "file_upload_acceptance": {
     "observed_at": "2026-11-16 22:35 America/New_York",
@@ -214,6 +219,7 @@
   "basic_memory_cloud_demo_acceptance_passed": true,
   "client_handover_complete": false,
   "application_url": "https://ain-virtual-eir-demo.onrender.com",
-  "acceptance_status": "basic_memory_cloud_demo_scenarios_passed",
-  "note": "Deployment reference only; contains no secrets. Basic demo scenarios passed: project/task read-write, configured real-model replies, cloud chat persistence, Incognito simulated Bob recall of recent context, attributed source lookup, and one private 773-byte TXT upload, AI content read, and byte-identical original download. The validated local currency rendering fix still awaits deployment. Live long-window retrieval, production authentication, other file formats, downtime recovery, disaster backup, and full AIN handover remain unverified."
+  "acceptance_status": "basic_memory_cloud_demo_scenarios_passed_quote_fix_deployed",
+  "note": "Personal-account prototype reference; contains no secrets. Core live demo checks passed: project/task persistence, real-model replies, shared recent context in an Incognito Bob session, attributed source lookup, and a private 773-byte TXT upload/read/download round-trip with exact byte equality. The literal-quote rendering fix is deployed and its targeted UI test passed; a new online screenshot has not been checked. Older-than-window retrieval, other file formats, production identity, disaster backup, and AIN Center handover remain unverified.",
+  "live_chat_memory_verification_scope": "Attributed lookup of saved recent team messages and model use after a fresh-session reload; no live validation of retrieval beyond the recent-message window."
 }
