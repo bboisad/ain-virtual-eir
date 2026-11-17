@@ -41,7 +41,7 @@ def render(ctx: state.PageContext) -> None:
             for hit in hits:
                 with st.container(border=True):
                     st.caption(hit.source_label)
-                    st.write(hit.text)
+                    st.text(hit.text)
                     st.caption(f"Source: {hit.source_id}")
     with st.expander("Daily summaries"):
         days = sorted(v.day_summaries, key=lambda d: d.day, reverse=True)

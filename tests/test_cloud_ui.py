@@ -103,11 +103,13 @@ def test_project_memory_dialog_searches_and_attributes_team_history(monkeypatch)
     button(at, label="Sign in")
     button(at, key="open_V-CAMPUS")
     v = at.session_state["repo"].get("V-CAMPUS")
-    v.conversation.append(Message("m2", "The library kiosk experiment is owned by Bob."))
+    statement = "The library kiosk experiment is owned by Bob: $36 ... $3, **literal** [Markdown](terms)."
+    v.conversation.append(Message("m2", statement))
     button(at, key="menu_memory")
     at.text_input(key="memory_search_V-CAMPUS").set_value("library kiosk").run()
     assert not at.exception
-    assert any("owned by Bob" in m.value for m in at.markdown)
+    assert any(t.value == statement for t in at.text)
+    assert v.conversation[-1].text == statement
     assert any("Bob" in c.value and "Team message" in c.value for c in at.caption)
 
 

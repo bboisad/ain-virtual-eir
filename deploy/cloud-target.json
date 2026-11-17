@@ -19,21 +19,201 @@
     "allowed_plan": "free",
     "service_id": "srv-dbtn61jm8hqs73cvbno0",
     "repository_url": "https://github.com/bboisad/ain-virtual-eir",
-    "source_commit": "d1240248b0b22c2490e8c06929ecff60afbc4c8b",
+    "source_commit": "a4a27bbcfacdcc936ddc03929e7b3422ce90beed",
     "creation_blocker": null,
     "initial_deploy_id": "dep-dbtn61rm8hqs73cvbol0",
+    "latest_deploy_id": "dep-dbts45rl550s7396l2l0",
+    "service_plan": "free",
     "service_url": "https://ain-virtual-eir-demo.onrender.com",
     "dashboard_url": "https://dashboard.render.com/web/srv-dbtn61jm8hqs73cvbno0",
     "deployment_status": "live",
-    "deployed_commit": "a3fcda350dcb390d8de1eeda3ce6c5d1c4629c7d",
+    "deployed_commit": "a4a27bbcfacdcc936ddc03929e7b3422ce90beed",
     "health_http_verified": true,
     "html_http_verified": true,
-    "private_configuration_pending": ["SUPABASE_SECRET_KEY", "EIR_DEMO_PASSWORD"]
+    "private_configuration_pending": []
   },
-  "streamlit_connected": false,
-  "rest_adapter_live_verified": false,
-  "file_upload_live_verified": false,
+  "streamlit_connected": true,
+  "rest_adapter_live_verified": true,
+  "cloud_task_acceptance": {
+    "verification_method": "User created the task through the deployed application UI; an independent Supabase SELECT confirmed the saved record.",
+    "project_id": "V-CAMPUS",
+    "baseline_revision": 1,
+    "revision": 2,
+    "updated_at": "2026-11-17 02:15:02.328238+00",
+    "archive_count": 2,
+    "latest_archive_matches_current": true,
+    "task_existed_before_save": false,
+    "matching_task_count_in_v_luma": 0,
+    "task": {
+      "id": "S-08919d1860a5",
+      "text": "Summarize the $3 prepaid listing test with 10 students: record how many paid, their reasons for declining, and whether at least 4 students paid.",
+      "owner": "team",
+      "due_date": "2026-11-16",
+      "status": "open",
+      "created_by": "m1"
+    }
+  },
+  "fresh_browser_session_read_live_verified": true,
+  "second_account_read_live_verified": false,
+  "simulated_second_member_model_recall_live_verified": true,
+  "shared_cloud_recent_context_recall_live_verified": true,
+  "production_authentication_live_verified": false,
+  "chat_memory_retrieval_live_verified": false,
+  "fresh_session_bob_recall_live_verified": true,
+  "source_search_live_verified": true,
+  "long_window_retrieval_live_verified": false,
+  "file_upload_live_verified": true,
+  "file_ai_discussion_live_verified": true,
+  "file_extracted_content_read_live_verified": true,
+  "file_download_live_verified": true,
+  "fresh_session_original_file_download_live_verified": true,
+  "browser_download_checksum_verified": true,
+  "single_file_roundtrip_live_verified": true,
+  "all_file_formats_live_verified": false,
+  "disaster_backup_verified": false,
+  "openai_model_configured": true,
+  "openai_model_live_verified": true,
+  "llm_provider": "openai",
+  "llm_model": "gpt-5.6-luna",
+  "cloud_chat_persistence_live_verified": true,
+  "cloud_chat_acceptance": {
+    "verification_method": "A user screenshot at 2026-11-16 22:14 America/New_York showed a successful non-scripted model reply; an independent Supabase SELECT confirmed both messages and the matching latest archive.",
+    "project_id": "V-CAMPUS",
+    "revision": 3,
+    "total_chat_messages": 2,
+    "latest_archive_matches_current": true,
+    "original_message": {
+      "id": "ce3d95d5-9a88-4691-99e7-13ec8d23e4b9",
+      "speaker": "m1",
+      "timestamp": "2026-11-17T03:14:35Z",
+      "text": "For our demo project, Alice will lead the Cedar pilot on November 20, 2026, with a $36 budget. We plan to recruit 10 students for the $3 prepaid listing test. No results have been collected yet. Please summarize this plan in one sentence."
+    },
+    "model_reply": {
+      "id": "ffd63708-47e5-4dba-9490-f687df89fbb6",
+      "speaker": "eir",
+      "timestamp": "2026-11-17T03:14:38Z",
+      "text": "Alice will lead the Cedar pilot on November 20, 2026, using a $36 budget to recruit 10 students for the $3 prepaid listing test, with results still pending."
+    },
+    "scope": "Successful real-model response and cloud chat persistence only. Both messages remain inside the recent-context window, so this is not proof of long-history retrieval."
+  },
+  "cross_session_recall_acceptance": {
+    "verification_method": "User screenshots showed recall in the normal Alice session and in a Chrome Incognito Bob Lee session; an independent Supabase SELECT confirmed Bob's question, the correct reply, and the matching latest archive.",
+    "project_id": "V-CAMPUS",
+    "revision": 5,
+    "total_chat_messages": 6,
+    "latest_archive_matches_current": true,
+    "bob_question": {
+      "id": "7d249a45-93e6-445e-95ec-2ead80f5bb97",
+      "speaker": "m2",
+      "timestamp": "2026-11-17T03:20:59Z",
+      "text": "What did we previously decide about the Cedar pilot? State the owner, scheduled date, budget, target number of students, and listing fee. Have any results been collected? Use only saved project information, and do not modify any records."
+    },
+    "model_reply": {
+      "id": "d08fbb06-52cf-49f4-bbf3-f32ea928cde4",
+      "speaker": "eir",
+      "timestamp": "2026-11-17T03:21:01Z",
+      "all_six_facts_correct": true,
+      "confirmed_facts": {
+        "owner": "Alice",
+        "scheduled_date": "2026-11-20",
+        "budget_usd": 36,
+        "target_students": 10,
+        "listing_fee_usd": 3,
+        "results_collected": false
+      }
+    },
+    "structured_record_comparison": {
+      "baseline_revision": 3,
+      "next_steps_unchanged": true,
+      "hypotheses_unchanged": true,
+      "experiments_unchanged": true
+    },
+    "scope": "Shared cloud context was recalled across browser sessions by a simulated second demo member. This is not verification of a separate authenticated production account or retrieval beyond the 30-message recent-context window."
+  },
+  "source_lookup_ui_acceptance": {
+    "observed_at": "2026-11-16 22:27 America/New_York",
+    "verification_method": "A user screenshot showed Menu > Project memory returning attributed member-message cards for lowercase cedar; their Source IDs match an independent Supabase SELECT.",
+    "query": "cedar",
+    "source_ids_match_database": true,
+    "returned_cards": [
+      {
+        "member": "Bob Lee",
+        "timestamp": "2026-11-17T03:20:59+00:00",
+        "source_id": "7d249a45-93e6-445e-95ec-2ead80f5bb97"
+      },
+      {
+        "member": "Alice",
+        "message": "followup",
+        "timestamp": "2026-11-17T03:20:42+00:00",
+        "source_id": "89c481f6-c17c-42e1-8edf-edbd791f7ab5"
+      },
+      {
+        "member": "Alice",
+        "message": "original",
+        "timestamp": "2026-11-17T03:14:35+00:00",
+        "source_id": "ce3d95d5-9a88-4691-99e7-13ec8d23e4b9"
+      }
+    ],
+    "scope": "Attributed source lookup UI is verified for recent saved messages; this is not proof of retrieval beyond the 30-message recent-context window."
+  },
+  "currency_quote_rendering": {
+    "literal_currency_display_live_verified": false,
+    "fix_deployed": false,
+    "status": "local_fix_validated_deployment_pending",
+    "observed_issue": "st.write interprets $36 and $3 as math delimiters and alters the displayed quote.",
+    "local_fix": "Use st.text for literal source text; completed locally and not yet deployed.",
+    "local_targeted_ui_test": {
+      "passed": 1,
+      "duration_seconds": 1.68
+    }
+  },
+  "file_upload_acceptance": {
+    "observed_at": "2026-11-16 22:35 America/New_York",
+    "verification_method": "The user uploaded Cedar_Pilot_Plan.txt and clicked Discuss in the deployed app. The screenshot showed the model reading the planned test without inventing results; independent Supabase SELECT and storage.objects checks confirmed the file, private objects, sizes, and local checksum agreement.",
+    "project_id": "V-CAMPUS",
+    "revision": 7,
+    "file_id": "F-46f571",
+    "filename": "Cedar_Pilot_Plan.txt",
+    "version": 1,
+    "uploaded_by": "m1",
+    "uploaded_at": "2026-11-17T03:34:58Z",
+    "blob_path": "V-CAMPUS/F-46f571/v1-3e14b29711f34751a9a7c3d71cfb0f96.txt",
+    "size_bytes": 773,
+    "extracted_characters": 772,
+    "sha256": "d984af6e492d7c6f322bef1edcd54ccb41e0bda6c8f086f4d43a28cdb2919409",
+    "sha256_matches_local_source": true,
+    "original_storage_etag": "6d995ebe964fd67e9775fa8731653c12",
+    "original_storage_etag_matches_local_md5": true,
+    "storage": {
+      "bucket": "eir-files",
+      "bucket_public": false,
+      "original_object_size_bytes": 773,
+      "extracted_text_object_path": "V-CAMPUS/F-46f571/v1-3e14b29711f34751a9a7c3d71cfb0f96.txt.txt",
+      "extracted_text_object_size_bytes": 772
+    },
+    "ai_discussion_confirmed_facts": {
+      "planned_students": 10,
+      "listing_fee_usd": 3,
+      "prepayment_target": 4,
+      "results_collected": false
+    },
+    "scope": "Live upload, private original and extracted-object creation, and AI discussion of extracted file content are verified. The subsequent single-file download and byte comparison are recorded in file_download_acceptance."
+  },
+  "file_download_acceptance": {
+    "verification_method": "The user reported performing the instructed fresh-session original download and supplied a screenshot of Cedar_Pilot_Plan_DL.txt. Direct comparison of the original and browser-downloaded file bytes confirmed equal size, matching SHA-256, and byte-for-byte equality.",
+    "fresh_session_performed_user_reported": true,
+    "original_filename": "Cedar_Pilot_Plan.txt",
+    "downloaded_filename": "Cedar_Pilot_Plan_DL.txt",
+    "original_size_bytes": 773,
+    "downloaded_size_bytes": 773,
+    "original_sha256": "d984af6e492d7c6f322bef1edcd54ccb41e0bda6c8f086f4d43a28cdb2919409",
+    "downloaded_sha256": "d984af6e492d7c6f322bef1edcd54ccb41e0bda6c8f086f4d43a28cdb2919409",
+    "byte_for_byte_equal": true,
+    "scope": "The upload, AI content read, and original download roundtrip is verified only for this 773-byte TXT file. Other formats, downtime recovery, and disaster backup were not verified."
+  },
+  "basic_memory_cloud_demo_acceptance_passed": true,
+  "client_handover_complete": false,
   "application_url": "https://ain-virtual-eir-demo.onrender.com",
-  "acceptance_status": "awaiting_private_configuration_and_functional_acceptance",
-  "note": "Deployment reference only. Contains no keys. The application still requires server-side secrets."
+  "acceptance_status": "basic_memory_cloud_demo_scenarios_passed",
+  "note": "Deployment reference only; contains no secrets. Basic demo scenarios passed: project/task read-write, configured real-model replies, cloud chat persistence, Incognito simulated Bob recall of recent context, attributed source lookup, and one private 773-byte TXT upload, AI content read, and byte-identical original download. The validated local currency rendering fix still awaits deployment. Live long-window retrieval, production authentication, other file formats, downtime recovery, disaster backup, and full AIN handover remain unverified."
 }

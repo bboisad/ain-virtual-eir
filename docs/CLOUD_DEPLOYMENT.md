@@ -26,6 +26,8 @@ flowchart LR
 
 需要 GitHub 仓库、Supabase 项目和 Render 账号。可以使用学校已有的服务；先确认团队成员中谁拥有这些账号，谁在展示后继续维护。此 Blueprint 选择 Render Free，不自动创建付费实例。
 
+当前已部署的实例为学生个人账号下的演示环境，AIN Center尚未接管。交付源代码、数据库初始化脚本、私密配置清单和测试证据，可支持接收方在自己的账号下重建演示。正式接管前需由AIN Center指定账号所有者、费用负责人和维护负责人，并约定学生团队支持期限。若需要保留现有云端数据及文件，还需制定并验证迁移与切换步骤；当前演示环境不代表已完成机构账号交接或正式运营验收。
+
 Render Free 有休眠、资源和使用额度限制，不应当承诺生产级持续在线；展示前应提前打开网址预热。云端文件和项目记录放在 Supabase，不依赖 Render 的临时本地磁盘。[Render Free 官方说明](https://render.com/docs/free)
 
 建议仓库根目录直接使用 `virtual_eir/` 的内容，使 `app.py`、`requirements.txt` 和 `render.yaml` 位于仓库根目录。如果上传整个外层文件夹，在 Render 中将 Root Directory 设为 `virtual_eir`；使用 Blueprint 时也要给服务加入 `rootDir: virtual_eir`，并选择 `virtual_eir/render.yaml` 作为 Blueprint 路径。[Render Blueprint 配置](https://render.com/docs/blueprint-spec)
