@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from datetime import date, datetime
 
-from . import access, consult, files, modes, overview, practice, roadmap
+from . import access, consult, files, modes, overview, practice, recall, roadmap
 from .models import EIR, SYSTEM, DaySummary, Experiment, FocusKind, LeadMode, Message, MessageKind, Rung, Venture
 
 MAX_FILES = 8  # project files described in the mentor's context (newest)
@@ -70,18 +70,23 @@ def briefing(v: Venture) -> list[str]:
     return lines
 
 
-def window(v: Venture) -> tuple[list[dict], dict[str, str]]:
-    """The current lead mentor's chat for the model, oldest first, and the map from tag to message id.
-    Team messages are tagged [m1], [m2], … so record updates can cite them. Notes from the app read "(note) …"."""
+def _window_messages(v: Venture) -> list[Message]:
+    """The messages in the model's recent window; retrieval uses the same boundary to avoid duplication."""
     kept, total = [], 0
     for m in reversed(v.thread(v.lead_mode)[-WINDOW_MESSAGES:]):
         total += len(m.text)
         if kept and total > WINDOW_CHARS:
             break
         kept.append(m)
+    return list(reversed(kept))
+
+
+def window(v: Venture) -> tuple[list[dict], dict[str, str]]:
+    """The current lead mentor's chat for the model, oldest first, and the map from tag to message id.
+    Team messages are tagged [m1], [m2], … so record updates can cite them. Notes from the app read "(note) …"."""
     refs: dict[str, str] = {}
     out: list[dict] = []
-    for m in reversed(kept):
+    for m in _window_messages(v):
         if m.author == EIR:
             role, content = "assistant", m.text
         elif m.author == SYSTEM or m.kind == MessageKind.EVENT:
@@ -97,6 +102,17 @@ def window(v: Venture) -> tuple[list[dict], dict[str, str]]:
     while out and out[0]["role"] == "assistant":  # chats sent to the model start with the team
         out.pop(0)
     return out, refs
+
+
+def recalled_memories(v: Venture, query: str | None = None) -> list[recall.MemoryHit]:
+    """Relevant older history beyond the normal chat and summary windows, with source metadata for inspection."""
+    return recall.search(v, query, exclude_message_ids={m.id for m in _window_messages(v)},
+                         exclude_days={d.day for d in sorted(v.day_summaries, key=lambda d: d.day)[-7:]})
+
+
+def recall_context(v: Venture, query: str | None = None) -> str:
+    """A bounded historical supplement, always subordinate to current structured project records."""
+    return recall.render(recalled_memories(v, query))
 
 
 def attachment(v: Venture, m: Message) -> str:
@@ -291,4 +307,5 @@ def lead_context(v: Venture) -> str:
     parts.append("PRACTICE SESSIONS YOU CAN SUGGEST (suggest_practice; the team practises on its own):\n" + "\n".join(
         f"- {c.id}/{s.id}: {c.name}, {s.title}. {s.description}" for c in practice.characters() for s in c.scenarios))
     parts.append(_flags(v))
+    parts.append(recall_context(v))
     return "\n\n".join(p for p in parts if p)
