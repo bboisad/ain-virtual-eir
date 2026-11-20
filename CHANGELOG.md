@@ -1,18 +1,5 @@
 # Changelog
 
-## Memory and cloud delivery extension — 2026-11-16
-
-- Source-linked English/Chinese retrieval over older team chat and daily summaries; at most five excerpts and
-  4,000 extra characters. Current project records take precedence. No embeddings or extra model calls are required.
-- Menu → Project memory: current records, history search, daily summaries and a team-authorized JSON export.
-- Optional Supabase repository and private file storage; atomic optimistic writes, append-only project snapshots,
-  immutable file version keys, and retained private blobs when attachments are removed from the project.
-- Shared passcode before any cloud data loads; fictional identities remain explicitly a demo limitation.
-- Failed project saves keep an exportable draft; no silent fallback from cloud to local storage. Cloud reset is
-  disabled in the browser.
-- Render and Docker deployment files, explicit seed/local migration, cloud verification and recovery instructions.
-- Offline validation and actual cloud deployment are tracked separately in `docs/RELEASE_MEMORY_CLOUD.md`.
-
 ## v0.19 — 2026-11-13  A simpler Overview, from outside feedback
 `docs/DECISIONS.md` "The Overview as the project's homepage" explains the reasons. The design came from one question,
 answered by a classmate and by ChatGPT (GPT-6); a third person said those two covered their view. The product owner
@@ -330,4 +317,3 @@ Product decisions: one group = one venture · group memory only · no invites / 
 ## v0.1 — 2026-10-12
 - First Streamlit template: intake, coach chat (3 modes, challenge always on), canvas, session summary
   with batch review, recap, consent-based mentor brief, static pathways, mock mode.
-

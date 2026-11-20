@@ -11,7 +11,6 @@ from eir import actions, brief, modes, overview, roadmap, teams
 from eir.models import LeadMode, Module, Stage, VentureType
 from ui import state
 from ui.components import member_row
-from ui.memory_dialog import render as render_memory
 
 EXPERIENCE = ("First venture", "Ran a small business or side project", "Founded a startup before")
 
@@ -24,7 +23,6 @@ def render_menu(ctx: state.PageContext) -> None:
         items = [("members", "Members", ":material/group:"),
                  ("human", "Ask a human EIR", ":material/support_agent:"),
                  ("switch", "Switch Virtual EIR", ":material/swap_horiz:"),
-                 ("memory", "Project memory", ":material/history:"),
                  ("settings", "Project settings", ":material/settings:")]
         if v.lead_mode == LeadMode.LAUNCH:
             items.append(("plan", "Project plan", ":material/description:"))
@@ -222,14 +220,10 @@ def _back(ctx: state.PageContext) -> None:
 @st.dialog("Prototype info", on_dismiss=state.close_dialog)
 def _info(ctx: state.PageContext) -> None:
     st.markdown(f"**Virtual EIR model:** {ctx.coach.label}")
-    if state.cloud_storage():
-        st.caption("Fictional demo data is saved in cloud storage and shared across devices. Reset is disabled "
-                   "for this shared workspace.")
-    else:
-        st.caption("Demo data is fictional and saved on this computer, so it survives a refresh. Reset puts the demo "
-                   "ventures back as they were.")
-        st.button("Reset demo", key="reset_demo", on_click=state.reset)
+    st.caption("Demo data is fictional and saved on this computer, so it survives a refresh. Reset puts the demo "
+               "ventures back as they were.")
+    st.button("Reset demo", key="reset_demo", on_click=state.reset)
 
 
 DIALOGS = {"members": _members, "human": _human, "switch": _switch, "settings": _settings, "plan": _plan,
-           "back": _back, "info": _info, "memory": render_memory}
+           "back": _back, "info": _info}

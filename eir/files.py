@@ -15,7 +15,6 @@ from __future__ import annotations
 import hashlib
 import re
 from pathlib import PurePath
-from uuid import uuid4
 
 from . import extract
 from .filestore import SEED, FileStore
@@ -81,23 +80,16 @@ def add_version(v: Venture, store: FileStore, name: str, data: bytes, by: str,
         text = extract.text_of(kind, data)
     except extract.ExtractError:
         text = ""
-    new_file = f is None
-    if new_file:
+    if f is None:
         f = ProjectFile(name=name, kind=kind, created_by=by)
+        v.files.append(f)
     number = len(f.versions) + 1
-    # Cloud uploads may finish before a competing metadata save is rejected. A
-    # unique upload key prevents those retained bytes blocking the next attempt
-    # at the same visible version. Existing local paths and older cloud paths
-    # remain readable through the FileVersion.blob stored with each version.
-    upload = f"-{uuid4().hex}" if getattr(store, "immutable_versions", False) else ""
-    blob = f"{v.id}/{f.id}/v{number}{upload}{PurePath(name).suffix.lower()}"
+    blob = f"{v.id}/{f.id}/v{number}{PurePath(name).suffix.lower()}"
     store.put(blob, data)
     store.put(blob + ".txt", text.encode("utf-8"))
     version = FileVersion(number, by, size=len(data), sha256=digest, blob=blob, chars=len(text), note=note.strip())
     f.name = name
     f.versions.append(version)
-    if new_file:
-        v.files.append(f)
     return f, version, text
 
 

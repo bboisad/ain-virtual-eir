@@ -3,8 +3,6 @@ from __future__ import annotations
 
 import os
 import shutil
-import hashlib
-import hmac
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -12,13 +10,11 @@ import streamlit as st
 
 from eir import access
 from eir.access import Account
-from eir.cloud import CloudStorageError, StorageConflict, SupabaseFileStore, SupabaseRepository
 from eir.coach import Coach, make_coach
 from eir.filestore import FileStore, LocalFileStore, MemoryFileStore
 from eir.models import Venture
 from eir.repository import InMemoryRepository, JsonFileRepository, VentureRepository
 from eir.seed import demo_accounts, demo_ventures
-from eir.serde import to_dict
 
 HOME = "Mentor"  # a team lands on its mentor; the briefing says what to do now (pages: ui/pages/__init__.py)
 
@@ -52,16 +48,7 @@ class PageContext:
     files: FileStore  # project files (the venture record keeps only names, versions and summaries)
 
     def save(self) -> None:
-        try:
-            self.repo.save(self.venture)
-        except CloudStorageError as err:
-            keep_unsaved(self.venture, err, self.account.id if self.account else "")
-            render_unsaved(key="save_failure")
-            st.stop()
-        else:
-            pending = st.session_state.get("unsaved_work")
-            if pending and pending[0]["id"] == self.venture.id:
-                st.session_state.pop("unsaved_work", None)
+        self.repo.save(self.venture)
 
 
 def app_state() -> AppState:
@@ -75,89 +62,7 @@ FILES_DIR = Path(os.getenv("EIR_FILES_DIR") or DATA_DIR.parent / "files")
 
 
 def _storage() -> str:
-    value = setting("EIR_STORAGE", "file").strip().lower()
-    if value not in {"file", "memory", "supabase"}:
-        raise CloudStorageError("Choose file, memory, or supabase for EIR_STORAGE.")
-    return value
-
-
-def setting(name: str, default: str = "") -> str:
-    """Read deployment settings without ever including their values in a diagnostic."""
-    try:
-        if name in st.secrets:
-            return str(st.secrets[name])
-    except (FileNotFoundError, st.errors.StreamlitSecretNotFoundError):
-        pass
-    return os.getenv(name, default)
-
-
-def cloud_storage() -> bool:
-    return _storage() == "supabase"
-
-
-def _cloud_settings() -> tuple[str, str]:
-    url = setting("SUPABASE_URL").strip()
-    key = setting("SUPABASE_SECRET_KEY").strip() or setting("SUPABASE_SERVICE_ROLE_KEY").strip()
-    if not url or not key:
-        raise CloudStorageError("Cloud storage is selected. Configure SUPABASE_URL and SUPABASE_SECRET_KEY first.")
-    return url, key
-
-
-def require_demo_access() -> None:
-    """A shared access gate for fictional demos, before loading cloud data or using an AI key.
-
-    This does not replace university sign-in or distinguish real people behind demo accounts.
-    """
-    password = setting("EIR_DEMO_PASSWORD")
-    if cloud_storage() and not password:
-        st.error("Set a shared demo passcode before opening the cloud demo (EIR_DEMO_PASSWORD).")
-        st.stop()
-    if not password:
-        return
-    fingerprint = hashlib.sha256(password.encode()).hexdigest()
-    if st.session_state.get("demo_access") == fingerprint:
-        return
-    st.title("AIN Virtual EIR")
-    st.write("Enter your team's passcode to open this private prototype.")
-    st.caption("This workspace uses fictional demo accounts and project data.")
-    with st.form("demo_access_form"):
-        st.text_input("Demo passcode", type="password", key="demo_access_password")
-        st.form_submit_button("Open demo", type="primary", on_click=_unlock_demo)
-    if st.session_state.pop("demo_access_error", False):
-        st.error("The passcode did not match. Please try again.")
-    st.stop()
-
-
-def _unlock_demo() -> None:
-    entered = st.session_state.pop("demo_access_password", "")
-    password = setting("EIR_DEMO_PASSWORD")
-    if password and hmac.compare_digest(entered.encode(), password.encode()):
-        st.session_state["demo_access"] = hashlib.sha256(password.encode()).hexdigest()
-    else:
-        st.session_state.pop("demo_access", None)
-        st.session_state["demo_access_error"] = True
-
-
-def keep_unsaved(venture: Venture, error: CloudStorageError, account_id: str = "") -> None:
-    st.session_state["unsaved_work"] = (to_dict(venture), isinstance(error, StorageConflict), account_id)
-
-
-def render_unsaved(key: str = "pending_save") -> None:
-    """Retain the losing writer's draft; never retry it over a teammate's newer revision."""
-    pending = st.session_state.get("unsaved_work")
-    if not pending:
-        return
-    if len(pending) > 2 and pending[2] and pending[2] != app_state().account_id:
-        return
-    import json
-    data, conflict = pending[:2]
-    st.warning("A teammate saved changes first. Your version was kept below and was not saved over theirs."
-               if conflict else "Your work could not be saved to the cloud. A copy is kept below.")
-    with st.expander("Your unsaved work", expanded=True):
-        st.caption("Download a copy before refreshing. Review the latest project and reapply your changes there.")
-        st.download_button("Download my unsaved copy", json.dumps(data, ensure_ascii=False, indent=2),
-                           file_name=f"unsaved_{data['id']}.json", mime="application/json", key=f"{key}_download")
-        st.button("Refresh the project", key=f"{key}_refresh", on_click=close_dialog)
+    return os.getenv("EIR_STORAGE", "file")  # tests set "memory"
 
 
 def repo() -> VentureRepository:
@@ -166,9 +71,6 @@ def repo() -> VentureRepository:
     if "repo" not in st.session_state:
         if _storage() == "memory":
             st.session_state["repo"] = InMemoryRepository(demo_ventures())
-        elif _storage() == "supabase":
-            # Cloud data is seeded by the explicit migration command, never by a browser opening the app.
-            st.session_state["repo"] = SupabaseRepository(*_cloud_settings())
         else:
             r = JsonFileRepository(DATA_DIR)
             if not r.list():
@@ -181,11 +83,7 @@ def repo() -> VentureRepository:
 def filestore() -> FileStore:
     """Project files: plain files under FILES_DIR (a prototype limit), or memory for tests and the in-memory demo."""
     if "filestore" not in st.session_state:
-        if _storage() == "supabase":
-            st.session_state["filestore"] = SupabaseFileStore(*_cloud_settings(),
-                                                              bucket=setting("SUPABASE_BUCKET", "eir-files"))
-        else:
-            st.session_state["filestore"] = MemoryFileStore() if _storage() == "memory" else LocalFileStore(FILES_DIR)
+        st.session_state["filestore"] = MemoryFileStore() if _storage() == "memory" else LocalFileStore(FILES_DIR)
     return st.session_state["filestore"]
 
 
@@ -196,6 +94,13 @@ def _coach(provider: str, key: str, model: str, base_url: str, tools: str) -> Co
 
 
 def coach() -> Coach:
+    def setting(name: str) -> str:
+        try:
+            if name in st.secrets:
+                return str(st.secrets[name])
+        except Exception:  # no secrets.toml
+            pass
+        return os.getenv(name, "")
     return _coach(*(setting(n) for n in ("LLM_PROVIDER", "LLM_API_KEY", "LLM_MODEL", "LLM_BASE_URL", "LLM_TOOLS")))
 
 
@@ -224,8 +129,6 @@ def sign_out() -> None:
     s = app_state()
     _leave(s)
     s.account_id = None
-    for key in ("demo_access", "unsaved_work"):
-        st.session_state.pop(key, None)
 
 
 def context() -> PageContext | None:
@@ -398,8 +301,6 @@ def pop_flash(where: str = "page") -> tuple[str, str] | None:
 
 def reset() -> None:
     """Back to the demo data: removes the saved ventures and their project files (file storage), and the session."""
-    if cloud_storage():
-        raise CloudStorageError("Cloud demo data cannot be reset from a browser. Export and manage it separately.")
     if _storage() != "memory":
         if DATA_DIR.exists():
             for f in DATA_DIR.glob("*.json"):

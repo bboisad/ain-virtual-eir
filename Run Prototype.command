@@ -1,16 +1,9 @@
 #!/bin/bash
-# Double-click to start the prototype. Ctrl+C stops it.
-set -e
+# Double-click to start the AIN Virtual EIR prototype at http://localhost:8501 (close this window to stop it).
 cd "$(dirname "$0")"
-if [ -x .venv/bin/python ]; then
-  EIR_RUN_PYTHON=.venv/bin/python
-elif [ -x ../.venv/bin/python ]; then
-  EIR_RUN_PYTHON=../.venv/bin/python
+if command -v streamlit >/dev/null 2>&1; then
+  streamlit run app.py --server.port 8501 --server.headless true
 else
-  python3 -m venv .venv
-  EIR_RUN_PYTHON=.venv/bin/python
+  python3 -m streamlit run app.py --server.port 8501 --server.headless true || {
+    echo "Streamlit not found, installing..."; python3 -m pip install --user -r requirements.txt && python3 -m streamlit run app.py --server.port 8501 --server.headless true; }
 fi
-if ! "$EIR_RUN_PYTHON" -c 'import streamlit' >/dev/null 2>&1; then
-  "$EIR_RUN_PYTHON" -m pip install -r requirements.txt
-fi
-exec "$EIR_RUN_PYTHON" -m streamlit run app.py --server.port 8501 --server.headless true

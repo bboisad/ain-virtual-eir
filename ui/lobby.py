@@ -7,9 +7,7 @@ from html import escape
 import streamlit as st
 
 from eir import access, modes, overview, teams
-from eir.cloud import CloudStorageError
 from eir.models import BACKGROUNDS, Goal, LeadMode, Stage, Traction, VentureType
-from eir.repository import InMemoryRepository
 from ui import state
 from ui.components import chip, chips, md
 
@@ -21,9 +19,7 @@ def render(account: access.Account) -> None:
     a.title("My projects")
     b.button("Sign out", icon=":material/logout:", width="stretch", on_click=state.sign_out)
     st.write(f"Signed in as **{account.name}** · Account ID: `{account.id}`")
-    st.caption("Fictional demo projects are saved in the cloud and shared across devices. Choose a demo account "
-               "to explore the team's view." if state.cloud_storage() else
-               "Prototype: demo data is fictional and saved on this computer. To try joining as a teammate, sign out "
+    st.caption("Prototype: demo data is fictional and saved on this computer. To try joining as a teammate, sign out "
                "and choose another demo account in the same tab.")
     ventures = access.visible_ventures(account, state.repo())
     if not ventures:
@@ -82,7 +78,6 @@ def _prepare(prefix: str) -> None:
         values[f"{prefix}_error"] = "Enter a project name."
         return
     values.pop(f"{prefix}_error", None)
-    values.pop(f"{prefix}_draft", None)
     fields = ("name", "description", "traction", "goal", "stage", "type", "background", "ip")
     values[f"{prefix}_pending"] = {f: values[f"{prefix}_{f}"] for f in fields}
 
@@ -105,38 +100,14 @@ def _choose_mentor(account: access.Account, prefix: str) -> None:
                    "You can switch later and keep your venture’s records.")
         st.button("Back", key=f"{prefix}_back", icon=":material/arrow_back:", on_click=st.session_state.pop,
                   args=(f"{prefix}_pending", None))
-        if error := st.session_state.get(f"{prefix}_error"):
-            st.error(error)
 
 
 def _create_workspace(account: access.Account, prefix: str, mode: LeadMode) -> None:
     """Commit before the next app render chooses its route."""
-    p = st.session_state[f"{prefix}_pending"]
-    v = st.session_state.get(f"{prefix}_draft")
-    if v is not None and v.lead_mode != mode:
-        st.session_state[f"{prefix}_error"] = "Retry with your chosen Virtual EIR, or go Back to start a new request."
-        return
-    if v is None:
-        # Build once locally, retaining the same ID if an HTTP response is lost after the server committed.
-        v = teams.create_workspace(InMemoryRepository([]), account, p["name"], p["description"],
-                                   background=p["background"], stage=p["stage"], venture_type=p["type"],
-                                   ip_sensitive=p["ip"], lead_mode=mode, traction=p["traction"], goal=p["goal"])
-        st.session_state[f"{prefix}_draft"] = v
-    try:
-        target = state.repo()
-        try:
-            confirmed = target.get(v.id)
-        except KeyError:
-            target.save(v)
-        else:
-            if not confirmed.member_for_account(account.id):
-                raise CloudStorageError("The project could not be confirmed. Your form has been kept.")
-            v = confirmed
-    except CloudStorageError as err:
-        st.session_state[f"{prefix}_error"] = str(err) + " Your form is kept; retry when the connection is ready."
-        return
-    for suffix in ("pending", "draft", "error"):
-        st.session_state.pop(f"{prefix}_{suffix}", None)
+    p = st.session_state.pop(f"{prefix}_pending")
+    v = teams.create_workspace(state.repo(), account, p["name"], p["description"], background=p["background"],
+                               stage=p["stage"], venture_type=p["type"], ip_sensitive=p["ip"], lead_mode=mode,
+                               traction=p["traction"], goal=p["goal"])
     state.open_venture(v.id)
 
 
@@ -148,7 +119,7 @@ def _join_form(account: access.Account) -> None:
         return
     v = teams.find_invited_venture(state.repo(), code)
     if v is None:
-        st.warning("No project matches this invitation code.")
+        st.warning("No project matches this code on this computer.")
         return
     with st.container(border=True):
         st.markdown(f"#### {escape(v.name)}")
@@ -170,16 +141,11 @@ def _join_form(account: access.Account) -> None:
 
 def _accept_invitation(account: access.Account) -> None:
     """Join before rerender, avoiding a transient mixture of lobby and workspace."""
-    try:
-        v = teams.find_invited_venture(state.repo(), st.session_state.get(f"join_code_{account.id}", ""))
-        if v is None:
-            st.session_state[f"join_error_{account.id}"] = "This invitation is no longer available."
-            return
-        teams.join_venture(v, account, st.session_state.get(f"join_background_{account.id}", "Other"))
-        state.repo().save(v)
-    except CloudStorageError as err:
-        st.session_state[f"join_error_{account.id}"] = str(err) + " Please retry; your invitation code is kept."
-        # Do not expose a full venture snapshot before membership is successfully saved.
+    v = teams.find_invited_venture(state.repo(), st.session_state.get(f"join_code_{account.id}", ""))
+    if v is None:
+        st.session_state[f"join_error_{account.id}"] = "This invitation is no longer available."
         return
     st.session_state.pop(f"join_error_{account.id}", None)
+    teams.join_venture(v, account, st.session_state.get(f"join_background_{account.id}", "Other"))
+    state.repo().save(v)
     state.open_venture(v.id)

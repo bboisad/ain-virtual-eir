@@ -201,14 +201,6 @@ class ScriptedCoach:
         if any(w in low for w in ("human", "real mentor", "real person")):
             box.call(ToolCall("human", "request_human", {"topic": text[:120], "reason": "the team asked for a person"}))
             return LeadTurn(MENTOR_REPLY)
-        if any(w in low for w in ("remember", "recall", "之前", "记得", "回忆")):
-            from .. import recall
-            hits = recall.search(v, text, exclude_message_ids={last.id}, limit=3)
-            if hits:
-                quotes = "\n\n".join(f"**{hit.source_label}**\n> {hit.text}" for hit in hits)
-                return LeadTurn("Here are related entries from your team's saved history:\n\n" + quotes +
-                                "\n\nThese are earlier statements. Use the current project records to check what "
-                                "has changed; retrieval does not verify a claim.")
         pressing = questioning.next_question(v) if v.lead_mode == LeadMode.LAUNCH else self._lens_question(v)
         if pressing:
             return LeadTurn(self._grounded(v) + f"{name}, before we go on:\n\n{pressing}")
