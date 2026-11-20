@@ -4,4 +4,10 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .data/
+.demo-data/
+.env
+.env.*
+!.env.example
+.coverage
+*.zip
 .venv/

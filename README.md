@@ -1,4 +1,24 @@
-# AIN Center Virtual EIR (prototype v0.19)
+# AIN Center Virtual EIR (v0.19 + memory and cloud prototype)
+
+## Memory and cloud delivery · November 16, 2026
+
+The original four-page application now includes source-linked English/Chinese history retrieval and optional
+Supabase project/file storage. Open **Menu → Project memory** to search saved team statements, review summaries,
+and export project records. The AI context adds relevant history beyond the recent message window; without an
+API key, explicit “remember” / “之前” questions can demonstrate attributed retrieval with the scripted coach.
+
+Cloud deployment uses the included Render configuration (or Docker) and `deploy/supabase.sql`. Project saves use
+atomic revision checks and keep previous snapshots. File versions are immutable; removing an attachment retains
+its private bytes for snapshot recovery. Cloud mode requires a shared demo passcode and uses fictional accounts,
+not university identity. Configuring a cloud adapter is not evidence of a live deployment.
+
+- Deployment and recovery: [Cloud deployment](docs/CLOUD_DEPLOYMENT.md).
+- Meeting walkthrough: [Memory and cloud demo](docs/DEMO_MEMORY_CLOUD.md).
+- Delivery status and validation: [Release notes](docs/RELEASE_MEMORY_CLOUD.md).
+- Local installation remains the same. Cloud settings belong in environment variables or private Streamlit secrets;
+  the commented template is `.streamlit/secrets.toml.example`. Nothing automatically uploads local projects.
+
+---
 
 A Virtual Entrepreneur in Residence for AIN Center ventures that have no dedicated EIR (MSAIB capstone, Fall 2026).
 
@@ -96,7 +116,9 @@ Data stays outside the project folder: ventures in `~/.virtual_eir/ventures/`, p
 ## Prototype boundaries
 
 - Sign-in is a demo selector, not authentication; membership and role checks are application-level only.
-- JSON files and plain files on one computer, not a database: no multiuser sync, no encryption.
+- Default local storage uses JSON files and plain files on one computer, without concurrent-write protection.
+  Optional Supabase storage supports shared persistence and optimistic writes; it still uses the application's
+  fictional demo identities rather than real per-user authentication.
 - Required evidence per key question and the step numbers are our initial standard, to be calibrated by AIN EIRs.
 - The AI mentor is checked with `eval/run_eval.py` (10 cases from Roberto's examples) and the practice characters with
   `eval/run_practice_eval.py` (3 cases); the judge is the same model. Neither is checked by real EIRs or students yet.

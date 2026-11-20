@@ -1,0 +1,419 @@
+{
+  "schema_version": 2,
+  "repository": "bboisad/ain-virtual-eir",
+  "branch": "memory-cloud",
+  "prepared_date": "2026-11-19",
+  "base_main_commit": "17cbf78048a8569afdcd9c17c0c9cb9ab217f9e6",
+  "provenance": "Verified against the authentic original v0.19 ZIP: 205 original files versus 227 delivery files; 191 byte-identical, 22 added, 14 modified, 0 deleted. GitHub text uses LF line endings and keeps existing file modes.",
+  "origin_counts": {
+    "added": 22,
+    "modified": 14,
+    "total": 36
+  },
+  "comparison_scope": "main current contents are restored to the original package baseline. memory-cloud contains the complete extension. The pull request includes the original 22 additions and 14 modifications plus two later integration documents: 24 added, 14 modified, 0 removed, 38 total.",
+  "publication_files": [
+    "MEMORY_CLOUD_INTEGRATION.md",
+    "docs/memory-cloud-change-manifest.json",
+    "操作手册.md"
+  ],
+  "files": [
+    {
+      "path": ".dockerignore",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/.dockerignore",
+      "purpose_zh": "Docker打包时排除密钥配置、本地数据和缓存",
+      "sha256": "0ce8daeace7c8287af8a9a1999f2a8263ac5e3beccc2b86ee4e55db2a1a46c91",
+      "git_blob_sha1": "8038f5185f7de1714429173be362f04e195eada5",
+      "bytes": 185,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "Dockerfile",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/Dockerfile",
+      "purpose_zh": "容器运行配置；尚未实际构建镜像验收",
+      "sha256": "564d785d537bf4df76aa03fbcb8ffbf6ecb41a50e0e39d4e08a2e2c0431681c3",
+      "git_blob_sha1": "11f01808824504bab96ebf6ae62cd45b6040be23",
+      "bytes": 732,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "render.yaml",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/render.yaml",
+      "purpose_zh": "Render网站部署配置",
+      "sha256": "60a831daa4e419986587ce24664c2de5a994e5c094cac071ee64bb1c32da31b4",
+      "git_blob_sha1": "fb57fc6dd1313a9ee0303b8c1803d65d47fa10bc",
+      "bytes": 1046,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "deploy/cloud-target.json",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/deploy/cloud-target.json",
+      "purpose_zh": "个人演示环境标识与验收状态记录；不是数据库备份",
+      "sha256": "152ec940683a1d8f4436e62ab18b1908d0da400414d9a72cd16c737dc5d9dc21",
+      "git_blob_sha1": "747d115653205acc1c51133d66acb5f91aa34d94",
+      "bytes": 11498,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "deploy/supabase.sql",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/deploy/supabase.sql",
+      "purpose_zh": "数据库表、访问权限、版本检查与历史保存规则",
+      "sha256": "94130a33fd827af3ddfe960e41d0e1631c03f55e5ea7cf31ea6156f2b0c9e024",
+      "git_blob_sha1": "e3ef16a86a6b72e5e914454091a9915abdb38b33",
+      "bytes": 3237,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "docs/CLOUD_DEPLOYMENT.md",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/docs/CLOUD_DEPLOYMENT.md",
+      "purpose_zh": "部署、数据迁移和历史恢复说明",
+      "sha256": "cdff2845361c177105445f18524326fe308a2da434f6d36ce9bdc1d332fc8089",
+      "git_blob_sha1": "e7537ef55bf7a8d8df32b0e68df61a9e7a329c3e",
+      "bytes": 11220,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "docs/DEMO_MEMORY_CLOUD.md",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/docs/DEMO_MEMORY_CLOUD.md",
+      "purpose_zh": "会议演示步骤",
+      "sha256": "d711de963e70593094fa7d00f1be3438e808c5ca0fffee1b97fd3ac25a1b567b",
+      "git_blob_sha1": "eec70dc3a1b8bd2cc9825036e9257bc9a6d93682",
+      "bytes": 6575,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "docs/PRIVATE_CONFIGURATION.md",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/docs/PRIVATE_CONFIGURATION.md",
+      "purpose_zh": "私密配置填写说明，仅列配置名称，不提供真实密钥",
+      "sha256": "c30ef9ea07ce735c12e5ab60fcc9a65335fee2d862594b8a69f655a5a15fa99b",
+      "git_blob_sha1": "7c2354f9d5d845ba9bc93d7f6a46d5a15e318158",
+      "bytes": 2937,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "docs/RELEASE_MEMORY_CLOUD.md",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/docs/RELEASE_MEMORY_CLOUD.md",
+      "purpose_zh": "功能范围、真实验收记录及未完成项",
+      "sha256": "16961e667fc9d6f3b03457caf50824e73928930db1bb77f2f329a8fd7c9f3c92",
+      "git_blob_sha1": "1c38b426f40391afdeaec1a4886ea97f4872a72d",
+      "bytes": 17433,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "docs/demo/Cedar_Pilot_Plan.txt",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/docs/demo/Cedar_Pilot_Plan.txt",
+      "purpose_zh": "虚构文件往返演示样例",
+      "sha256": "d984af6e492d7c6f322bef1edcd54ccb41e0bda6c8f086f4d43a28cdb2919409",
+      "git_blob_sha1": "fc3fcabcd096401a48c8f9db57c2285ffde870fa",
+      "bytes": 773,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "docs/validation-memory-cloud.xml",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/docs/validation-memory-cloud.xml",
+      "purpose_zh": "2026-11-16完整自动测试结果：303项通过",
+      "sha256": "59d9bf7b8b28587520c4384b14418aa9ab6b59dc5cd3d1832e844190dc35a8f3",
+      "git_blob_sha1": "5554bcc1c863d0135ff530e85da35aaa93dade20",
+      "bytes": 38099,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "eir/cloud.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/eir/cloud.py",
+      "purpose_zh": "Supabase项目、版本和私有文件读写",
+      "sha256": "eec435ad8cdea9fc8c7f669adaed8a87b6037f4d22d62c1892541f0850e55c71",
+      "git_blob_sha1": "c0ef192e3ba53ba302b2ff547a292e4bcbe8296e",
+      "bytes": 11856,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "eir/recall.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/eir/recall.py",
+      "purpose_zh": "带发言人、时间和来源的中英文历史检索",
+      "sha256": "1cbd450c932e590f048530a16794bd353e9dce6561038fba632222ee5fac1d6a",
+      "git_blob_sha1": "c7e08c3d74d7f670265f5b8315ce319381078322",
+      "bytes": 8640,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "scripts/cloud_check.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/scripts/cloud_check.py",
+      "purpose_zh": "云端连接、读写和文件检查工具",
+      "sha256": "06cc27058f96e13c202f736ad0a20704ccd84678381202afe57354b8408803d5",
+      "git_blob_sha1": "0defd997e1afcde7e79605d5fbddf398da44eb42",
+      "bytes": 6852,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "scripts/migrate_cloud.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/scripts/migrate_cloud.py",
+      "purpose_zh": "明确执行后才导入数据，默认预览",
+      "sha256": "8e1538a749907b9977fc8b91226d047572a3b416edea641339a1ea24a1718598",
+      "git_blob_sha1": "152bac2ebb959f2a8b1c7fa42b7234bbfad21340",
+      "bytes": 6583,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "scripts/restore_cloud.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/scripts/restore_cloud.py",
+      "purpose_zh": "项目历史恢复工具，默认预览",
+      "sha256": "4f904b7a079e1c9dc1c25b747d2bae9844b73981d8835ee408060e1539688d23",
+      "git_blob_sha1": "e372a7ed4f66ab94f912cac0b76b77c4eef851c2",
+      "bytes": 6063,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "tests/test_cloud.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/tests/test_cloud.py",
+      "purpose_zh": "云端读写、权限边界和版本测试",
+      "sha256": "bc0c104a96af86714ec7e14dc83118b4f01324c20018a49ae9c8b848cd8f3cb3",
+      "git_blob_sha1": "9539e9a09a70c88893cdc268037636b87e7a886f",
+      "bytes": 10775,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "tests/test_cloud_scripts.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/tests/test_cloud_scripts.py",
+      "purpose_zh": "迁移、检查和恢复工具测试",
+      "sha256": "427a7077b299a3e776d5d7af0425929addc58c5a808e3344e6dd0fcfc68525b9",
+      "git_blob_sha1": "6735a71b696275c9e7873265403aeda8f0d7767b",
+      "bytes": 8146,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "tests/test_cloud_ui.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/tests/test_cloud_ui.py",
+      "purpose_zh": "访问密码、记忆窗口和保存失败界面测试",
+      "sha256": "d062eebbb56415234289a9e68f8239acbb165b67e1bf5f3b8cd1cb77bd3fa0c2",
+      "git_blob_sha1": "d2dfb6e0ceb7c296897992da238cccf384fb03f0",
+      "bytes": 7636,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "tests/test_cloud_uploads.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/tests/test_cloud_uploads.py",
+      "purpose_zh": "上传失败与重试测试",
+      "sha256": "64aa644e9a7f81f65ed1e8f446f63e983e6335932419b52e56cf6da668ab7b57",
+      "git_blob_sha1": "5fbffe949ab6a75c9bc61c84a2fb72a47f31cbc2",
+      "bytes": 3837,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "tests/test_memory_recall.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/tests/test_memory_recall.py",
+      "purpose_zh": "历史搜索、来源、检索范围和边界测试",
+      "sha256": "d7fa779382f7c621c483cef6064ba13599c01460aa0e7b9f5616e3dbb4292291",
+      "git_blob_sha1": "eb21282760cf6cfac1598e2a96acebba278c510b",
+      "bytes": 8100,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": "ui/memory_dialog.py",
+      "origin_change": "added",
+      "source_package_path": "virtual_eir/ui/memory_dialog.py",
+      "purpose_zh": "Project memory界面：搜索、来源、摘要和导出",
+      "sha256": "c1cd60765c3d7f5669b71a00d5c0e23d1e68defe26232cda31608081f96579ac",
+      "git_blob_sha1": "e676755c84929160ae0cd4bd549e556562c43bfb",
+      "bytes": 2737,
+      "baseline_git_blob_sha1": null
+    },
+    {
+      "path": ".gitignore",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/.gitignore",
+      "purpose_zh": "补充密钥配置、本地数据和缓存的忽略规则",
+      "sha256": "ce6ec7cc70c7b64f2c1dd8b25359208f1eb983432bd95cba26be8cea5836ce09",
+      "git_blob_sha1": "da8ed1f10b2c92bd52ed2a73a384d95b6a040875",
+      "bytes": 136,
+      "source_package_sha256": "9c825c8f6f1d6ca691c5f750f0ffde931422d63729ffc1627f7c0584e4d078da",
+      "source_git_blob_sha1": "95669912d30e4c2d07f517a0d7fbc9bc237fa01b",
+      "source_package_bytes": 137,
+      "publication_adaptation": "GitHub版将原包末行CRLF换行规范为LF；忽略规则文字不变。",
+      "baseline_git_blob_sha1": "5c43e516319c0e42859f43aa462c32a12e8ed199",
+      "original_archive_sha256": "e64463b8c579412004cf8d58e4e2b21dc4f392b7fc2967cd6bc693afe41a3f74"
+    },
+    {
+      "path": ".streamlit/secrets.toml.example",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/.streamlit/secrets.toml.example",
+      "purpose_zh": "增加云端存储和共享演示密码的配置模板",
+      "sha256": "72689e3add2fbb63cf20acdadeb719fca743795981f55755fa10cad0246a7b39",
+      "git_blob_sha1": "c125ffd5cf99e35258b5924d6ce0a87ba4c02b80",
+      "bytes": 858,
+      "baseline_git_blob_sha1": "68e6f0bb5a62d3ed91f1ce76a4953394205dee59",
+      "original_archive_sha256": "1f282fdab13f6abfb784519437714c82b3d8e4606e47b87f3d42a6d3aab0352a"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/CHANGELOG.md",
+      "purpose_zh": "补充记忆与云端扩展记录",
+      "sha256": "37b365c3b9f09b554c2822a0cbf69594f5da622d86fe0520b18d693ca45bdd39",
+      "git_blob_sha1": "526c9160dac6b2d56d34ea23c7b2ab0be210ee32",
+      "bytes": 27544,
+      "baseline_git_blob_sha1": "f3f434dead6308829fac3438a380905416f3e134",
+      "original_archive_sha256": "c756a6bb50ddc6212bf4a25e79a10448cee6119ba9dab086c60724d5656f293e"
+    },
+    {
+      "path": "README.md",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/README.md",
+      "purpose_zh": "补充功能和文档入口",
+      "sha256": "00fc53fad0454a57e7670f0673b891b889153f5cd8621b5dcb0107bc4715b2cf",
+      "git_blob_sha1": "b5fea71c3dfd9b4a06ae1f65060c7cbfee6fece0",
+      "bytes": 9533,
+      "baseline_git_blob_sha1": "bd334cbf91b3b4c6440bf821088ba26282a03883",
+      "original_archive_sha256": "8472226d1f21049c6f58a2031ec9ef9c05bcb340d8bcec25add5107644efa9e7"
+    },
+    {
+      "path": "Run Prototype.command",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/Run Prototype.command",
+      "purpose_zh": "调整本地启动脚本",
+      "sha256": "e0ae852a52e1136f11b4f8f078cc66cd6077877a6618f7c13636cf281fb303cf",
+      "git_blob_sha1": "08f2ec3d9774d86498e754f1f30dcc43c83ba46b",
+      "bytes": 518,
+      "baseline_git_blob_sha1": "910197abc6aa14acfed2b1cf7ef2c8acad4e351b",
+      "original_archive_sha256": "fe676d4a0f1821737666b312eca1f4cb8f4fd657e2c9a2b8f1ee42f39df38d36"
+    },
+    {
+      "path": "app.py",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/app.py",
+      "purpose_zh": "云端访问入口和错误处理",
+      "sha256": "e3d83292140e7264dce25b69d88480ea74fb19499f208ecf59dea8a769949954",
+      "git_blob_sha1": "cf2a203b7a9e3cafd1463d734ee7b86d7016d304",
+      "bytes": 1411,
+      "baseline_git_blob_sha1": "1a1c22408cd19494a33bc4043ab54234d817170c",
+      "original_archive_sha256": "533fcc4446e95970005e3c89a476181a5142cfdc6924cd6fb8154b8570d2edb4"
+    },
+    {
+      "path": "eir/coach/scripted.py",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/eir/coach/scripted.py",
+      "purpose_zh": "无真实模型时的历史回忆演示",
+      "sha256": "1a5d3c6435f41bbfa953269c6d12715223c4791b24f7c433c749ce3a2e6a32b1",
+      "git_blob_sha1": "e7ca326875549c078032edcb084487cfa0056abb",
+      "bytes": 27074,
+      "baseline_git_blob_sha1": "49bd590a27499640ae1e61bafe6119e7fdf6a246",
+      "original_archive_sha256": "d3d9724ec55c083823dbe4c08821d5bbfbe980f76a1357a06b483cdc1acfd714"
+    },
+    {
+      "path": "eir/files.py",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/eir/files.py",
+      "purpose_zh": "云端文件保存、版本与上传失败处理",
+      "sha256": "38820c154432a09ef222ae902fe9a4a157e683e65b5593c3e7db51ab7b4a4a04",
+      "git_blob_sha1": "5e13f98f15c0cf2ed503030c1752426a0c94b54d",
+      "bytes": 9385,
+      "baseline_git_blob_sha1": "7c16dae8ae1eb28ede71eb64a45e0868602c73f9",
+      "original_archive_sha256": "8504d35b8fa100461199be1b5b12fccfe3a84f2e23cf058c1a1bf72691ba3081"
+    },
+    {
+      "path": "eir/memory.py",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/eir/memory.py",
+      "purpose_zh": "向模型上下文补充相关历史",
+      "sha256": "2c0ae050b40db7df4890d4ad27d1db1a094c0ecd50436e55b8b7dc854f17ddfa",
+      "git_blob_sha1": "67163b6fa771ebeecac1397f2a03e7e075690530",
+      "bytes": 16734,
+      "baseline_git_blob_sha1": "a85be06afb1ab40ac92f109307ecc001cb7ed36a",
+      "original_archive_sha256": "bbc1d1b02f6576348c79395f116b01d468e72556a3d2d595dbbd33d16e6f4452"
+    },
+    {
+      "path": "ui/lobby.py",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/ui/lobby.py",
+      "purpose_zh": "云端项目读取、创建与重试",
+      "sha256": "1d2109a29ce094c790f28907677ea7228705bd3528874a318386cb4f7f118ba2",
+      "git_blob_sha1": "875a4dca1dc39a64a5cb89531dc99ca9af042759",
+      "bytes": 10154,
+      "baseline_git_blob_sha1": "454af9fe074be440d7a5f61f8dd66131d00c0f87",
+      "original_archive_sha256": "5ff8676924c05f371ba1069fadcc5d173a2cddac20ac07f6c69ca427d496c885"
+    },
+    {
+      "path": "ui/menu.py",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/ui/menu.py",
+      "purpose_zh": "Project memory入口和云端重置限制",
+      "sha256": "076ef8021a9bacb9bac18f96076ff11d7223a68edf91d01610043a08f6e4c885",
+      "git_blob_sha1": "65c01fdc33141ae66de11991db59e47aa85052e9",
+      "bytes": 12369,
+      "baseline_git_blob_sha1": "7b8114e3111e25bd829c61994327409ecb2fc06f",
+      "original_archive_sha256": "553ccac2cd0008ff8d613973cb7d045453bc873fa44737a9583b4c95bd9336d0"
+    },
+    {
+      "path": "ui/state/__init__.py",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/ui/state/__init__.py",
+      "purpose_zh": "导出新增的状态与云端功能",
+      "sha256": "365a2049fd3e7732a1ccab40b656a11537e9ff4d15785acf163e1b7a26c69b6e",
+      "git_blob_sha1": "6fbf1741358eb1e44e78b7827f23e77d1887af4d",
+      "bytes": 1799,
+      "baseline_git_blob_sha1": "eaf934646aa5f6ce195cd64a9604bb24ede99eb5",
+      "original_archive_sha256": "75f6df9219e827fd7d3ef1c0c918ed5ef1b8f6780d02f5e3e2972bd14035cbfb"
+    },
+    {
+      "path": "ui/state/core.py",
+      "origin_change": "modified",
+      "source_package_path": "virtual_eir/ui/state/core.py",
+      "purpose_zh": "云端连接、演示密码和失败草稿处理",
+      "sha256": "c90b01ad8d8543477962540beee3d7a8735f45d759565e19d428022b77870f33",
+      "git_blob_sha1": "ee9968cd42183a5048a393e39d5c72dbcb771fd5",
+      "bytes": 15394,
+      "baseline_git_blob_sha1": "a6b37241f1531ea0cb1e8b444b0bf3c469d71dd2",
+      "original_archive_sha256": "fd8735e7b23c1511be41ac11438171c15e0cfdb528a6b3d480c6f183a45d4a37"
+    },
+    {
+      "path": "操作手册.md",
+      "origin_change": "modified",
+      "source_package_path": "操作手册.md",
+      "purpose_zh": "原交付包外层手册；本分支补传仓库根目录适配版",
+      "publication_adaptation": "目录路径、下载步骤及本地/云端登录与重置说明已按仓库布局调整",
+      "source_package_sha256": "423a942a15ff0924a4bd8d9211b0cd34a8b30c58ee733a1eb2e71bd21339616b",
+      "sha256": "86c65c961f60a7743e52cfcf96e4ff9b4b4b4edef4cc0402912ceeb03a5107e5",
+      "git_blob_sha1": "600abd1e0261368aa73b25f7040218e65ca8889b",
+      "bytes": 5744,
+      "baseline_git_blob_sha1": "a95d2bc4e874a83e43b1006b3f0a63bdddf54377",
+      "original_archive_sha256": "b74e4c1b87062e7cadad0dfe980d2711349a183ba5ae644b647ddf7d721ff173"
+    }
+  ],
+  "previous_main_commit": "8ff5b5c2fdda400209e03d6841c2407dfab32bdd",
+  "feature_commit_before_repair": "e12cd6f9f6bb1df4451a356ccab87dd3975a5129",
+  "original_archive": {
+    "name": "AIN_Virtual_EIR_v0.19_2026-11-13.zip",
+    "sha256": "4ad454bf6d13ec32a4b61752a462431e72bffbceaf18ec8f5b19a2dfecd39556",
+    "file_count": 205
+  },
+  "retained_original_files": 191,
+  "expected_pull_request_diff": {
+    "added": 24,
+    "modified": 14,
+    "removed": 0,
+    "total": 38
+  },
+  "additional_integration_documents": [
+    "MEMORY_CLOUD_INTEGRATION.md",
+    "docs/memory-cloud-change-manifest.json"
+  ]
+}
